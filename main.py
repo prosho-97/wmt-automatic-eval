@@ -65,7 +65,7 @@ def read_arguments() -> ArgumentParser:
     parser.add_argument(
         "--gemba-model",
         type=str,
-        choices=["gpt-4o", "gpt-4.1", "command-a"],
+        choices=["gpt-4o", "gpt-4.1", "command-a-03-2025"],
         default="gpt-4o",
         help="The LLM model to call with API for GEMBA. Default: 'gpt-4o'.",
     )
@@ -135,9 +135,9 @@ def matching_paragraphs_check(
                     ):
                         systems_to_filter.append(sys)
                         break
-                if systems_to_filter[-1] == sys:
+                if len(systems_to_filter) > 0 and systems_to_filter[-1] == sys:
                     break
-            if systems_to_filter[-1] == sys:
+            if len(systems_to_filter) > 0 and systems_to_filter[-1] == sys:
                 break
 
     for sys in systems_to_filter:
@@ -189,6 +189,9 @@ def main() -> None:
                 continue  # Skip instances from the "testsuites" collection for automatic evaluation
 
             lp, domain, document_id = test_doc["doc_id"].split("_#_")
+            if domain == "speech":
+                assert document_id.startswith("vid_")
+                document_id = document_id[4:]  # Remove the "vid_" prefix from speech document IDs to match the ones in the refs
             lp2domain_test_docs[lp][domain][document_id] = [
                 {"src": src} for src in test_doc["src_text"].split("\n\n")
             ]

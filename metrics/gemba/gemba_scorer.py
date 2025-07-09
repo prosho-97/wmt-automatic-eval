@@ -28,14 +28,14 @@ class GembaScorer:
     def __init__(
         self,
         gemba_type: str = "GEMBA-ESA",
-        model: Literal["gpt-4o", "gpt-4.1", "command-a"] = "gpt-4o",
+        model: Literal["gpt-4o", "gpt-4.1", "command-a-03-2025"] = "gpt-4o",
     ):
         """
         Class for scoring translations using the GEMBA metric (either GEMBA-ESA or GEMBA-MQM).
 
         Args:
             gemba_type: Type of GEMBA metric to use. Either "GEMBA-ESA" or "GEMBA-MQM". Default: "GEMBA-ESA".
-            model: The LLM model to call with API. Allowed values: "gpt-4o", "gpt-4.1", "command-a". Default: "gpt-4o".
+            model: The LLM model to call. Allowed values: "gpt-4o", "gpt-4.1", "command-a-03-2025". Default: "gpt-4o".
 
         Raises:
             ValueError: If `gemba_type` or `model` are not supported.
@@ -45,9 +45,9 @@ class GembaScorer:
                 f"Unsupported GEMBA type: {gemba_type}. Supported types are 'GEMBA-ESA' and 'GEMBA-MQM'."
             )
 
-        if model != "gpt-4o" and model != "gpt-4.1" and model != "command-a":
+        if model != "gpt-4o" and model != "gpt-4.1" and model != "command-a-03-2025":
             raise ValueError(
-                f"Unsupported model: {model}. Supported models are 'gpt-4o', 'gpt-4.1', and 'command-a'."
+                f"Unsupported model: {model}. Supported models are 'gpt-4o', 'gpt-4.1', and 'command-a-03-2025'."
             )
 
         self.gemba_type = gemba_type
@@ -55,7 +55,7 @@ class GembaScorer:
 
         self.api, self.template_funct = (
             (CohereApi(), apply_template_for_command_a)
-            if self.model == "command-a"
+            if self.model == "command-a-03-2025"
             else (GptApi(), apply_template)
         )
 
