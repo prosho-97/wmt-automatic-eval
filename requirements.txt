@@ -1,0 +1,11 @@
+openai
+pandas
+termcolor
+pexpect
+scipy
+ipdb
+absl-py
+diskcache
+cohere
+tqdm
+unbabel-comet

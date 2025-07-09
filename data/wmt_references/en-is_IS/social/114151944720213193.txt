@@ -1,0 +1,26 @@
+Saga fyrir háttatímann!
+Hvað er málið með T9-lyklaborð? Af hverju eru 7 og 9 með 4 bókstöfum en aðrar tölur með 3? Af hverju þessar tvær? Af hverju ekki að úthluta 1 einhverjum bókstöfum?
+Hefur 0 alltaf verið fyrir bil?
+
+Fyrst af öllu, til að gera illt verra, hunsaði Nokia 2110 svo öll stafróf og ákvað að oqz fengi eigin hnapp. En 1 hefur enn ekki neitt!
+
+Þar sem þessir hnappar voru fyrst notaðir fyrir SMS á þessum Nokia 2110* af hverju voru þeir þá á símum?
+Þið getið þakkað Bandaríkjunum! Á sjötta áratugnum tók Bell í notkun sjálfvirkt símkerfi í stað símastúlknanna. „Gefið mér samband við Texas“ varð átta ... þr ... hvað ... 
+Bell varð að úthluta á númerin! Það voru 9 tölur sem hægt var að úthluta bókstöfum á til að auðvelda tengingar. 26 bókstafir, 8 hnappar.
+0 gengur ekki, það er til sérstakra nota. 1 ... og nú byrjum við!
+(* opinberlega, sagan hjá Nokia er röng, ekki leiðrétta mig)
+
+Af hverju er 1 meira að segja auður hnappur á iPhone? Af hverju fengu Bandaríkin +1?
+Í gamla Bell-kerfinu var 1 frátekinn sem flýtileið að langlínukerfinu. Þannig að ef bæjarnafn byrjaði á bókstöfunum ABC komst maður ... jú, sjálfkrafa inn í langlínukerfið gegn ríflegu gjaldi. Það skýrir þessa aðgreiningu!
+
+Snúum okkur aftur að Bell. Í enska stafrófinu eru 26 stafir og við höfum átta hnappa. Það er 3 og eitthvað á hvern hnapp ... 
+Hvaða stöfum sleppum við? Við þurfum að sleppa tveimur!
+Z var síðasti stafurinn á svæðið og því fyrstur til að fara!
+Stafurinn þar á undan er Y ... Það er vinsæll staður í örnefnum. Kannast einhver við New York? Við getum ekki rekið bókstaf með fullkomna ferilskrá!
+
+Tungumálasérfræðingar voru ráðnir til að fjarlægja einn staf í viðbót úr stafrófinu.
+Q (fyrirgefðu Q, ekkert persónulegt) er sérstakur stafur. Allir Frakkar vita að Q getur ekki án U verið. Annar hvor þeirra varð að fjúka. 
+Q hefur minna að gera í ensku en U og Q var sleppt í skiptistöðvakerfi Bell!
+Og það, börnin góð, er ástæðan fyrir því að maður finnur það ekki á gömlum símum.
+
+Snúum okkur aftur að T9. SMS var flott ný uppfinning í GSM-staðlinum því símafyrirtækin þurftu hvort sem er textasendingar svo af hverju ekki að opna fyrir stutt spjall á 15 sent fyrir hverja 160 stafi (á ascii-sniði, börnin mín góð)

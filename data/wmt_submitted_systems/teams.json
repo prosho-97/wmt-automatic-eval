@@ -1,0 +1,1262 @@
+[
+  {
+    "description": "The AMI submission for WMT 2025 is based on a pre-trained Llama 3.2 3B parameter language model. We pre-train the model with 10 billion tokens of English and Icelandic texts, fine-tune on parallel corpora and finally do contrastive preference optimization on the model. For the submission we produce multiple hypotheses with different temperatures on the model and use CometKiwi to select the final hypotheses.",
+    "email": "steinst@hi.is",
+    "institution_name": "The Arni Magnusson Institute",
+    "name": "AMI",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.ami-light.51.jsonl",
+        "is_constrained": true,
+        "is_open_source": true,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 51,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "AMI-light",
+    "publication_url": "AMI-light at WMT25 General Translation Task: How low can we go? Finetuning lightweight Llama for low resource machine translation"
+  },
+  {
+    "description": "Our submission leverages a sophisticated Large Language Model (LLM) architecture enhanced through a comprehensive training pipeline. The system incorporates multi-stage translation supervised fine-tuning (SFT) combined with a two-stage post-training approach to significantly improve translation capabilities.\r\nTo address the limitations of conventional decoding strategies and enhance model stability, we integrate word alignment techniques with an advanced MBR (Minimum Bayes Risk) + reranking decoding algorithm. This hybrid approach ensures more reliable and consistent translation outputs across diverse linguistic contexts.\r\nOur methodology has demonstrated superior performance, achieving state-of-the-art results on both automatic Quality Estimation (QE) metrics and LLM judge evaluations. The system's robust architecture and innovative decoding strategies position AllTrans as a leading solution in the current translation landscape.",
+    "email": "18325533378@163.com",
+    "institution_name": "Alibaba",
+    "name": "AMT-Hero",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.yolu.56.gz",
+        "is_constrained": true,
+        "is_open_source": true,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 56,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "Yolu",
+    "publication_url": "Yolu at WMT25 Translation Task"
+  },
+  {
+    "description": "",
+    "email": "469720058@qq.com",
+    "institution_name": "",
+    "name": "bb88",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.result_list.jsonl.gz.22.gz",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 22,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "bb88",
+    "publication_url": ""
+  },
+  {
+    "description": "In this paper, we present the \\salamandraTA\\ family of models, an improved iteration of \\salamandra\\ LLMs \\cite{gonzalezagirre2025salamandratechnicalreport} specifically trained to achieve strong performance in translation-related tasks for 38 European languages. \\salamandraTA\\ comes in two scales: 2B and 7B parameters. For both versions, we applied the same training recipe with a first step of continual pre-training on parallel data, and a second step of supervised fine-tuning on high-quality instructions.\r\n\r\nThe BSC submission to the WMT25 General Machine Translation shared task is based on the 7B variant of \\salamandraTA. We first extended the model vocabulary to support the seven additional non-European languages included in the task. This was followed by a second phase of continual pretraining and supervised fine-tuning, carefully designed to optimize performance across all translation directions for this year's shared task. For decoding, we employed two quality-aware strategies: Minimum Bayes Risk Decoding and Translation Reranking using \\comet\\ and \\cometkiwi.\r\n\r\nWe publicly release both the 2B and 7B versions of \\salamandraTA, along with the newer \\salamandraTAversiontwo\\ model, on Hugging Face.",
+    "email": "javier.garcia1.bsc@gmail.com",
+    "institution_name": "Barcelona Supercomputing Center",
+    "name": "BSC",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.salamandrata.11.jsonl",
+        "is_constrained": true,
+        "is_open_source": true,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 11,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "SalamandraTA",
+    "publication_url": "From Salamandra to SalamandraTA: BSC Submission for WMT25 General Machine Translation Shared Task"
+  },
+  {
+    "description": "",
+    "email": "cristian.grozea@fokus.fraunhofer.de",
+    "institution_name": "",
+    "name": "CGFOKUS",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.en2ukr_translated.jsonl.gz.92.gz",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 92,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "CGFOKUS",
+    "publication_url": ""
+  },
+  {
+    "description": "We present an English-to-Bhojpuri machine translation system built using large language models (LLMs) with a two-stage approach: pretraining followed by instruction fine-tuning. The model is first pretrained on multilingual and Bhojpuri-related corpora to enhance language understanding. It is then fine-tuned using translation-specific instructions and prompts to adapt to Bhojpuri’s linguistic characteristics. Our results show significant improvements in translation quality, demonstrating the effectiveness of instruction tuning for low-resource language pairs like English–Bhojpuri.",
+    "email": "boynfrancis@gmail.com",
+    "institution_name": "IIT Patna",
+    "name": "COILD-IITP",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.coild-bho.49.jsonl",
+        "is_constrained": true,
+        "is_open_source": true,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 49,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "COILD-BHO",
+    "publication_url": "COILD-BHO at WMT25 GMT: Fine-Tuning LLMs for English to Bhojpuri Translation via Dynamic Contrastive Preference Optimization"
+  },
+  {
+    "description": "We built our system on top of Command-A using a direct preference optimization with data preparation pipeline that emphasizes robust data quality control, primarily incorporating standard quality filtering along with a novel difficulty filtering component, which serves as the key innovation of our approach. The final translation is built through step-by-step reasoning, and we employ Minimum Bayes Risk decoding with a candidate pool size of 20, using MetricX-XL as the primary utility metric. For unsupported languages, we use a second model prepared identically but with an additional initial supervised fine-tuning step for the unsupported languages that Command-A model has not seen.",
+    "email": "kocmi@cohere.com",
+    "institution_name": "Cohere",
+    "name": "CommandA-MT",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.commanda-mt.115.jsonl",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 115,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "CommandA-MT",
+    "publication_url": "CommandA-MT: The era of difficulty, rethinking data preparation in machine translation"
+  },
+  {
+    "description": "...",
+    "email": "jon@ufal.mff.cuni.cz",
+    "institution_name": "CUNI",
+    "name": "CUNI",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.cuni-sft.75.jsonl",
+        "is_constrained": true,
+        "is_open_source": true,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 75,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "CUNI-SFT",
+    "publication_url": "CUNI at WMT25 Translation task"
+  },
+  {
+    "description": "CUNI-DocTransformer is a standard enc-dec Transformer trained with Block backtranslation on multi-sentence sequences. It is the same system as in WMT20--WMT24.",
+    "email": "popel@ufal.mff.cuni.cz",
+    "institution_name": "Charles University",
+    "name": "CUNI-DocTransformer",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.cuni-doctransformer.8.gz",
+        "is_constrained": true,
+        "is_open_source": true,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 8,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "CUNI-DocTransformer",
+    "publication_url": "https://aclanthology.org/2020.wmt-1.28.pdf"
+  },
+  {
+    "description": "CUNI-EdUKate-v1 is EuroLLM-9B-Instruct finetuned for Czech to Ukrainian machine translation using LoRA and CPO on data from educational domain.",
+    "email": "hrabal@ufal.mff.cuni.cz",
+    "institution_name": "ÚFAL MFF UK",
+    "name": "CUNI-EdUKate-v1",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.cuni-edukate-v1.79.gz",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 79,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "CUNI-EdUKate-v1",
+    "publication_url": "CUNI at WMT25 Translation Task"
+  },
+  {
+    "description": "CUNI-MH-v2 is an EuroLLM-9B-Instruct finetuned for en2cs and cs2de machine translation using LoRA and CPO. We trained separate LoRA adapters for both languages. Both language pairs were trained on samples from publicly available CzEng 2.0 dataset.",
+    "email": "hrabal@ufal.mff.cuni.cz",
+    "institution_name": "ÚFAL MFF UK",
+    "name": "CUNI-MH-v2",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.cuni-mh-v2.112.gz",
+        "is_constrained": true,
+        "is_open_source": true,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 112,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "CUNI-MH-v2",
+    "publication_url": "CUNI at WMT25 Translation Task"
+  },
+  {
+    "description": "CUNI-Transformer is a standard enc-dec Transformer trained with Block backtranslation, the same system as in WMT23 and WMT24.",
+    "email": "popel@ufal.mff.cuni.cz",
+    "institution_name": "Charles University",
+    "name": "CUNI-Transformer",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.cuni-transformer.7.gz",
+        "is_constrained": true,
+        "is_open_source": true,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 7,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "CUNI-Transformer",
+    "publication_url": "Hrabal et al. at WMT25 (or 2024.wmt-1.16.pdf)"
+  },
+  {
+    "description": "DLUT and GTCOM Machine Translation Systems for WMT25,\r\nNMT+Gemma3 27B",
+    "email": "156681133@qq.com",
+    "institution_name": "DLUT and GTCOM",
+    "name": "DLUT_GTCOM",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.dlut_gtcom.110.jsonl",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 110,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "DLUT_GTCOM",
+    "publication_url": "DLUT and GTCOM Machine Translation Systems for WMT25"
+  },
+  {
+    "description": "",
+    "email": "vince62s@yahoo.com",
+    "institution_name": "",
+    "name": "Eole",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.wmt25_ru_zh.document.jsonl.99.jsonl",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 99,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "Eole",
+    "publication_url": ""
+  },
+  {
+    "description": "Rits-CM submission builds on the Mistral-7B base model by first applying LoRA-based fine-tuning on available parallel data, adapting only low-rank projection layers to conserve resources \\citep{DBLP:journals/corr/abs-2106-09685}.\r\n\r\nIt then augments its training set with synthetic parallel examples generated via back-translation of a Japanese monolingual corpus, following the approach of Sennrich et al. \\citep{DBLP:journals/corr/SennrichHB15a}. This pipeline achieves strong translation performance in low-resource scenarios by combining parameter-efficient adaptation with monolingual data exploitation.\r\n\r\n@inproceedings{ritscm2025ftbt,\r\n  title     = {Low-Resource Machine Translation via LoRA Fine-Tuning and Back-Translation},\r\n  author    = {Rits-CM Team},\r\n  booktitle = {Proceedings of the Workshop on Machine Translation (WMT25)},\r\n  year      = {2025},\r\n}\r\n\r\n@article{DBLP:journals/corr/abs-2106-09685,\r\n  author    = {Edward J. Hu and Yelong Shen and Phillip Wallis and Zeyuan Allen{-}Zhu \r\n               and Yuanzhi Li and Shean Wang and Weizhu Chen},\r\n  title     = {LoRA: Low-Rank Adaptation of Large Language Models},\r\n  journal   = {CoRR},\r\n  volume    = {abs/2106.09685},\r\n  year      = {2021},\r\n  url       = {https://arxiv.org/abs/2106.09685},\r\n  eprinttype= {arXiv},\r\n  eprint    = {2106.09685}\r\n}\r\n\r\n@article{DBLP:journals/corr/SennrichHB15a,\r\n  author    = {Rico Sennrich and Barry Haddow and Alexandra Birch},\r\n  title     = {Improving Neural Machine Translation Models with Monolingual Data},\r\n  journal   = {CoRR},\r\n  volume    = {abs/1511.06709},\r\n  year      = {2015},\r\n  url       = {http://arxiv.org/abs/1511.06709},\r\n  eprinttype= {arXiv},\r\n  eprint    = {1511.06709}\r\n}",
+    "email": "mello.feley@gmail.com",
+    "institution_name": "Ritsumeikan \\textsc{Ritsumeikan}",
+    "name": "Felipe Fujita",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.rits-cm.63.jsonl",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 63,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "Rits-CM",
+    "publication_url": "Rits-CM at WMT25 Translation Task"
+  },
+  {
+    "description": "",
+    "email": "jiafeng.xiong@manchester.ac.uk",
+    "institution_name": "",
+    "name": "GIIFT",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.wmt25mt_updated.jsonl.gz.59.gz",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 59,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "GIIFT",
+    "publication_url": ""
+  },
+  {
+    "description": "In this submission, we present a sophisticated Large Language Model (LLM) architecture driven by a comprehensive training pipeline. Our approach features multi-stage translation supervised fine-tuning (SFT) and a two-phase post-training process, collectively producing substantial improvements in translation accuracy.\r\n\r\nTo address the shortcomings of conventional decoding strategies and bolster model stability, we incorporate word alignment techniques alongside an advanced MBR (Minimum Bayes Risk) plus reranking decoding algorithm. This integrated strategy yields more robust and consistent translation outputs across varied linguistic contexts.\r\n\r\nOur method delivers superior performance, achieving state-of-the-art results on both automatic Quality Estimation (QE) metrics and LLM-based judge evaluations. With its resilient architecture and innovative decoding procedures, the AllTrans system stands out as a leading solution in today’s translation landscape.",
+    "email": "385191581@qq.com",
+    "institution_name": "AI Business",
+    "name": "goodwishes01",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.algharb.71.gz",
+        "is_constrained": true,
+        "is_open_source": true,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 71,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "Algharb",
+    "publication_url": "Algharb at WMT25 Translation Task"
+  },
+  {
+    "description": "",
+    "email": "vilar@google.com",
+    "institution_name": "",
+    "name": "Google",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.google_205_ape.jsonl.gz.60.gz",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 60,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "Google",
+    "publication_url": ""
+  },
+  {
+    "description": "Team SH's submission consists of two standard LLMs based on cyberagent/DeepSeek-R1-Distill-Qwen-14B-Japanese: an initial translation model fine-tuned with LoRA \\citep{hu2022lora}, and an automatic post-editing model fine-tuned with LoRA and SimPO \\citep{meng2024simpo}. Both use MBR decoding \\citep{muller-sennrich-2021-understanding}.\r\n\r\n@inproceedings{\r\nmeng2024simpo,\r\ntitle={Sim{PO}: Simple Preference Optimization with a Reference-Free Reward},\r\nauthor={Yu Meng and Mengzhou Xia and Danqi Chen},\r\nbooktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},\r\nyear={2024},\r\nurl={https://openreview.net/forum?id=3Tzcot1LKb}\r\n}\r\n\r\n@inproceedings{\r\nhu2022lora,\r\ntitle={Lo{RA}: Low-Rank Adaptation of Large Language Models},\r\nauthor={Edward J Hu and yelong shen and Phillip Wallis and Zeyuan Allen-Zhu and Yuanzhi Li and Shean Wang and Lu Wang and Weizhu Chen},\r\nbooktitle={International Conference on Learning Representations},\r\nyear={2022},\r\nurl={https://openreview.net/forum?id=nZeVKeeFYf9}\r\n}\r\n\r\n@inproceedings{muller-sennrich-2021-understanding,\r\n    title = \"Understanding the Properties of Minimum {B}ayes Risk Decoding in Neural Machine Translation\",\r\n    author = {M{\\\"u}ller, Mathias  and\r\n      Sennrich, Rico},\r\n    editor = \"Zong, Chengqing  and\r\n      Xia, Fei  and\r\n      Li, Wenjie  and\r\n      Navigli, Roberto\",\r\n    booktitle = \"Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)\",\r\n    month = aug,\r\n    year = \"2021\",\r\n    address = \"Online\",\r\n    publisher = \"Association for Computational Linguistics\",\r\n    url = \"https://aclanthology.org/2021.acl-long.22/\",\r\n    doi = \"10.18653/v1/2021.acl-long.22\",\r\n    pages = \"259--272\",\r\n}",
+    "email": "e225719@cs.u-ryukyu.ac.jp",
+    "institution_name": "University of the Ryukyus",
+    "name": "Hayate Shiroma",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.sh.68.jsonl",
+        "is_constrained": false,
+        "is_open_source": true,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 68,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "SH",
+    "publication_url": "SH at WMT25 Translation Task"
+  },
+  {
+    "description": "submission",
+    "email": "122348214@qq.com",
+    "institution_name": "tencent",
+    "name": "hybrid",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.hybrid.40.jsonl",
+        "is_constrained": true,
+        "is_open_source": true,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 40,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "hybrid",
+    "publication_url": "hybrid at WMT25 Translation Task"
+  },
+  {
+    "description": "",
+    "email": "time_flys@163.com",
+    "institution_name": "",
+    "name": "HYT",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.res_wmt25.jsonl.43.jsonl",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 43,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "HYT",
+    "publication_url": ""
+  },
+  {
+    "description": "This paper presents the open-system submission by the In2x research team for the WMT25 General Machine Translation Shared Task. Our submission focuses on Japanese-related translation tasks, aiming to explore a generalizable paradigm for extending large language models (LLMs) to other languages. This paradigm encompasses aspects such as data construction methods and reward model design. The ultimate goal is to enable large language model systems to achieve exceptional performance in low-resource or less commonly spoken languages.",
+    "email": "panglei@duxiaoman.com",
+    "institution_name": "\\textsc{in2x}",
+    "name": "in2x-llm",
+    "number_of_primary_submissions": 2,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.in2x.84.gz",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 84,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "In2x",
+    "publication_url": "In2x at WMT25 Translation Task"
+  },
+  {
+    "description": "IRB-MT submission is a simple agentic system based on instruction-tuned Gemma3 model with 12B parameters. The system is based on the self-refine workflow \\citet{madaan_selfrefine_2023} adapted for the WMT-25 machine translation tasks. No training data and model adaptation was used, as the goal of the approach was to test the viability of using a capable smaller off-the-shelf LLM in combination with a simple agentic system.\r\n\r\nBoth the self-refine system and the simple translator (both using a single instance of Gemma3 with 12B parameters) were used to translate all the texts of the WMT25 dataset (both the \"general\" and the \"multilingual\" pairs), and the results were evaluated using MetricX-24-XL. All the translations were performed and evaluated on the paragraph level. The scores demonstrated that the self-refine system resulted in competitive or slightly improved scores for the majority of language pairs. Therefore, the submitted results were produced by the described self-refine system.\r\n\r\n@inproceedings{madaan_selfrefine_2023,\r\n author = {Madaan, Aman and Tandon, Niket and Gupta, Prakhar and Hallinan, Skyler and Gao, Luyu and Wiegreffe, Sarah and Alon, Uri and Dziri, Nouha and Prabhumoye, Shrimai and Yang, Yiming and Gupta, Shashank and Majumder, Bodhisattwa Prasad and Hermann, Katherine and Welleck, Sean and Yazdanbakhsh, Amir and Clark, Peter},\r\n booktitle = {Advances in Neural Information Processing Systems},\r\n editor = {A. Oh and T. Naumann and A. Globerson and K. Saenko and M. Hardt and S. Levine},\r\n pages = {46534--46594},\r\n publisher = {Curran Associates, Inc.},\r\n title = {Self-Refine: Iterative Refinement with Self-Feedback},\r\n volume = {36},\r\n year = {2023}\r\n}",
+    "email": "damir.korencic@gmail.com",
+    "institution_name": "",
+    "name": "IRB-MT",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.irb-mt-submission.jsonl.gz.98.gz",
+        "is_constrained": true,
+        "is_open_source": true,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 98,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "IRB-MT",
+    "publication_url": "IRB-MT at WMT25 Translation Task: A Simple Agentic System Using an Off-the-Shelf LLM"
+  },
+  {
+    "description": "Kaze-MT is a simple test-time-scaling for Machine Translation",
+    "email": "shaomu.tan.edu@gmail.com",
+    "institution_name": "University of Amsterdam",
+    "name": "Kaze-MT",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.kaze-mt.93.jsonl",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 93,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "Kaze-MT",
+    "publication_url": "Kaze-MT at WMT25 Translation Task"
+  },
+  {
+    "description": "",
+    "email": "iwakawa.koichi.q5@dc.tohoku.ac.jp",
+    "institution_name": "",
+    "name": "KIKIS",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.wmt25.subtest.submit.jsonl.61.jsonl",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 61,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "KIKIS",
+    "publication_url": ""
+  },
+  {
+    "description": "KYUoM submission is a two-stage model equipped with gated graph-based fusion mechanisms for transferring visual knowledge with pre-trained models for\r\nmultimodal machine translation and traditional machine translation. The best improvement was achieved thanks to two-stage continuous learning with multimodal scene graphs and linguistic scene graphs.",
+    "email": "zhao.yuting.095@m.kyushu-u.ac.jp",
+    "institution_name": "KYUoM",
+    "name": "KYUoM",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.kyuom.62.gz",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 62,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "KYUoM",
+    "publication_url": "KYUoM Systems to the WMT25 General Machine Translation Task"
+  },
+  {
+    "description": "The Laniqo's submission for the WMT25 General Translation Task uses EuroLLM-9B-Instruct as the base translation model. The approach involved creating a high-quality preference dataset by employing Minimum Bayes Risk (MBR) decoding using a subset of NewsPALM document-level data across various translation directions. This dataset was then used to train a LoRA adapter via Contrastive Preference Optimization. All previous WMT test sets, along with WMT24++, FLORES-200 and NTREX-128 were indexed in a vector search database. This database was queried to select few-shot examples for each prompt.  For the final translation output, the system first performs QE reranking, which is then followed by MBR decoding. Finally, rule-based post-processing steps were applied to refine the translations.",
+    "email": "kamil.guttmann@laniqo.com",
+    "institution_name": "Laniqo",
+    "name": "Laniqo",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.laniqo.96.gz",
+        "is_constrained": true,
+        "is_open_source": true,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 96,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "Laniqo",
+    "publication_url": "Laniqo at WMT25 General Translation Task: Self-Improved and Retrieval Augmented Translation"
+  },
+  {
+    "description": "Erlendur is a multilingual LLM-based translation system that uses a multi-stage pipeline with preparatory text analysis, dictionary lookup, and glossary integration, with a focus on English-to-Icelandic translation. The system's language-agnostic features address LLM limitations for lower-resource languages through hybrid prompting and post-processing with grammatical error correction.",
+    "email": "svanhvit@mideind.is",
+    "institution_name": "Miðeind",
+    "name": "Mideind",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.erlendur.46.gz",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 46,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "Erlendur",
+    "publication_url": "Erlendur at WMT25 Translation Task"
+  },
+  {
+    "description": "\\textsc{solo}-MultiagentMT's submission comprises a multi-agent translation model founded on the GPT series \\citep{kim:25:ir-multiagent-mt}. Leveraging our recent MQM model, designated as Rubric-MQM, which mitigates the labeling bias inherent in Gemba-MQM while enhancing its precision in detection, we employ the Prompt Chaining workflow. Within this framework, we deploy three agents: the Translation Agent, the Post-edit Agent, and the Proofread Agent. The Translation Agent is responsible for generating the initial translation in accordance with the officially supplied prompt. The Post-edit Agent identifies errors in the translation and classifies them using the MQM framework with severities from 1 to 4. An important feature of our agent is that it effectively post-edits by proposing improved translations for each identified segment. The Proofread Agent, utilizing the post-edited translation, enhances the outcome by rephrasing it in five different versions while taking into account fluency and adequacy, ultimately selecting the optimal translation. We submit two versions for the unconstrained track: the first, derived from the Post-edit Agent, and the second, from the Proofread Agent. All results are obtained using the GPT-4o-mini (2024-07-18), which incurs lower costs compared to GPT-4o or o3, with a temperature setting of 1 and a maximum token limit of 1024. Our experimental findings indicate that the greatest improvement is observed when the Post-edit Agent is incorporated into the process, particularly when the initial translation quality is high. Additionally, by achieving comparable results with a more cost-effective model, we propose a methodology for a self-improving machine translation model.\r\n@inproceedings{kim:25:ir-multiagent-mt,\r\n    title=\"IR-MultiagentMT at WMT 25 Translation Task\",\r\n    year=\"2025\",\r\n    booktitle=\"Proceedings of the Ninth Conference on Machine Translation(WMT)\",\r\n    publisher=\"Association for Computational Linguistics\"\r\n}",
+    "email": "ahriikim@gmail.com",
+    "institution_name": "IR-MultiagentMT",
+    "name": "mqm_agent_1",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.ir-multiagentmt.117.jsonl",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 117,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "IR-MultiagentMT",
+    "publication_url": "IR-MultiagentMT at WMT25 Translation Task"
+  },
+  {
+    "description": "This paper presents the submission of NTTSU for the constrained track of the English-Japanese and Japanese-Chinese at the WMT2025 General Machine Translation Task.\r\nFor each language pair, we trained three large language models (LLMs), with various settings, e.g., whether to use continual pre-training, supervised fine-tuning, preference optimization based on the quality and adequacy, and model merging.\r\nWe generated translation candidates for each model using context-aware MBR decoding.",
+    "email": "katsuki.chousa@ntt.com",
+    "institution_name": "NTT, University of Tsukuba",
+    "name": "NTTSU",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.nttsu.83.gz",
+        "is_constrained": true,
+        "is_open_source": true,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 83,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "NTTSU",
+    "publication_url": "NTTSU at WMT2025 General Translation Task"
+  },
+  {
+    "description": "Our submission introduces a state-of-the-art translation system, Wenyiil, built upon a sophisticated Large Language Model (LLM). The model's exceptional performance is achieved through a comprehensive training pipeline, featuring multi-stage supervised fine-tuning (SFT) on translation tasks and a two-stage post-training regimen. To overcome the limitations of standard decoding, we employ a novel hybrid decoding strategy that integrates word alignment with an advanced Minimum Bayes Risk (MBR) reranking algorithm. This approach not only enhances translation stability but also ensures superior accuracy across diverse linguistic contexts.",
+    "email": "1206655499@qq.com",
+    "institution_name": "AIDC",
+    "name": "oldmoney",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.wenyiil.77.gz",
+        "is_constrained": true,
+        "is_open_source": true,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 77,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "Wenyiil",
+    "publication_url": "Wenyiil at WMT25 Translation Task"
+  },
+  {
+    "description": "CTPC_NLP team submition a paper on nllb(600M) as encoder, llama(8B) as decoder , use adapter concat them.",
+    "email": "conghuyuan17@gmail.com",
+    "institution_name": "ctpc",
+    "name": "one_day_day_just_know_eat",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.ctpc_nlp.30.jsonl",
+        "is_constrained": true,
+        "is_open_source": true,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 30,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "ctpc_nlp",
+    "publication_url": "CTPC at WMT25 Translation Task"
+  },
+  {
+    "description": "MMMT submission is based on transformer",
+    "email": "wh18325533378@gmail.com",
+    "institution_name": "Individual Researcher",
+    "name": "shepherd",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.mmmt.31.gz",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 31,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "MMMT",
+    "publication_url": "MMMT at WMT25 Translation Task"
+  },
+  {
+    "description": "Shy submission is based on LLM. More is on the way",
+    "email": "yangdu0731@163.com",
+    "institution_name": "",
+    "name": "Shy",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.shy_submit.jsonl.44.jsonl",
+        "is_constrained": true,
+        "is_open_source": true,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 44,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "Shy",
+    "publication_url": "Shy at WMT25 Translation Task"
+  },
+  {
+    "description": "SRPOL submission in its innovative approach is using an LLM with A-star decoding technique (instead of usually employed greedy, beam or sampling techniques) and subsequent reranking of the hypotheses based on Comet-QE and NLLB that together gives significant improvement of translation quality. EuroLLM as an LLM model for translation was used.",
+    "email": "p.przewlocki@partner.samsung.com",
+    "institution_name": "SRPOL",
+    "name": "SRPOL",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.srpol.42.gz",
+        "is_constrained": true,
+        "is_open_source": true,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 42,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "SRPOL",
+    "publication_url": "SRPOL at WMT2025 translation task"
+  },
+  {
+    "description": "We present an English-to-Japanese translation system built upon the EuroLLM-9B\\cite{martins2025eurollm9btechnicalreport} model. The training process involves two main stages: continue pretraining (CPT) and supervised fine-tuning (SFT). After both stages, we further tuned the model using a development set to optimize performance. For training data, we employed both basic filtering techniques and high-quality filtering strategies to ensure data cleanness. Additionally, we classify both the training data and development data into 4 different domains and we train and finetune with domain specific prompts during system training. Finally, we applied Minimum Bayes Risk (MBR) decoding and paragraph-level reranking for post-processing to enhance translation quality.\r\n\r\n@misc{martins2025eurollm9btechnicalreport,\r\n      title={EuroLLM-9B: Technical Report}, \r\n      author={Pedro Henrique Martins and João Alves and Patrick Fernandes and Nuno M. Guerreiro and Ricardo Rei and Amin Farajian and Mateusz Klimaszewski and Duarte M. Alves and José Pombal and Nicolas Boizard and Manuel Faysse and Pierre Colombo and François Yvon and Barry Haddow and José G. C. de Souza and Alexandra Birch and André F. T. Martins},\r\n      year={2025},\r\n      eprint={2506.04079},\r\n      archivePrefix={arXiv},\r\n      primaryClass={cs.CL},\r\n      url={https://arxiv.org/abs/2506.04079}, \r\n}",
+    "email": "dzhang@chapsvision.com",
+    "institution_name": "Systran By Chapsvision",
+    "name": "SystranByChapsvision",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.systran.74.jsonl",
+        "is_constrained": true,
+        "is_open_source": true,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 74,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "Systran",
+    "publication_url": "SYSTRAN @ WMT 2025 General Translation Task"
+  },
+  {
+    "description": "我们使用hunyuan13b模型 经历了cpt sft grpo等训练 生成的翻译结果",
+    "email": "23140007@bjtu.edu.cn",
+    "institution_name": "tecent-bj",
+    "name": "tecentbeijing",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.tecent-bj-hunyuan.82.jsonl",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 82,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "tecent-bj-hunyuan",
+    "publication_url": "tecent-bj-hunyuan at wmt25 translation task"
+  },
+  {
+    "description": "TBD",
+    "email": "634690564@qq.com",
+    "institution_name": "TENCENT",
+    "name": "TMTHY",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.tmthy.35.jsonl",
+        "is_constrained": true,
+        "is_open_source": true,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 35,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "TMTHY",
+    "publication_url": "TMTHY at WMT25 Translation Task"
+  },
+  {
+    "description": "The TranssionMT team employs the Transformer architecture and finetuning the translation of a specific language within the multilingual pretrained model to enhance its translation performance. Additionally, the team adopts various strategies, such as finetuning language model instructions, joint training of similar languages, integrated model decision - making, and non - English data mining, all aimed at improving the translation outcomes.",
+    "email": "zebiao.zhou@transsion.com",
+    "institution_name": "TranssionMT",
+    "name": "TranssionMT",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.transsionmt.76.jsonl",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 76,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "TranssionMT",
+    "publication_url": "TranssionMT at WMT25 Translation Task"
+  },
+  {
+    "description": "Machine translation system for the ​WMT25 Shared Task. Focused on ​low-resource languages​ and key global languages (English, Hindi), our approach integrates:\r\n\r\n​Hybrid Architecture: Combines ​neural MT (NMT)​​ with ​rule-based post-editing​ to handle morphologically rich languages.\r\n​Data Augmentation: Leverages ​back-translation​ and ​synthetic parallel corpora​ for under-resourced language pairs.\r\n​Domain Adaptation: Optimizes for ​localized content​ (e.g., SMS, social media) using user data.",
+    "email": "zaber.zhou@gmail.com",
+    "institution_name": "TranssionTranslate",
+    "name": "TranssionTranslate",
+    "number_of_primary_submissions": 2,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.transsiontranslate.107.jsonl",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 107,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "TranssionTranslate",
+    "publication_url": "TranssionTranslate  at WMT25 Translation Task"
+  },
+  {
+    "description": "UvA-MT's submission is based on the gemma_12b model, with a very light-weight post-training method, i.e., translation calibration.  The training set covers all general translation directions.",
+    "email": "s.aycock@uva.nl",
+    "institution_name": "University of Amsterdam",
+    "name": "UvA-MT",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.uva-mt.97.jsonl",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 97,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "UvA-MT",
+    "publication_url": "UvA-MT at WMT25 Translation Task"
+  },
+  {
+    "description": "This is a technical description of Yandex Translate system participating in General MT Task of the WMT25.",
+    "email": "nkarpachev@yandex-team.ru",
+    "institution_name": "Yandex",
+    "name": "Yandex Translate Pro",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.yandex-translate-pro.80.jsonl",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 80,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "Yandex-Translate-Pro",
+    "publication_url": "Yandex Translate Submission to WMT25 Translation Task"
+  },
+  {
+    "publication_name": "AyaExpanse-32B",
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/AyaExpanse-32B.jsonl",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": null,
+        "test_set": "wmt25genmt"
+      }
+    ]
+  },
+  {
+    "publication_name": "AyaExpanse-8B",
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/AyaExpanse-8B.jsonl",
+        "is_constrained": true,
+        "is_open_source": true,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": null,
+        "test_set": "wmt25genmt"
+      }
+    ]
+  },
+  {
+    "publication_name": "Claude-4",
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/Claude-4.jsonl",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": null,
+        "test_set": "wmt25genmt"
+      }
+    ]
+  },
+  {
+    "publication_name": "CommandA",
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/CommandA.jsonl",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": null,
+        "test_set": "wmt25genmt"
+      }
+    ]
+  },
+  {
+    "publication_name": "DeepSeek-V3",
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/DeepSeek-V3.jsonl",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": null,
+        "test_set": "wmt25genmt"
+      }
+    ]
+  },
+  {
+    "publication_name": "Gemini-2.5-Pro",
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/Gemini-2.5-Pro.jsonl",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": null,
+        "test_set": "wmt25genmt"
+      }
+    ]
+  },
+  {
+    "publication_name": "Gemma-3-12B",
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/Gemma-3-12B.jsonl",
+        "is_constrained": true,
+        "is_open_source": true,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": null,
+        "test_set": "wmt25genmt"
+      }
+    ]
+  },
+  {
+    "publication_name": "Gemma-3-27B",
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/Gemma-3-27B.jsonl",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": null,
+        "test_set": "wmt25genmt"
+      }
+    ]
+  },
+  {
+    "publication_name": "Llama-4-Maverick",
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/Llama-4-Maverick.jsonl",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": null,
+        "test_set": "wmt25genmt"
+      }
+    ]
+  },
+  {
+    "publication_name": "Llama-4-Scout",
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/Llama-4-Scout.jsonl",
+        "is_constrained": true,
+        "is_open_source": true,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": null,
+        "test_set": "wmt25genmt"
+      }
+    ]
+  },
+  {
+    "publication_name": "ONLINE-B",
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/ONLINE-B.jsonl",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": null,
+        "test_set": "wmt25genmt"
+      }
+    ]
+  },
+  {
+    "publication_name": "ONLINE-G",
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/ONLINE-G.jsonl",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": null,
+        "test_set": "wmt25genmt"
+      }
+    ]
+  },
+  {
+    "publication_name": "ONLINE-W",
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/ONLINE-W.jsonl",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": null,
+        "test_set": "wmt25genmt"
+      }
+    ]
+  },
+  {
+    "publication_name": "Qwen3-235B",
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/Qwen3-235B.jsonl",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": null,
+        "test_set": "wmt25genmt"
+      }
+    ]
+  }
+]
