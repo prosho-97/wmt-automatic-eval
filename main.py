@@ -191,7 +191,9 @@ def main() -> None:
             lp, domain, document_id = test_doc["doc_id"].split("_#_")
             if domain == "speech":
                 assert document_id.startswith("vid_")
-                document_id = document_id[4:]  # Remove the "vid_" prefix from speech document IDs to match the ones in the refs
+                document_id = document_id[
+                    4:
+                ]  # Remove the "vid_" prefix from speech document IDs to match the ones in the refs
             lp2domain_test_docs[lp][domain][document_id] = [
                 {"src": src} for src in test_doc["src_text"].split("\n\n")
             ]
@@ -283,6 +285,16 @@ def main() -> None:
             disk_cache_path=args.disk_cache_path,
         )
 
+    def recursive_defaultdict_to_dict(d):
+        if isinstance(d, defaultdict):
+            d = {k: recursive_defaultdict_to_dict(v) for k, v in d.items()}
+        elif isinstance(d, dict):
+            d = {k: recursive_defaultdict_to_dict(v) for k, v in d.items()}
+        return d
+
+    sys2seg_outputs = recursive_defaultdict_to_dict(
+        sys2seg_outputs
+    )  # To avoid a pickle error with defaultdicts
     logging.info(f"Scored {len(sys2seg_outputs)} MT systems with {args.metric}.")
     with open(args.scored_translations_path, "wb") as handle:
         pickle.dump(sys2seg_outputs, handle, protocol=pickle.HIGHEST_PROTOCOL)
