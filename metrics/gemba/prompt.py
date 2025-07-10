@@ -51,7 +51,7 @@ def parse_final_score(
     if not valid_scores:
         return None
 
-    # Choose the LAST valid score (per TEMPLATE_GEMBA_ESA_RANKING_FOR_COMMAND_A prompt/instructions)
+    # Choose the LAST valid score (per TEMPLATE_GEMBA_ESA_RANKING prompt/instructions)
     return valid_scores[-1]
 
 
