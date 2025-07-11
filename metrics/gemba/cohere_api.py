@@ -33,7 +33,7 @@ class CohereApi:
         prompt,
         model,
         parse_response,
-        temperature=0,
+        temperature=0.0,
         answer_id=-1,
         cache=None,
         max_tokens=8192,
@@ -101,7 +101,7 @@ class CohereApi:
                 prompt,
                 model,
                 parse_response,
-                temperature=temperature + 1,
+                temperature=temperature + 0.1,
                 answer_id=answer_id,
                 cache=cache,
                 max_tokens=max_tokens,
@@ -109,8 +109,10 @@ class CohereApi:
 
         return parsed_answers
 
-    def request_api(self, prompt, model, temperature=0, max_tokens=8192, max_retry=10):
-        if temperature > 10:
+    def request_api(
+        self, prompt, model, temperature=0.0, max_tokens=8192, max_retry=10
+    ):
+        if temperature > 1:
             return ERROR_MAX_TEMPERATURE
 
         curr_retry, response = 0, None
@@ -164,7 +166,7 @@ class CohereApi:
         try:
             response = self.client.chat(
                 model=model,
-                temperature=temperature / 10,
+                temperature=temperature,
                 messages=prompt,
                 max_tokens=max_tokens,
             )
