@@ -65,6 +65,7 @@ class GembaScorer:
         sys2translations: Dict[str, Dict[str, Dict[str, Dict[str, List[str]]]]],
         provide_explanations: bool = False,
         disk_cache_path: Optional[Path] = None,
+        lps_to_score: Optional[List[str]] = None,
     ) -> Dict[
         str,  # sys
         Dict[
@@ -88,6 +89,7 @@ class GembaScorer:
             sys2translations: Nested dict for tgt: sys -> lp -> domain -> document_id -> list of translated paragraphs.
             provide_explanations: If True, returns explanations for the scores. Default: False.
             disk_cache_path: Optional path to a disk cache directory. If not provided, a default one will be used.
+            lps_to_score: Optional language pairs to score. If provided, only these language pairs will be scored.
 
         Returns:
             sys2seg_outputs: Nested out structure mirroring sys2translations: sys -> lp -> domain -> doc_id -> [scores].
@@ -107,8 +109,16 @@ class GembaScorer:
             lambda: defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
         )  # nested dict: sys -> lp -> domain -> doc_id -> list of paragraph outputs
 
-        for sys, lp2domain_translated_docs in tqdm(sys2translations.items(), desc="Systems"):
+        if lps_to_score is not None:
+            lps_to_score = set(lps_to_score)
+
+        for sys, lp2domain_translated_docs in tqdm(
+            sys2translations.items(), desc="Systems"
+        ):
             for lp, domain2translated_docs in lp2domain_translated_docs.items():
+                if lps_to_score is not None and lp not in lps_to_score:
+                    continue
+
                 src_lang_code, tgt_lang_code = lp.split("-")
                 source_lang, target_lang = (
                     LANG_CODE_2_LANG_COUNTRY[src_lang_code]["language"],

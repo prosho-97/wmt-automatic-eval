@@ -164,7 +164,7 @@ class CohereApi:
         try:
             response = self.client.chat(
                 model=model,
-                temperature=temperature,
+                temperature=temperature / 10,
                 messages=prompt,
                 max_tokens=max_tokens,
             )

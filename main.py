@@ -42,6 +42,14 @@ def read_arguments() -> ArgumentParser:
     )
 
     parser.add_argument(
+        "--lps-to-score",
+        type=str,
+        nargs="+",
+        help="If passed, only the translations for these language pairs will be scored. They must be passed in local "
+        "code format (e.g., 'en-et_EE').",
+    )
+
+    parser.add_argument(
         "--metric",
         type=str,
         choices=[
@@ -270,7 +278,10 @@ def main() -> None:
     if args.metric == "gemba-esa" or args.metric == "gemba-mqm":
         scorer = GembaScorer(args.metric.upper(), args.gemba_model)
         sys2seg_outputs = scorer.score(
-            lp2domain_test_docs, sys2translations, disk_cache_path=args.disk_cache_path
+            lp2domain_test_docs,
+            sys2translations,
+            disk_cache_path=args.disk_cache_path,
+            lps_to_score=args.lps_to_score,
         )
     else:
         scorer = (
@@ -283,6 +294,7 @@ def main() -> None:
             sys2translations,
             batch_size=args.batch_size,
             disk_cache_path=args.disk_cache_path,
+            lps_to_score=args.lps_to_score,
         )
 
     def recursive_defaultdict_to_dict(d):
