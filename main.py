@@ -74,8 +74,8 @@ def read_arguments() -> ArgumentParser:
         "--gemba-model",
         type=str,
         choices=["gpt-4o", "gpt-4.1", "command-a-03-2025"],
-        default="gpt-4o",
-        help="The LLM model to call with API for GEMBA. Default: 'gpt-4o'.",
+        default="gpt-4.1",
+        help="The LLM model to call with API for GEMBA. Default: 'gpt-4.1'.",
     )
 
     parser.add_argument(
@@ -308,6 +308,7 @@ def main() -> None:
         sys2seg_outputs
     )  # To avoid a pickle error with defaultdicts
     logging.info(f"Scored {len(sys2seg_outputs)} MT systems with {args.metric}.")
+    args.scored_translations_path.parent.mkdir(parents=True, exist_ok=True)
     with open(args.scored_translations_path, "wb") as handle:
         pickle.dump(sys2seg_outputs, handle, protocol=pickle.HIGHEST_PROTOCOL)
     logging.info(f"Wrote scores to {args.scored_translations_path}")

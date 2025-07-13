@@ -115,7 +115,7 @@ class GembaScorer:
         for sys, lp2domain_translated_docs in tqdm(
             sys2translations.items(), desc="Systems"
         ):
-            for lp, domain2translated_docs in lp2domain_translated_docs.items():
+            for lp, domain2translated_docs in tqdm(lp2domain_translated_docs.items(), "Language pairs"):
                 if lps_to_score is not None and lp not in lps_to_score:
                     continue
 
@@ -164,7 +164,7 @@ class GembaScorer:
                     )
                     parse_answer = lambda x: x
                     error_spans = self.api.bulk_request(
-                        df, self.model, parse_answer, cache=cache
+                        df, self.model, parse_answer, cache=cache, max_tokens=8196
                     )
                     df["error_spans"] = [output["answer"] for output in error_spans]
 
@@ -178,7 +178,7 @@ class GembaScorer:
                         provide_explanations=provide_explanations,
                     )
                     answers = self.api.bulk_request(
-                        df, self.model, parse_answer, cache=cache
+                        df, self.model, parse_answer, cache=cache, max_tokens=8196
                     )
                 else:  # GEMBA-MQM (THIS PART OF THE CODE IS NOT TESTED!)
                     df["prompt"] = df.apply(
@@ -189,7 +189,7 @@ class GembaScorer:
                         x, list_mqm_errors=provide_explanations, full_desc=True
                     )
                     answers = self.api.bulk_request(
-                        df, self.model, parse_answer, cache=cache, max_tokens=500
+                        df, self.model, parse_answer, cache=cache, max_tokens=8196
                     )
                 model_outputs = [output["answer"] for output in answers]
                 if len(model_outputs) != len(meta):

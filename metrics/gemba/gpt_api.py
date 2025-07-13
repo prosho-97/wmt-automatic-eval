@@ -13,23 +13,12 @@ class GptApi:
     def __init__(self, verbose=False):
         self.verbose = verbose
 
-        if "OPENAI_AZURE_ENDPOINT" in os.environ:
-            assert (
-                "OPENAI_AZURE_KEY" in os.environ
-            ), "OPENAI_AZURE_KEY not found in environment"
-
-            # Azure API access
-            self.client = openai.AzureOpenAI(
-                api_key=os.environ["OPENAI_AZURE_KEY"],
-                azure_endpoint=os.environ["OPENAI_AZURE_ENDPOINT"],
-                api_version="2023-07-01-preview",
-            )
-        elif "OPENAI_API_KEY" in os.environ:
+        if "OPENAI_API_KEY" in os.environ:
             # OpenAI API access
             self.client = openai.OpenAI(api_key=os.environ["OPENAI_API_KEY"])
         else:
             raise Exception(
-                "OPENAI_API_KEY or OPENAI_AZURE_KEY not found in environment!"
+                "OPENAI_API_KEY not found in environment!"
             )
 
         logging.getLogger().setLevel(
@@ -113,7 +102,9 @@ class GptApi:
         if temperature > 10:
             return []
 
+        counter = 0
         while True:
+            counter += 1
             try:
                 response = self.call_api(prompt, model, temperature, max_tokens)
                 break
@@ -125,11 +116,18 @@ class GptApi:
                     print(e.code, file=sys.stderr)
                 if hasattr(e, "error") and e.error["code"] == "invalid_model_output":
                     return []
+                
+                if counter > 5:
+                    print(
+                        colored("Error, retrying too many times, giving up.", "red"),
+                        file=sys.stderr,
+                    )
+                    return []
 
                 # A frequent error is reaching the API limit
                 print(colored("Error, retrying...", "red"), file=sys.stderr)
                 print(e, file=sys.stderr)
-                time.sleep(1)
+                time.sleep(30)
 
         answers = []
         for choice in response.choices:
@@ -141,20 +139,16 @@ class GptApi:
                 answer = choice.text.strip()
 
             # one of the responses didn't finish, we need to request more tokens
-            if choice.finish_reason != "stop":
-                if self.verbose:
-                    print(
-                        colored(f"Increasing max tokens to fit answers.", "red")
-                        + colored(answer, "blue"),
-                        file=sys.stderr,
-                    )
-                print(f"Finish reason: {choice.finish_reason}", file=sys.stderr)
-                if max_tokens is None:
-                    return []
-                return self.request_api(
-                    prompt, model, temperature=temperature, max_tokens=max_tokens + 200
+            if choice.finish_reason not in ["stop", "length"]:
+                print(
+                    colored(
+                        f"Warning: answer did not finish properly ({choice.finish_reason})",
+                        "red",
+                    ),
+                    file=sys.stderr,
                 )
-
+                return []
+            
             answers.append(
                 {
                     "answer": answer,
@@ -204,7 +198,7 @@ class GptApi:
 
     def bulk_request(self, df, model, parse_response, cache, max_tokens=None):
         answers = []
-        for i, row in tqdm.tqdm(df.iterrows(), total=len(df), file=sys.stderr):
+        for i, row in df.iterrows():
             prompt = row["prompt"]
             parsed_answers = self.request(
                 prompt, model, parse_response, cache=cache, max_tokens=max_tokens
