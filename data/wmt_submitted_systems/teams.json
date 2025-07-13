@@ -312,30 +312,6 @@
     "publication_url": "DLUT and GTCOM Machine Translation Systems for WMT25"
   },
   {
-    "description": "This paper presents an English to Bhojpuri machine translation system developed as part of the Multilingual Instruction Shared Task. Our approach begins with a pretraining phase using a curated corpus of 3 lakh sentences, where 70% Bhojpuri monolingual and 30% English data to learn foundational representations. On top of this, we perform supervised fine-tuning using 40 thousand high-quality bilingual English ro Bhojpuri sentence pairs. To align the model with instruction following objectives and improve translation quality, we incorporate a novel Dynamic Contrastive Preference Optimization (CPO) technique. This optimization approach enables the model to better distinguish between nuanced translation preferences, especially in low-resource contexts. Our system is evaluated under instruction-following settings across machine translation, open-ended generation, and LLM-as-a-Judge tracks, demonstrating competitive performance in low-resource translation tasks.",
-    "email": "deepakkumar1538@gmail.com",
-    "institution_name": "IIT Patna",
-    "name": "DPKM",
-    "number_of_primary_submissions": 1,
-    "primary_submissions": [
-      {
-        "competition": "WMT25: Multilingual Instruction",
-        "file_name": "submissions/wmt25genmt.multi-multi.dpkm.50.jsonl",
-        "is_constrained": true,
-        "is_open_source": true,
-        "is_primary": true,
-        "is_removed": false,
-        "language_pair": "multi-lingual",
-        "score": null,
-        "score_chrf": null,
-        "submission_id": 50,
-        "test_set": "wmt25genmt"
-      }
-    ],
-    "publication_name": "DPKM",
-    "publication_url": "Dynamic CPO for Low-Resource Instruction Tuning: Enhancing English to Bhojpuri Machine Translation"
-  },
-  {
     "description": "Eole NLP Submission uses Tower+ 9B model with an extra layer for quality estimation.\r\n\r\nIt generates multiple hypotheses and rank them according to an internal score.",
     "email": "vince62s@yahoo.com",
     "institution_name": "Eole.EN_to_RUZH",
@@ -532,7 +508,7 @@
     "email": "panglei@duxiaoman.com",
     "institution_name": "\\textsc{in2x}",
     "name": "in2x-llm",
-    "number_of_primary_submissions": 2,
+    "number_of_primary_submissions": 1,
     "primary_submissions": [
       {
         "competition": "WMT25: General MT",
@@ -964,7 +940,7 @@
     "email": "zaber.zhou@gmail.com",
     "institution_name": "TranssionTranslate",
     "name": "TranssionTranslate",
-    "number_of_primary_submissions": 2,
+    "number_of_primary_submissions": 1,
     "primary_submissions": [
       {
         "competition": "WMT25: General MT",
@@ -982,108 +958,6 @@
     ],
     "publication_name": "TranssionTranslate",
     "publication_url": "TranssionTranslate  at WMT25 Translation Task"
-  },
-  {
-    "description": "",
-    "email": "shu.okabe@tum.de",
-    "institution_name": "",
-    "name": "TUM_organiser",
-    "number_of_primary_submissions": 7,
-    "primary_submissions": [
-      {
-        "competition": "WMT25: Slavic LLMs for MT & QA",
-        "file_name": "submissions/wmtslavicllm2025-mt.cs-uk.cs-uk.cs-uk_preds.jsonl.129.jsonl",
-        "is_constrained": false,
-        "is_open_source": false,
-        "is_primary": true,
-        "is_removed": false,
-        "language_pair": "cs-uk",
-        "score": null,
-        "score_chrf": null,
-        "submission_id": 129,
-        "test_set": "wmtslavicllm2025-mt.cs-uk"
-      },
-      {
-        "competition": "WMT25: Slavic LLMs for MT & QA",
-        "file_name": "submissions/wmtslavicllm2025-mt.en-uk.en-uk.en-uk_preds.jsonl.130.jsonl",
-        "is_constrained": false,
-        "is_open_source": false,
-        "is_primary": true,
-        "is_removed": false,
-        "language_pair": "en-uk",
-        "score": null,
-        "score_chrf": null,
-        "submission_id": 130,
-        "test_set": "wmtslavicllm2025-mt.en-uk"
-      },
-      {
-        "competition": "WMT25: Slavic LLMs for MT & QA",
-        "file_name": "submissions/wmtslavicllm2025-qa.dsb.dsb-dsb.dsb_qa_preds.jsonl.121.jsonl",
-        "is_constrained": false,
-        "is_open_source": false,
-        "is_primary": true,
-        "is_removed": false,
-        "language_pair": "dsb-dsb",
-        "score": 45.9,
-        "score_chrf": 46.716003700277525,
-        "submission_id": 121,
-        "test_set": "wmtslavicllm2025-qa.dsb"
-      },
-      {
-        "competition": "WMT25: Slavic LLMs for MT & QA",
-        "file_name": "submissions/wmtslavicllm2025-mt.de-hsb.de-hsb.de-hsb_preds.jsonl.123.jsonl",
-        "is_constrained": false,
-        "is_open_source": false,
-        "is_primary": true,
-        "is_removed": false,
-        "language_pair": "de-hsb",
-        "score": 1.2615465110533173,
-        "score_chrf": 15.587014504701886,
-        "submission_id": 123,
-        "test_set": "wmtslavicllm2025-mt.de-hsb"
-      },
-      {
-        "competition": "WMT25: Slavic LLMs for MT & QA",
-        "file_name": "submissions/wmtslavicllm2025-mt.de-dsb.de-dsb.de-dsb_preds.jsonl.124.jsonl",
-        "is_constrained": false,
-        "is_open_source": false,
-        "is_primary": true,
-        "is_removed": false,
-        "language_pair": "de-dsb",
-        "score": 1.6511836086694358,
-        "score_chrf": 13.69063751121559,
-        "submission_id": 124,
-        "test_set": "wmtslavicllm2025-mt.de-dsb"
-      },
-      {
-        "competition": "WMT25: Slavic LLMs for MT & QA",
-        "file_name": "submissions/wmtslavicllm2025-qa.hsb.hsb-hsb.hsb_qa_preds.jsonl.125.jsonl",
-        "is_constrained": false,
-        "is_open_source": false,
-        "is_primary": true,
-        "is_removed": false,
-        "language_pair": "hsb-hsb",
-        "score": 42.9,
-        "score_chrf": 43.24324324324324,
-        "submission_id": 125,
-        "test_set": "wmtslavicllm2025-qa.hsb"
-      },
-      {
-        "competition": "WMT25: Slavic LLMs for MT & QA",
-        "file_name": "submissions/wmtslavicllm2025-qa.uk.uk-uk.ukrqa-test_preds.jsonl.126.jsonl",
-        "is_constrained": false,
-        "is_open_source": false,
-        "is_primary": true,
-        "is_removed": false,
-        "language_pair": "uk-uk",
-        "score": 31.2,
-        "score_chrf": 31.158455392809586,
-        "submission_id": 126,
-        "test_set": "wmtslavicllm2025-qa.uk"
-      }
-    ],
-    "publication_name": "TUM_organiser",
-    "publication_url": ""
   },
   {
     "description": "UvA-MT's submission is based on the gemma_12b model, with a very light-weight post-training method, i.e., translation calibration.  The training set covers all general translation directions.",

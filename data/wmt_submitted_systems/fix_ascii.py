@@ -26,6 +26,9 @@ def convert_jsonl_to_unicode_in_place():
                 # same for input
                 if "input" in obj:
                     del obj["input"]
+                # if hypothesis is a list, check it has only one element and take that element
+                if isinstance(obj.get("hypothesis"), list) and len(obj["hypothesis"]) == 1:
+                    obj["hypothesis"] = obj["hypothesis"][0]
                 unicode_line = json.dumps(obj, ensure_ascii=False)
                 converted_lines.append(unicode_line + '\n')
 
