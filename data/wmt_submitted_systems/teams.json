@@ -912,6 +912,30 @@
     "publication_url": "UvA-MT at WMT25 Translation Task"
   },
   {
+    "description": "We present an English-to-Bhojpuri machine translation system built using large language models (LLMs) with a two-stage approach: pretraining followed by instruction fine-tuning. The model is first pretrained on multilingual and Bhojpuri-related corpora to enhance language understanding. It is then fine-tuned using translation-specific instructions and prompts to adapt to Bhojpuri\u2019s linguistic characteristics. Our results show significant improvements in translation quality, demonstrating the effectiveness of instruction tuning for low-resource language pairs like English\u2013Bhojpuri.",
+    "email": "boynfrancis@gmail.com",
+    "institution_name": "IIT Patna",
+    "name": "COILD-IITP",
+    "number_of_primary_submissions": 1,
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/wmt25genmt.multi-multi.coild-bho.49.jsonl",
+        "is_constrained": true,
+        "is_open_source": true,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": 49,
+        "test_set": "wmt25genmt"
+      }
+    ],
+    "publication_name": "COILD-BHO",
+    "publication_url": "COILD-BHO at WMT25 GMT: Fine-Tuning LLMs for English to Bhojpuri Translation via Dynamic Contrastive Preference Optimization"
+  },
+  {
     "description": "This paper describes Yandex submission to the WMT25 General Machine Translation task. We participate in English-to-Russian translation direction and propose a purely LLM-based translation model.\r\nOur training procedure comprises a training pipeline of several stages built upon YandexGPT, an in-house general-purpose LLM.\r\nIn particular, firstly, we employ continual pretraining (post-pretrain) for MT task similar to Alves et.al., 2023 for initial adaptation to multilinguality and translation. Subsequently, we use SFT on parallel document-level corpus in the form of P-Tuning v2 (Lui et.al., 2021).\r\nFollowing SFT, we propose a novel alignment scheme of two stages, the first one being a curriculum learning with difficulty schedule and a second one - training the model for tag preservation and error correction with human post-edits as training samples.\r\nOur model achieves results comparable to human reference translations on multiple domains.",
     "email": "nkarpachev@yandex-team.ru",
     "institution_name": "Yandex",
