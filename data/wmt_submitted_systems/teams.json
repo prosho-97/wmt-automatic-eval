@@ -1258,5 +1258,23 @@
         "test_set": "wmt25genmt"
       }
     ]
+  },
+  {
+    "publication_name": "Mistral-Medium",
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/Mistral-Medium.jsonl",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": null,
+        "test_set": "wmt25genmt"
+      }
+    ]
   }
 ]
