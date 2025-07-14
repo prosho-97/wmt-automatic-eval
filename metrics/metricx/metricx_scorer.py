@@ -37,7 +37,7 @@ class MetricXScorer:
         self,
         source_texts: List[str],
         translations: List[str],
-        refs: List[str],
+        refs: List[Optional[str]],
         tmp_path: Path,
         batch_size: int = 32,
         is_qe: bool = True,
@@ -48,7 +48,7 @@ class MetricXScorer:
         Args:
             source_texts: Source texts list.
             translations: Translations list.
-            refs: References list.
+            refs: References list. May contain None values if references are not available.
             tmp_path: Temporary path to write necessary input MetricX files.
             batch_size: Batch size for MetricX scoring. Default: 32.
             is_qe: If True ===> MetricX-24-Hyrbrid-QE.
@@ -169,71 +169,105 @@ class MetricXScorer:
             for sys, lp2domain_translated_docs in tqdm(
                 sys2translations.items(), desc="Systems"
             ):
-                for lp, domain2translated_docs in lp2domain_translated_docs.items():
+                for lp, domain2translated_docs in tqdm(
+                    lp2domain_translated_docs.items(), "Language pairs"
+                ):
                     if lps_to_score is not None and lp not in lps_to_score:
                         continue
 
-                    cache_id = {"sys": sys, "lp": lp}
-
-                    meta = []
-                    lp_source_texts, lp_translations, lp_refs = [], [], []
-
-                    is_qe = True
-
-                    for domain, translated_docs in domain2translated_docs.items():
-                        for doc_id, translated_paragraphs in translated_docs.items():
-                            assert len(lp2domain_test_docs[lp][domain][doc_id]) == len(
-                                translated_paragraphs
-                            ), f"Mismatch in {sys}, {lp}, {domain}, {doc_id}"
-                            for seg_idx, (seg_data, tgt) in enumerate(
-                                zip(
-                                    lp2domain_test_docs[lp][domain][doc_id],
-                                    translated_paragraphs,
-                                )
-                            ):
-                                lp_source_texts.append(seg_data["src"])
-                                lp_translations.append(tgt)
-                                lp_refs.append(seg_data.get("ref", ""))
-                                if "ref" in seg_data:
-                                    is_qe = False
-                                meta.append((domain, doc_id, seg_idx))
-
-                    if cache_id in cache:
-                        scores, meta = (
-                            cache[cache_id]["scores"],
-                            cache[cache_id]["meta"],
-                        )
-                        logging.info(
-                            f"Using cached scores for {sys}, {lp} from disk cache for MetricX."
-                        )
-                    else:
-                        logging.info(
-                            f"Calculating scores for {sys}, {lp} and saving to disk cache for MetricX."
-                        )
-                        scores = self.launch_script(
-                            lp_source_texts,
-                            lp_translations,
-                            lp_refs,
-                            tmp_path,
-                            batch_size,
-                            is_qe,
-                        )
-                        cache[cache_id] = {"scores": scores, "meta": meta}
-                    assert len(scores) == len(meta), (
-                        f"Mismatch in number of scores ({len(scores)}) "
-                        f"and meta entries ({len(meta)}) for {sys}, {lp}."
-                    )
-
-                    # Now distribute model outputs into structure: sys → lp → domain → doc_id → list[output]
-                    # First, prebuild empty lists:
+                    # To preserve the output structure, pre-fill outputs with None
                     for domain, translated_docs in domain2translated_docs.items():
                         for doc_id, translated_paragraphs in translated_docs.items():
                             sys2seg_outputs[sys][lp][domain][doc_id] = [None] * len(
                                 translated_paragraphs
                             )
 
-                    # Fill per-paragraph
-                    for (domain, doc_id, seg_idx), score in zip(meta, scores):
+                    is_qe = True
+
+                    # Collect details per segment
+                    all_segments = []
+                    for domain, translated_docs in domain2translated_docs.items():
+                        for doc_id, translated_paragraphs in translated_docs.items():
+                            src_list = lp2domain_test_docs[lp][domain][doc_id]
+                            assert len(src_list) == len(
+                                translated_paragraphs
+                            ), f"Mismatch in {sys}, {lp}, {domain}, {doc_id}"
+                            for seg_idx, (seg_data, tgt) in enumerate(
+                                zip(src_list, translated_paragraphs)
+                            ):
+                                src = seg_data["src"]
+                                ref = seg_data.get("ref")
+                                if ref is not None:
+                                    is_qe = False
+                                # cache ref=None segments if reference is not available.
+                                cache_id: Dict[str, Optional[str]] = {
+                                    "src": src,
+                                    "mt": tgt,
+                                    "ref": ref,
+                                }
+                                all_segments.append(
+                                    (domain, doc_id, seg_idx, cache_id, src, tgt, ref)
+                                )
+
+                    uncached_inputs = []
+                    uncached_meta = []  # list of (domain, doc_id, seg_idx, cache_id)
+                    cached_scores = dict()
+
+                    for meta in all_segments:
+                        domain, doc_id, seg_idx, cache_id, src, mt, ref = meta
+                        cache_key_tuple = tuple(
+                            sorted(cache_id.items())
+                        )  # Diskcache only supports hashable keys. Sorting to ensure consistency.
+                        if cache_key_tuple in cache:
+                            cached_scores[(domain, doc_id, seg_idx)] = cache[
+                                cache_key_tuple
+                            ]
+                        else:
+                            uncached_inputs.append((src, mt, ref))
+                            uncached_meta.append(
+                                (domain, doc_id, seg_idx, cache_key_tuple)
+                            )
+
+                    # Score and update the cache for missing entries
+                    if uncached_inputs:
+                        logging.info(
+                            f"Calculating {len(uncached_inputs)} scores for {sys}, {lp} and saving to disk cache for "
+                            "MetricX."
+                        )
+                        srcs, mts, refs = [], [], []
+                        for src, mt, ref in uncached_inputs:
+                            srcs.append(src)
+                            mts.append(mt)
+                            refs.append(ref)
+                        if refs[0] is not None:
+                            logging.info("Scoring with references.")
+
+                        scores = self.launch_script(
+                            srcs,
+                            mts,
+                            refs,
+                            tmp_path,
+                            batch_size,
+                            is_qe,
+                        )
+                        assert len(scores) == len(uncached_meta), (
+                            f"Mismatch in number of scores ({len(scores)}) "
+                            f"and meta entries ({len(uncached_meta)}) for {sys}, {lp}."
+                        )
+                        # Fill cache, indexed by the relevant cache tuple
+                        for (domain, doc_id, seg_idx, cache_key_tuple), score in zip(
+                            uncached_meta, scores
+                        ):
+                            cache[cache_key_tuple] = score
+                            cached_scores[(domain, doc_id, seg_idx)] = score
+
+                    logging.info(
+                        f"Scores complete for {sys}, {lp} (total segments: {len(all_segments)})."
+                    )
+
+                    # Write output scores into result structure
+                    for domain, doc_id, seg_idx, cache_id, src, mt, ref in all_segments:
+                        score = cached_scores[(domain, doc_id, seg_idx)]
                         sys2seg_outputs[sys][lp][domain][doc_id][seg_idx] = score
 
         finally:

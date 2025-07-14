@@ -127,9 +127,10 @@ def matching_paragraphs_check(
     systems_to_filter = []
     for sys, lp2domain_translated_docs in sys2translations.items():
         for lp, domain2translated_docs in lp2domain_translated_docs.items():
-            assert set(domain2translated_docs) == set(
-                lp2domain_test_docs[lp]
-            ), f"Mismatch in domains for {sys}, {lp}: {set(domain2translated_docs)} (in translations) vs {set(lp2domain_test_docs[lp])} (in test set)."
+            assert set(domain2translated_docs) == set(lp2domain_test_docs[lp]), (
+                f"Mismatch in domains for {sys}, {lp}: {set(domain2translated_docs)} (in translations) vs "
+                f"{set(lp2domain_test_docs[lp])} (in test set)."
+            )
             for domain, translated_docs in domain2translated_docs.items():
                 if set(translated_docs) != set(lp2domain_test_docs[lp][domain]):
                     systems_to_filter.append(sys)
@@ -231,10 +232,12 @@ def main() -> None:
         teams = json.load(f)
     filename2sys = dict()
     for entry in teams:
-        publication_name = entry.get("publication_name")
+        publication_name = entry["publication_name"]
+        assert isinstance(publication_name, str) and len(publication_name) > 0
         primary_submissions = entry.get("primary_submissions", [])
         assert len(primary_submissions) == 1
         for sub in primary_submissions:
+            assert sub["competition"] == "WMT25: General MT"
             file_name = sub["file_name"]
 
             assert file_name.startswith("submissions/")

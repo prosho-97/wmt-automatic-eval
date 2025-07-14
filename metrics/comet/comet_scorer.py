@@ -120,70 +120,100 @@ class CometScorer:
         for sys, lp2domain_translated_docs in tqdm(
             sys2translations.items(), desc="Systems"
         ):
-            for lp, domain2translated_docs in lp2domain_translated_docs.items():
+            for lp, domain2translated_docs in tqdm(
+                lp2domain_translated_docs.items(), "Language pairs"
+            ):
                 if lps_to_score is not None and lp not in lps_to_score:
                     continue
 
-                cache_id = {"sys": sys, "lp": lp}
-
-                meta = []
-                lp_source_texts, lp_translations, lp_refs = [], [], []
-
-                for domain, translated_docs in domain2translated_docs.items():
-                    for doc_id, translated_paragraphs in translated_docs.items():
-                        assert len(lp2domain_test_docs[lp][domain][doc_id]) == len(
-                            translated_paragraphs
-                        ), f"Mismatch in {sys}, {lp}, {domain}, {doc_id}"
-                        for seg_idx, (seg_data, tgt) in enumerate(
-                            zip(
-                                lp2domain_test_docs[lp][domain][doc_id],
-                                translated_paragraphs,
-                            )
-                        ):
-                            lp_source_texts.append(seg_data["src"])
-                            lp_translations.append(tgt)
-                            if "ref" in seg_data and not self.model.startswith(
-                                "cometkiwi"
-                            ):
-                                lp_refs.append(seg_data["ref"])
-                            meta.append((domain, doc_id, seg_idx))
-
-                if cache_id in cache:
-                    scores, meta = (
-                        cache[cache_id]["scores"],
-                        cache[cache_id]["meta"],
-                    )
-                    logging.info(
-                        f"Using cached scores for {sys}, {lp} from disk cache for COMET."
-                    )
-                else:
-                    logging.info(
-                        f"Calculating scores for {sys}, {lp} and saving to disk cache for COMET."
-                    )
-                    scores = self.comet_metric_model.predict(
-                        create_input_data_for_comet_metric_model(
-                            lp_source_texts,
-                            lp_translations,
-                            lp_refs if len(lp_refs) > 0 else None,
-                        ),
-                        batch_size=batch_size,
-                        gpus=1,
-                    ).scores
-                    cache[cache_id] = {"scores": scores, "meta": meta}
-                assert len(scores) == len(meta), (
-                    f"Mismatch in number of scores ({len(scores)}) "
-                    f"and meta entries ({len(meta)}) for {sys}, {lp}."
-                )
-
-                # Prebuild structure: sys → lp → domain → doc_id → [None]*N
+                # To preserve the output structure, pre-fill outputs with None
                 for domain, translated_docs in domain2translated_docs.items():
                     for doc_id, translated_paragraphs in translated_docs.items():
                         sys2seg_outputs[sys][lp][domain][doc_id] = [None] * len(
                             translated_paragraphs
                         )
 
-                # Fill per-paragraph
-                for (domain, doc_id, seg_idx), score in zip(meta, scores):
+                # Collect details per segment
+                all_segments = []
+                for domain, translated_docs in domain2translated_docs.items():
+                    for doc_id, translated_paragraphs in translated_docs.items():
+                        src_list = lp2domain_test_docs[lp][domain][doc_id]
+                        assert len(src_list) == len(
+                            translated_paragraphs
+                        ), f"Mismatch in {sys}, {lp}, {domain}, {doc_id}"
+                        for seg_idx, (seg_data, tgt) in enumerate(
+                            zip(src_list, translated_paragraphs)
+                        ):
+                            src = seg_data["src"]
+                            ref = (
+                                seg_data.get("ref")
+                                if (not self.model.startswith("cometkiwi"))
+                                else None
+                            )
+                            # cache ref=None segments if reference is not available or if we're using a CometKiwi.
+                            cache_id: Dict[str, Optional[str]] = {
+                                "src": src,
+                                "mt": tgt,
+                                "ref": ref,
+                            }
+                            all_segments.append(
+                                (domain, doc_id, seg_idx, cache_id, src, tgt, ref)
+                            )
+
+                uncached_inputs = []
+                uncached_meta = []  # list of (domain, doc_id, seg_idx, cache_id)
+                cached_scores = dict()
+
+                for meta in all_segments:
+                    domain, doc_id, seg_idx, cache_id, src, mt, ref = meta
+                    cache_key_tuple = tuple(
+                        sorted(cache_id.items())
+                    )  # Diskcache only supports hashable keys. Sorting to ensure consistency.
+                    if cache_key_tuple in cache:
+                        cached_scores[(domain, doc_id, seg_idx)] = cache[
+                            cache_key_tuple
+                        ]
+                    else:
+                        uncached_inputs.append((src, mt, ref))
+                        uncached_meta.append((domain, doc_id, seg_idx, cache_key_tuple))
+
+                # Score and update the cache for missing entries
+                if uncached_inputs:
+                    logging.info(
+                        f"Calculating {len(uncached_inputs)} scores for {sys}, {lp} and saving to disk cache for COMET."
+                    )
+                    srcs, mts, refs = [], [], []
+                    for src, mt, ref in uncached_inputs:
+                        srcs.append(src)
+                        mts.append(mt)
+                        refs.append(ref)
+                    if refs[0] is not None:
+                        logging.info("Scoring with references.")
+                    # For batch scoring:
+                    input_data = create_input_data_for_comet_metric_model(
+                        srcs, mts, refs if refs[0] is not None else None
+                    )
+                    scores = self.comet_metric_model.predict(
+                        input_data, batch_size=batch_size, gpus=1
+                    ).scores
+                    assert len(scores) == len(uncached_meta), (
+                        f"Mismatch in number of scores ({len(scores)}) "
+                        f"and meta entries ({len(uncached_meta)}) for {sys}, {lp}."
+                    )
+                    # Fill cache, indexed by the relevant cache tuple
+                    for (domain, doc_id, seg_idx, cache_key_tuple), score in zip(
+                        uncached_meta, scores
+                    ):
+                        cache[cache_key_tuple] = score
+                        cached_scores[(domain, doc_id, seg_idx)] = score
+
+                logging.info(
+                    f"Scores complete for {sys}, {lp} (total segments: {len(all_segments)})."
+                )
+
+                # Write output scores into result structure
+                for domain, doc_id, seg_idx, cache_id, src, mt, ref in all_segments:
+                    score = cached_scores[(domain, doc_id, seg_idx)]
                     sys2seg_outputs[sys][lp][domain][doc_id][seg_idx] = score
 
         return sys2seg_outputs
