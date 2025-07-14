@@ -1276,5 +1276,77 @@
         "test_set": "wmt25genmt"
       }
     ]
+  },
+  {
+    "publication_name": "TowerPlus-9B",
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/vLLM_Unbabel_Tower_Plus_9B.jsonl",
+        "is_constrained": true,
+        "is_open_source": true,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": null,
+        "test_set": "wmt25genmt"
+      }
+    ]
+  },
+  {
+    "publication_name": "EuroLLM-9B",
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/vLLM_utter_project_EuroLLM_9B_Instruct.jsonl",
+        "is_constrained": true,
+        "is_open_source": true,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": null,
+        "test_set": "wmt25genmt"
+      }
+    ]
+  },
+  {
+    "publication_name": "EuroLLM-22B",
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/vLLM_utter_project_EuroLLM_22B_Instruct_Preview.jsonl",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": null,
+        "test_set": "wmt25genmt"
+      }
+    ]
+  },
+  {
+    "publication_name": "NLLB",
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/NLLB.jsonl",
+        "is_constrained": true,
+        "is_open_source": true,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": null,
+        "test_set": "wmt25genmt"
+      }
+    ]
   }
 ]
