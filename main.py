@@ -182,7 +182,9 @@ def main() -> None:
     logging.basicConfig(level=getattr(logging, args.log_level.upper()))
 
     if args.lps_to_score is not None:
-        logging.info(f"Language pairs to score: {args.lps_to_score}({len(args.lps_to_score)}).")
+        logging.info(
+            f"Language pairs to score: {args.lps_to_score}({len(args.lps_to_score)})."
+        )
 
     lp2refs = dict()  # nested dict: lp -> domain -> document_id -> list of refs
     if args.refs_path is not None:
@@ -199,6 +201,11 @@ def main() -> None:
                                     doc_id = doc_id[
                                         :-5
                                     ]  # Remove the "_ET_C" suffix present in en-et_EE ref doc files
+                                if domain.name == "speech" and doc_id.startswith(
+                                    "vid_"
+                                ):
+                                    # Remove the "vid_" prefix from ref speech document IDs, as it's not always present.
+                                    doc_id = doc_id[4:]
                                 # Read the file content
                                 content = read_file_with_fallback(doc)
                                 # Split into paragraphs by double-newline
