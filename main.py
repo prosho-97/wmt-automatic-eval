@@ -181,6 +181,9 @@ def main() -> None:
 
     logging.basicConfig(level=getattr(logging, args.log_level.upper()))
 
+    if args.lps_to_score is not None:
+        logging.info(f"Language pairs to score: {args.lps_to_score}({len(args.lps_to_score)}).")
+
     lp2refs = dict()  # nested dict: lp -> domain -> document_id -> list of refs
     if args.refs_path is not None:
         for lp in args.refs_path.iterdir():
