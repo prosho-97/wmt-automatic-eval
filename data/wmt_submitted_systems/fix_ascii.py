@@ -2,6 +2,13 @@ import os
 import json
 
 def convert_jsonl_to_unicode_in_place():
+    reference_submission = {}
+    with open("CommandA.jsonl", 'r', encoding='utf-8') as infile:
+        for line in infile:
+            # read json
+            data = json.loads(line)
+            reference_submission[data["doc_id"]] = '\n\n'.join(['FAILED'] * len(data['hypothesis'].split('\n\n')))
+
     current_dir = os.getcwd()
 
     for filename in os.listdir(current_dir):
@@ -26,6 +33,9 @@ def convert_jsonl_to_unicode_in_place():
                 # same for input
                 if "input" in obj:
                     del obj["input"]
+                # fixing hypothesis from European systems
+                if obj["hypothesis"] == "NO TRANSLATION":
+                    obj["hypothesis"] = reference_submission[obj["doc_id"]]
                 # if hypothesis is a list, check it has only one element and take that element
                 if isinstance(obj.get("hypothesis"), list):
                     if len(obj["hypothesis"]) == 1:
