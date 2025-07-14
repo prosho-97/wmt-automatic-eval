@@ -120,30 +120,6 @@
     "publication_url": ""
   },
   {
-    "description": "We present an English-to-Bhojpuri machine translation system built using large language models (LLMs) with a two-stage approach: pretraining followed by instruction fine-tuning. The model is first pretrained on multilingual and Bhojpuri-related corpora to enhance language understanding. It is then fine-tuned using translation-specific instructions and prompts to adapt to Bhojpuri’s linguistic characteristics. Our results show significant improvements in translation quality, demonstrating the effectiveness of instruction tuning for low-resource language pairs like English–Bhojpuri.",
-    "email": "boynfrancis@gmail.com",
-    "institution_name": "IIT Patna",
-    "name": "COILD-IITP",
-    "number_of_primary_submissions": 1,
-    "primary_submissions": [
-      {
-        "competition": "WMT25: General MT",
-        "file_name": "submissions/wmt25genmt.multi-multi.coild-bho.49.jsonl",
-        "is_constrained": true,
-        "is_open_source": true,
-        "is_primary": true,
-        "is_removed": false,
-        "language_pair": "multi-lingual",
-        "score": null,
-        "score_chrf": null,
-        "submission_id": 49,
-        "test_set": "wmt25genmt"
-      }
-    ],
-    "publication_name": "COILD-BHO",
-    "publication_url": "COILD-BHO at WMT25 GMT: Fine-Tuning LLMs for English to Bhojpuri Translation via Dynamic Contrastive Preference Optimization"
-  },
-  {
     "description": "We built our system on top of Command-A using a direct preference optimization with data preparation pipeline that emphasizes robust data quality control, primarily incorporating standard quality filtering along with a novel difficulty filtering component, which serves as the key innovation of our approach. The final translation is built through step-by-step reasoning, and we employ Minimum Bayes Risk decoding with a candidate pool size of 20, using MetricX-XL as the primary utility metric. For unsupported languages, we use a second model prepared identically but with an additional initial supervised fine-tuning step for the unsupported languages that Command-A model has not seen.",
     "email": "kocmi@cohere.com",
     "institution_name": "Cohere",
@@ -334,30 +310,6 @@
     ],
     "publication_name": "RuZh",
     "publication_url": "RuZh Submission translation task for WMT25"
-  },
-  {
-    "description": "Rits-CM submission builds on the Mistral-7B base model by first applying LoRA-based fine-tuning on available parallel data, adapting only low-rank projection layers to conserve resources \\citep{DBLP:journals/corr/abs-2106-09685}.\r\n\r\nIt then augments its training set with synthetic parallel examples generated via back-translation of a Japanese monolingual corpus, following the approach of Sennrich et al. \\citep{DBLP:journals/corr/SennrichHB15a}. This pipeline achieves strong translation performance in low-resource scenarios by combining parameter-efficient adaptation with monolingual data exploitation.\r\n\r\n@inproceedings{ritscm2025ftbt,\r\n  title     = {Low-Resource Machine Translation via LoRA Fine-Tuning and Back-Translation},\r\n  author    = {Rits-CM Team},\r\n  booktitle = {Proceedings of the Workshop on Machine Translation (WMT25)},\r\n  year      = {2025},\r\n}\r\n\r\n@article{DBLP:journals/corr/abs-2106-09685,\r\n  author    = {Edward J. Hu and Yelong Shen and Phillip Wallis and Zeyuan Allen{-}Zhu \r\n               and Yuanzhi Li and Shean Wang and Weizhu Chen},\r\n  title     = {LoRA: Low-Rank Adaptation of Large Language Models},\r\n  journal   = {CoRR},\r\n  volume    = {abs/2106.09685},\r\n  year      = {2021},\r\n  url       = {https://arxiv.org/abs/2106.09685},\r\n  eprinttype= {arXiv},\r\n  eprint    = {2106.09685}\r\n}\r\n\r\n@article{DBLP:journals/corr/SennrichHB15a,\r\n  author    = {Rico Sennrich and Barry Haddow and Alexandra Birch},\r\n  title     = {Improving Neural Machine Translation Models with Monolingual Data},\r\n  journal   = {CoRR},\r\n  volume    = {abs/1511.06709},\r\n  year      = {2015},\r\n  url       = {http://arxiv.org/abs/1511.06709},\r\n  eprinttype= {arXiv},\r\n  eprint    = {1511.06709}\r\n}",
-    "email": "mello.feley@gmail.com",
-    "institution_name": "Ritsumeikan \\textsc{Ritsumeikan}",
-    "name": "Felipe Fujita",
-    "number_of_primary_submissions": 1,
-    "primary_submissions": [
-      {
-        "competition": "WMT25: General MT",
-        "file_name": "submissions/wmt25genmt.multi-multi.rits-cm.63.jsonl",
-        "is_constrained": false,
-        "is_open_source": false,
-        "is_primary": true,
-        "is_removed": false,
-        "language_pair": "multi-lingual",
-        "score": null,
-        "score_chrf": null,
-        "submission_id": 63,
-        "test_set": "wmt25genmt"
-      }
-    ],
-    "publication_name": "Rits-CM",
-    "publication_url": "Rits-CM at WMT25 Translation Task"
   },
   {
     "description": "",
@@ -864,30 +816,6 @@
     "publication_url": "SYSTRAN @ WMT 2025 General Translation Task"
   },
   {
-    "description": "我们使用hunyuan13b模型 经历了cpt sft grpo等训练 生成的翻译结果",
-    "email": "23140007@bjtu.edu.cn",
-    "institution_name": "tecent-bj",
-    "name": "tecentbeijing",
-    "number_of_primary_submissions": 1,
-    "primary_submissions": [
-      {
-        "competition": "WMT25: General MT",
-        "file_name": "submissions/wmt25genmt.multi-multi.tecent-bj-hunyuan.82.jsonl",
-        "is_constrained": false,
-        "is_open_source": false,
-        "is_primary": true,
-        "is_removed": false,
-        "language_pair": "multi-lingual",
-        "score": null,
-        "score_chrf": null,
-        "submission_id": 82,
-        "test_set": "wmt25genmt"
-      }
-    ],
-    "publication_name": "tecent-bj-hunyuan",
-    "publication_url": "tecent-bj-hunyuan at wmt25 translation task"
-  },
-  {
     "description": "TBD",
     "email": "634690564@qq.com",
     "institution_name": "TENCENT",
@@ -992,7 +920,7 @@
     "primary_submissions": [
       {
         "competition": "WMT25: General MT",
-        "file_name": "submissions/wmt25genmt.multi-multi.yandex-pro.80.jsonl",
+        "file_name": "submissions/wmt25genmt.multi-multi.yandex.80.jsonl",
         "is_constrained": false,
         "is_open_source": false,
         "is_primary": true,
