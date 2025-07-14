@@ -36,6 +36,11 @@ def convert_jsonl_to_unicode_in_place():
                 # fixing hypothesis from European systems
                 if obj["hypothesis"] == "NO TRANSLATION":
                     obj["hypothesis"] = reference_submission[obj["doc_id"]]
+                expected_hypothesis = reference_submission[obj["doc_id"]].count('\n\n')
+                count = obj["hypothesis"].count('\n\n')
+                if count != expected_hypothesis:
+                    obj["hypothesis"] = reference_submission[obj["doc_id"]]
+
                 # if hypothesis is a list, check it has only one element and take that element
                 if isinstance(obj.get("hypothesis"), list):
                     if len(obj["hypothesis"]) == 1:
