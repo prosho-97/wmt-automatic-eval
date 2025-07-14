@@ -110,6 +110,28 @@ def read_arguments() -> ArgumentParser:
     return parser
 
 
+def read_file_with_fallback(path: Path) -> str:
+    """
+    Read a file with multiple encoding fallbacks.
+
+    Args:
+        path: Path to the file to read.
+
+    Returns:
+        str: The content of the file as a string.
+
+    Raises:
+        UnicodeDecodeError: If the file cannot be decoded with any of the tested encodings.
+    """
+    encodings = ["utf-8", "utf-16", "cp1251"]
+    for enc in encodings:
+        try:
+            return path.read_text(encoding=enc)
+        except UnicodeDecodeError:
+            continue
+    raise UnicodeDecodeError(f"Cannot decode file: {path}")
+
+
 def matching_paragraphs_check(
     lp2domain_test_docs: Dict[str, Dict[str, Dict[str, List[str]]]],
     sys2translations: Dict[str, Dict[str, Dict[str, Dict[str, List[str]]]]],
@@ -175,7 +197,7 @@ def main() -> None:
                                         :-5
                                     ]  # Remove the "_ET_C" suffix present in en-et_EE ref doc files
                                 # Read the file content
-                                content = doc.read_text(encoding="utf-8")
+                                content = read_file_with_fallback(doc)
                                 # Split into paragraphs by double-newline
                                 paragraphs = [
                                     p for p in content.split("\n\n") if p.strip()
