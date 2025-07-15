@@ -1320,6 +1320,24 @@
     ]
   },
   {
+    "publication_name": "TowerPlus-72B",
+    "primary_submissions": [
+      {
+        "competition": "WMT25: General MT",
+        "file_name": "submissions/vLLM_Unbabel_Tower_Plus_22B.jsonl",
+        "is_constrained": false,
+        "is_open_source": false,
+        "is_primary": true,
+        "is_removed": false,
+        "language_pair": "multi-lingual",
+        "score": null,
+        "score_chrf": null,
+        "submission_id": null,
+        "test_set": "wmt25genmt"
+      }
+    ]
+  },
+  {
     "publication_name": "EuroLLM-9B",
     "primary_submissions": [
       {
