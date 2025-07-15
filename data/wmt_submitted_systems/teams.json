@@ -1324,7 +1324,7 @@
     "primary_submissions": [
       {
         "competition": "WMT25: General MT",
-        "file_name": "submissions/vLLM_Unbabel_Tower_Plus_22B.jsonl",
+        "file_name": "submissions/vLLM_Unbabel_Tower_Plus_72B.jsonl",
         "is_constrained": false,
         "is_open_source": false,
         "is_primary": true,
