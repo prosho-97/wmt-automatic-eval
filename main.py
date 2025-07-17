@@ -197,15 +197,21 @@ def main() -> None:
                         for doc in domain.iterdir():
                             if doc.is_file() and doc.suffix == ".txt":
                                 doc_id = doc.stem
-                                if lp.name == "en-et_EE" and doc_id.endswith("_ET_C"):
-                                    doc_id = doc_id[
-                                        :-5
-                                    ]  # Remove the "_ET_C" suffix present in en-et_EE ref doc files
                                 if domain.name == "speech" and doc_id.startswith(
                                     "vid_"
                                 ):
                                     # Remove the "vid_" prefix from ref speech document IDs, as it's not always present.
                                     doc_id = doc_id[4:]
+                                if lp.name == "en-et_EE" and doc_id.endswith("_ET_C"):
+                                    doc_id = doc_id[
+                                        :-5
+                                    ]  # Remove the "_ET_C" suffix present in en-et_EE ref doc files
+                                elif lp.name == "en-zh_CN" and doc_id.endswith(
+                                    "-en-zh_hans-R-C"
+                                ):
+                                    doc_id = doc_id[
+                                        : -len("-en-zh_hans-R-C")
+                                    ]  # Remove the "-en-zh_hans-R-C" suffix present in en-zh_CN refs
                                 # Read the file content
                                 content = read_file_with_fallback(doc)
                                 # Split into paragraphs by double-newline
