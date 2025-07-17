@@ -1,0 +1,23 @@
+Hledáte informace v Cambridge
+Hledáte <i>vlak</i>. Vlak by měl odjíždět ve <i>čtvrtek</i> a měl by <i>odjet po 12:15</i>.
+Vlak by měl odjíždět z <i>Cambridge</i> a měl by jet do <i>Peterborough</i>.
+Ujistěte se, že dostanete <i>cenu</i> a <i>čas příjezdu</i>.
+Hledáte také <i>místo k pobytu</i>. Hotel by měl mít <i>2 hvězdy</i> a měl by <i>zahrnovat bezplatné parkování</i>.
+Hotel by měl být v typu <i>hotelu</i>.
+Ujistěte se, že dostanete <i>PSČ</i> a <i>cenové rozmezí</i>.
+
+X: Můžete mi pomoci najít vlak?
+Y: Jistě. Kam budete cestovat?
+X: Z Cambridge do Peterborough. Hledám ve čtvrtek po 12:15.
+Y: Vlak TR8124 odjíždí z Cambridge ve čtvrtek v 12:34 a dorazí do Peterborough v 13:24. Bude to vyhovovat?
+X: Mělo by, kolik stojí ta jízdenka?
+Y: Stojí to 16,50 liber.
+X: Dobře, také potřebuji 2hvězdičkový hotel s bezplatným parkováním.
+Y: Je zde 3 možnosti. Chcete doporučení, nebo chcete přidat specifikaci?
+X: Rád bych doporučení.
+Y: Ten dražší není vlastně o moc víc než ostatní dva. Velmi bych to doporučil. To bude v Express by Holiday Inn Cambridge. Je to na východě.
+X: Zní to dobře. Potřebuji prosím PSČ.
+Y: Jistě! PSČ je CB13LH. Mohu vám s něčím dalším pomoci?
+X: To by mělo být vše, co dnes potřebuji. Děkuji za pomoc.
+Y: Děkujeme, že jste kontaktovali informační centrum města Cambridge. Na shledanou!
+

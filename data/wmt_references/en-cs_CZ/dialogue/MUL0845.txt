@@ -1,0 +1,30 @@
+Plánujete svou cestu do Cambridge.
+Hledáte <i>místo k večeři</i>. Restaurace by měla být v <i>centru</i> a měla by být v <i>levném</i> cenovém rozmezí.
+Restaurace by měla podávat <i>singapurskou</i> kuchyni.
+Pokud taková restaurace neexistuje, jaká by byla taková, která podává <i>italskou</i> kuchyni?
+Ujistěte se, že dostanete <i>PSČ</i>.
+Hledáte také <i>místa, která můžete navštívit</i> ve městě. Atrakce by měla být <i>ve stejné oblasti jako restaurace</i>.
+Ujistěte se, že dostanete <i>typ atrakce</i> a <i>PSČ</i>.
+Také chcete zarezervovat <i>taxi</i>, abyste se mohli dopravit mezi oběma místy.
+Chcete odejít z <i>restaurace</i> v <i>22:15</i>.
+Ujistěte se, že dostanete <i>kontaktní číslo</i> a <i>typ vozu</i>.
+
+X: Hledám restauraci v centru města.
+Y: V centru města je více než 60 restaurací, máte na mysli nějakou konkrétní kuchyni nebo cenové rozmezí?
+X: Ano, něco v cenově dostupném rozmezí. Také mají nějaké, které podávají singapurskou kuchyni?
+Y: Neexistují žádné singapurské restaurace, ale jsou zde levné, které nabízejí několik různých kuchyní.
+X: Dobře, co takhle italská kuchyně?
+Y: Zizzi Cambridge podává italskou kuchyni v centru města. Chtěli byste rezervaci?
+X: Ne teď, ale mohu dostat jejich PSČ, prosím?
+Y: Jejich PSČ je cb21ab.
+X: Děkuji. Hledám také nějaká místa, která mohu navštívit. Můžete mi s tím pomoci?
+Y: Mám v databázi spoustu různých míst a atrakcí, je něco konkrétního, co byste chtěli vidět? Nebo hledat podle umístění?
+X: Co je k vidění v centru a jaké je PSČ?
+Y: V centru města je 44 atrakcí. Chtěli byste muzeum, nebo možná kino?
+X: Preferuji kino, je tam nějaké ve stejném PSČ jako restaurace?
+Y: Mám pouze jedno místo, které nabízí kino v centru, ale má jiné PSČ než restaurace. PSČ Vue Cinema je cb11ps. Mám hledat jinde pro kina?
+X: Ne, to je perfektní. Můžete mi prosím pomoci zarezervovat taxi? Hledám jedno, které mě vezme z Zizzi Cambridge do Vue Cinema. Chtěl bych odejít v 22:15.
+Y: Samozřejmě. Rezervoval jsem vám šedou Hondu, která odjíždí z Zizzi Cambridge do Vue Cinema v 22:15. Kontaktní číslo je 07135477113.
+X: Děkuji, to je všechno, co dnes potřebuji. Mějte se hezky.
+Y: Není zač. Přeji vám hezký den.
+

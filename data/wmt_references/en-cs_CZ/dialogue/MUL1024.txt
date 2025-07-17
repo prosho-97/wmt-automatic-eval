@@ -1,0 +1,33 @@
+Plánujete svou cestu do Cambridge
+Hledáte <i>místa, kam jít</i> ve městě. Atrakcí by měl být v <i>centru</i> a měl by být typ <i>divadla</i>
+Ujistěte se, že dostanete <i>adresu</i>
+Hledáte také <i>konkrétní hotel</i>. Jeho název je <i>Avalon</i>
+Jakmile najdete <i>hotel</i>, chcete si rezervovat <i>6 osob</i> a <i>3 noci</i> s začátkem od <i>úterý</i>
+Pokud rezervace nevyjde, co třeba <i>1 noc</i>?
+Ujistěte se, že dostanete <i>referenční číslo</i>
+
+X: Hledám divadlo k návštěvě v centru Cambridge. Můžete mi s tím pomoci?
+Y: Mohu doporučit ADC Theatre na Park Street nebo Cambridge Arts Theatre, které se nachází na 6 St Edward's Passage
+X: Jsou některé v centru města?
+Y: Obě se nacházejí v centru města.
+X: Můžete mi prosím dát adresu ADC Theatre?
+Y: Adresa je Park Street.
+X: Jaké filmy hrají dnes?
+Y: Omlouvám se. Nemám tyto informace. Mohu vám pomoci s něčím jiným?
+X: Hledám konkrétní hotel, který se jmenuje Avalon.
+Y: Avalon se nachází na 62 Gilbert Road. Chcete, abych pro vás udělal rezervaci?
+X: Skvělé, mohu to rezervovat pro 6 osob na 3 noci od úterý.
+Y: Omlouvám se, rezervace byla neúspěšná. Chcete zkusit jiný termín nebo kratší pobyt?
+X: Měli byste zájem o pobyt v Avalonu na 1 noc? Pokud ne, můžeme najít jiný hotel, který je k dispozici na 3 noci pro 6 hostů.
+Y: Můžete mi najít jiný hotel, který ubytuje 6 osob?
+X: Hledám Avalon, je to pěkný hotel.
+Y: Našel jsem ho. Je to čtyřhvězdičkový hotel, který zahrnuje bezplatný internet. Adresa je 62 Gilbert Road. Můžete zavolat na 01223353071 a rezervovat si pokoj.
+X: Potřebuji rezervovat pokoj pro 6 osob a 3 noci od úterý, prosím.
+Y: Nemohu rezervovat ten hotel na 3 dny pro 6 osob. Chcete zkusit jiný hotel?
+X: Můžete zkusit 1 noc?
+Y: Ano, můžeme udělat jednu noc v Avalonu.
+X: To je skvělé. Můžete zarezervovat pokoj a dát mi referenční číslo?
+Y: Mohl jsem vás zarezervovat na 1 noc v Avalonu pro 6 osob. Vaše referenční číslo je QIS9XTIQ. Můžu vám ještě s něčím pomoci?
+X: Ne, to by bylo vše. Děkuji. Na shledanou.
+Y: Není zač, na shledanou! Pište kdykoli!
+

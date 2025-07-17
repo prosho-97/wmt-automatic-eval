@@ -1,0 +1,28 @@
+Hledáte informace o Cambridge
+Hledáte <i>vlak</i>. Vlak by měl jet do <i>Ely</i> a měl by <i>odjet po 09:00</i>.
+Vlak by měl jet v <i>pondělí</i> a měl by odjíždět z <i>Cambridge</i>.
+Ujistěte se, že máte <i>délku jízdy</i>, <i>čas příjezdu</i> a <i>cenu</i>.
+Také hledáte <i>ubytování</i>. Hotel by měl mít <i>4 hvězdičky</i> a měl by být v typu <i>hotel</i>.
+Hotel by měl být v <i>drahé</i> cenové kategorii a měl by <i>zahrnovat bezplatné Wi-Fi</i>.
+Až najdete <i>hotel</i>, chcete ho zarezervovat pro <i>7 osob</i> na <i>5 nocí</i> od <i>středy</i>.
+Ujistěte se, že máte <i>rezervační číslo</i>.
+
+X: Potřebuji najít vlak z Cambridge do Ely, který odjíždí po 09:00.
+Y: Který den byste chtěl cestovat?
+X: Cestuji v pondělí.
+Y: Mám vlak TR8399, který odjíždí z Cambridge v 9:50 a přijíždí do Ely v 10:07. Chcete si ho rezervovat?
+X: Jaká je doba jízdy a cena?
+Y: Cesta trvá jen 17 minut a cena je 4,40 libry.
+X: Také potřebuji někde přespat.
+Y: Ráda pomůžu. V jaké cenové kategorii a části města chcete zůstat?
+X: Potřebuji 4hvězdičkový hotel.
+Y: Máme více než 20 hotelů s 4 hvězdičkami. Máte představu, ve které části města chcete být?
+X: A co nějaký dražší hotel s bezplatným Wi-Fi?
+Y: Doporučuji hotel University Arms v centru města, chcete si ho rezervovat?
+X: Zarezervujte ho pro 7 osob na 5 nocí od středy.
+Y: Zarezervoval jsem vás do hotelu University Arms. Rezervační číslo je WRRF425A. Mohu vám ještě s něčím pomoci?
+X: To je vše, díky za pomoc.
+Y: Rádo se stalo, užijte si zbytek dne.
+X: Děkuji! Hezký den.
+Y: Rádo se stalo, jsem rád, že jsem mohl pomoci.
+

@@ -1,0 +1,36 @@
+Hledáte informace o Cambridge
+Hledáte <i>ubytování</i>. Hotel by měl být v <i>levné</i> cenové kategorii a měl by <i>zahrnovat bezplatné parkování</i>.
+Hotel by měl mít <i>3 hvězdičky</i>.
+Pokud takový hotel není k dispozici, zkusíte hotel v <i>střední</i> cenové kategorii.
+Ujistěte se, že máte <i>poštovní směrovací číslo</i>, <i>zda má internet</i> a <i>telefonní číslo</i>.
+Také hledáte <i>konkrétní restauraci</i>. Jmenuje se <i>The Cow Pizza Kitchen and Bar</i>.
+Ujistěte se, že máte <i>adresu</i>.
+Chcete si také objednat <i>taxi</i>, aby vás převezlo mezi oběma místy.
+Chcete odjet z <i>hotelu</i> v <i>13:45</i>.
+Ujistěte se, že máte <i>telefonní číslo</i> a <i>typ vozu</i>.
+
+X: Hledám levný hotel s bezplatným parkováním v Cambridge.
+Y: Mám několik levných hotelů s bezplatným parkováním. Která část města vás zajímá?
+X: Chtěl bych být blízko centra, ale hotel by měl mít 3 hvězdičky.
+Y: Nemáme žádné hotely, které by odpovídaly vašemu vyhledávání. Chcete zkusit něco jiného?
+X: Máte nějaké 3hvězdičkové hotely ve střední cenové kategorii s bezplatným parkováním?
+Y: Nemáme žádné hotely, které by odpovídaly vašemu vyhledávání. Chcete zkusit něco jiného?
+X: Co třeba něco ve střední cenové kategorii?
+Y: Máme 3 nabídky, které odpovídají vašim preferencím. Preferujete sever, jih nebo západ?
+X: Nemám žádné preference, ale také bych rád našel restauraci jménem The Cow Pizza Kitchen and Bar.
+Y: Než rezervuji restauraci, chcete si nejdřív rezervovat ubytování? Myslím, že by se vám mohl líbit hotel Hamilton Lodge. Splňuje vaše požadavky.
+X: Má internet?
+Y: Ano, Hamilton Lodge má internet.
+X: Zní to dobře. Jaká je adresa a kontaktní informace?
+Y: Hamilton Lodge se nachází na 156 Chesterton Road, PSČ CB41DA. Telefonní číslo je 01223365664. Chcete si zarezervovat pokoj?
+X: To není nutné, děkuji. Ale můžete mi najít restauraci, o které mluvil můj přítel? Myslím, že se jmenovala The Cow Pizza Kitchen and Bar.
+Y: The Cow Pizza Kitchen and Bar je gastropub ve střední cenové kategorii v centru města. Chcete udělat rezervaci?
+X: Můžete mi prosím poskytnout adresu restaurace The Cow Pizza Kitchen and Bar?
+Y: Adresa je Corn Exchange Street. Mohu vám ještě s něčím pomoci?
+X: Chtěl bych taxi z hotelu na 13:45, abych se dostal do restaurace.
+Y: Objednal jsem vám taxi, které dorazí do Hamilton Lodge v 13:45. Telefonní číslo je 07214110599.
+X: Jaký je typ vozu?
+Y: Taxi je červené Audi.
+X: Děkuji, to je vše, co potřebuji.
+Y: Rádo se stalo, mějte krásný den!
+

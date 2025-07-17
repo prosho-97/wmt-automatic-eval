@@ -121,7 +121,7 @@ def read_file_with_fallback(path: Path) -> str:
         str: The content of the file as a string.
 
     Raises:
-        UnicodeDecodeError: If the file cannot be decoded with any of the tested encodings.
+        ValueError: If the file cannot be decoded with any of the tested encodings.
     """
     encodings = ["utf-8", "utf-16", "cp1251"]
     for enc in encodings:
@@ -129,7 +129,7 @@ def read_file_with_fallback(path: Path) -> str:
             return path.read_text(encoding=enc)
         except UnicodeDecodeError:
             continue
-    raise UnicodeDecodeError(f"Cannot decode file: {path}")
+    raise ValueError(f"Cannot decode file: {path}")
 
 
 def matching_paragraphs_check(

@@ -1,0 +1,44 @@
+Hledáte informace v Cambridge.
+Hledáte <i>místa, která můžete navštívit</i> ve městě. Atrakce by měla být na <i>západě</i>.
+Ujistěte se, že dostanete <i>telefonní číslo</i> a <i>PSČ</i>.
+Hledáte také <i>místo k pobytu</i>. Hotel by měl <i>zahrnovat bezplatné parkování</i> a měl by být typu <i>hotel</i>.
+Hotel by měl mít <i>4 hvězdičky</i> a měl by být v <i>umírněném</i> cenovém rozmezí.
+Pokud takový hotel neexistuje, jaký by byl v <i>drahém</i> cenovém rozmezí?
+Jakmile najdete <i>hotel</i>, chcete si ho zarezervovat pro <i>6 osob</i> a <i>2 noci</i>, počínaje <i>středou</i>.
+Pokud rezervace selže, co takhle <i>neděle</i>?
+Ujistěte se, že dostanete <i>referenční číslo</i>.
+Také chcete zarezervovat <i>taxi</i>, abyste se mohli dopravit mezi oběma místy.
+Chcete odejít z <i>atrakce</i> v <i>05:30</i>.
+Ujistěte se, že dostanete <i>kontaktní číslo</i> a <i>typ vozu</i>.
+
+X: Snažím se najít nějaké místo k návštěvě ve městě.
+Y: Mohu vám s tím pomoci! Máte na mysli nějaký konkrétní typ atrakce, nebo spíše určitou oblast?
+X: Ano, potřebuji atrakci na západě.
+Y: Na západě je mnoho kolejí a muzeí, vyhovuje vám některé z nich?
+X: Ano. Můžete doporučit nějaké místo a poskytnout jejich telefonní číslo a PSČ?
+Y: Určitě. Churchill College: PSČ cb30ds, telefonní číslo 01223332360.
+X: Hledám také 4hvězdičkový hotel.
+Y: Je zde 21 4hvězdičkových hotelů. V jaké oblasti byste chtěli zůstat?
+X: Jsou některé z nich v umírněném cenovém rozmezí?
+Y: Ne, nejsou.
+X: Jaký by byl v drahém cenovém rozmezí?
+Y: Huntingdon Marriott Hotel je jedinou drahou možností na západě. Chtěli byste, abych ho pro vás zarezervoval?
+X: Ano, pro 6 osob na 2 noci ve středu, a potřebuji potvrzovací číslo.
+Y: Pracuji na rezervaci a brzy se k vám vrátím.
+X: Dobře, dejte mi prosím referenční číslo, až to zarezervujete.
+Y: Právě jsem to pro vás zarezervoval, vaše referenční číslo je AZU0UO5N. Můžu vám ještě s něčím pomoci?
+X: Ano, budu potřebovat taxi na cestu mezi atrakcí a hotelem, prosím.
+Y: V kolik hodin potřebujete rezervovat taxi?
+X: Chci odejít z koleje v 05:30.
+Y: Pracuji na rezervaci a brzy se k vám vrátím.
+X: Jakmile rezervaci provedete, potřebuji prosím kontaktní číslo a typ vozu.
+Y: Jistě. Měl jste na mysli nějaké konkrétní auto?
+X: Ne, děkuji, potřebuji jen vědět kontaktní číslo a typ vozu.
+Y: Máte červenou škodu. Užijte si to!
+X: Děkuji. Jaké je jejich kontaktní číslo?
+Y: Kontaktní číslo je 8675309.
+X: Děkuji. To je pro dnešek vše.
+Y: Vítejte a děkujeme, že jste využili naše služby.
+X: Ocenil jsem vaši pomoc. Na shledanou.
+Y: Omlouvám se, ale došlo k záměně s taxi, která byla opravena. Máte rezervováno na šedou Hondu s kontaktním číslem 07913624200. Je ještě něco?
+

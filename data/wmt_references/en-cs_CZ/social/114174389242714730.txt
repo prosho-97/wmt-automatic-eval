@@ -1,0 +1,37 @@
+Jak jsem říkal před pár měsíci [boing.world], správce bytu mi nabídl garáž, což znamená, že mám konečně kde zaparkovat dodávku, kterou si můžu přestavět na obytňák.
+Tak jsem si minulý měsíc koupil Berlingo.
+Myslel jsem si, že když už je přestavěné na dodávku, půjde ta přestavba na karavan snadněji.
+Ukázalo se, že to tak úplně neplatí. Tak to prostě chodí. Předtím bylo upravené pro invalidní rampu, což znamená, že má sníženou podlahu, a tím pádem nikde bezpečně přišroubované zadní sedačky, takže nelze použít takzvanou „rock and roll“ postel, kterou lze přestavět zpátky na sedačky s pásy.
+Na druhou stranu to ale znamená, že vznikl velký úložný prostor pod podlahou.
+Myslel jsem si, že bude celkem snadné sundat kovové desky z oken, ale to jsem se spletl. Žádné kovové desky tam nebyly. Sklo bylo natřené jen nějakou kovovou barvou. Naštěstí to jde seškrábat, asi budu muset použít taky nějaká rozpouštědla. Netuším. Nechal jsem to na profících.
+
+Lidi, kteří by to dokázali přestavět pořádně, mají volno až v červenci, takže si zatím můžu pohrát a udělat polovičatou verzi, která to do té doby snad nějak zvládne.
+První krok je vyndat podlahu, abych se dostal k úložnému prostoru a položil na to lino. Nějaké zbylo z loňské rekonstrukce koupelny.
+Pak znovu položit podlahu a všechno přikrýt červeným kobercem z plsti.
+Je to odfláknuté, co si budeme. Správně by se měl celý interiér auta zaizolovat a profesionálně obložit, ale nevím, jak na to. Použil jsem jen sprejové lepidlo, abych ten napínací koberec přilepil na dřevo, které se pak stejně vymění při pořádné přestavbě.
+Střecha zatím zůstane studená a kovová.
+
+Tahle židle funguje v autě výborně. Ideálně by se měla pořádně přichytit k podlaze, ale má tři polohy.
+Sezení, lehátko a úplně sklopená jako postel, když je sklopené i sedadlo spolujezdce.
+
+Dá se koupit sklápěcí stolek, a když uříznete spodních cca 15 cm z bočních a předních desek a zadní tam nedáte vůbec, vznikne tak akorát výška, aby se to vešlo pod zadní okno.
+Je to o trochu vyšší než karavanová lednice, ale ta má zhruba výšku malého nočního stolku.
+Vedle toho upraveného stolu se taky pěkně vejde malý obdélníkový dřez, zhruba stejně široký jako ta lednice.
+Takže si můžu většinu vnitřku připravit doma v bytě. Děti z horního bytu mi mávaly, když jsem se na dvoře zoufale snažil řezat ty desky svou přímočarkou.
+
+Pak následoval celý den nošení těch věcí do dodávky a snahy je přišroubovat k podlaze.
+Musel jsem oproti původnímu plánu prohodit lednici s kredencí. Lednice je plytčí, ale za to širší, takže nezavazí sklopnému stolu, když je na kraji a dveře směřují dopředu.
+Čekal jsem, že budu muset v tu chvíli zastavit, všechno přeměřit a koupit si nějaké dřevo, ale někdo vyhodil stůl, který se sem skvěle hodí, a po troše dalšího řezání se z toho dal udělat rám, který všechno drží na místě.
+Dřez je připojený jen jedním ze šesti držáků, které by tady měly být. Dva nejdou upevnit naplocho k desce a 3 zatím nic nadrží.
+Možná to půjde přichytit líp, až dorazí pumpa a kohoutek.
+
+Líbí se mi, že je zezadu jednoduchý přístup k baterii, vodě a dalším věcem. Je tam docela dost úložného prostoru, který je přístupný i zevnitř, když je stůl zvednutý.
+Ještě musím dát vodní pumpu do kanystru s vodou, připojit ji na napájení a přidělat k ní nějaký kohoutek.
+
+A to je tak všechno, co sám zvládnu. Doufám, že něco z toho půjde využít i za pár měsíců, až se do přestavby pustí profesionálové.
+Aspoň ta lednice by mohla zůstat použitelná.
+Skvělé je, že postel může být rozložená směrem přes spolujezdce. Na tohle auto jsem sice moc vysoký, ale takhle se to dá. Škoda, že to sedadlo/postel musí být tak úzké. Dvoumístná varianta byla dost lákavá a vypadalo to, že by se vešla, ale nedalo se ji rozložit zevnitř a volant překáží sklopení sedačky řidiče tak, jak to jde u spolujezdce, takže by to nešlo rozložit úplně.
+
+Díkybohu za Blender! Nedokážu si představit, že bych to všechno plánoval a měl šanci, že to klapne, kdybych si to nemohl předem vymodelovat ve 3D.
+3 snímky ukazují 3 hlavní režimy. Sezení, Pracovní stůl a Spánek.
+

@@ -1,0 +1,25 @@
+Plánujete svou cestu do Cambridge
+Hledáte <i>restauraci</i>. Restaurace by měla být v <i>drahé</i> cenové kategorii a měla by být na <i>severu</i>
+Restaurace by měla podávat <i>čínská</i> jídla
+Jakmile najdete <i>restauraci</i>, kterou chcete, rezervujte stůl pro <i>1 osobu</i> na <i>16:45</i> v <i>úterý</i>
+Ujistěte se, že dostanete <i>referenční číslo</i>
+Také hledáte <i>vlak</i>. Vlak by měl odjíždět z <i>Bishops Stortford</i> a měl by jet do <i>Cambridge</i>
+Vlak by měl být ve <i>stejný den jako rezervace restaurace</i> a měl by <i>přijet do 12:45</i>
+Jakmile najdete vlak, který chcete, rezervujte lístek pro <i>stejnou skupinu osob</i>
+Ujistěte se, že dostanete <i>referenční číslo</i>
+
+X: Hledám drahou restauraci v severní části města.
+Y: Mám restaurace ve střední a drahé cenové kategorii. City Stop restaurace podává evropskou kuchyni a patří mezi dražší. Nebo mohu doporučit Saigon City, která nabízí asijskou kuchyni?
+X: Specializuje se některá z nich na čínskou kuchyni?
+Y: Ano, Hakka a The Hotpot podávají čínská jídla. Mohu pro vás zarezervovat jednu z nich?
+X: Zkusme Hakku. Bude to pro mě samotnou v 16:45 v úterý.
+Y: Rezervace byla úspěšná. Stůl bude rezervován na 15 minut. Vaše referenční číslo je: KWV7HGEB.
+X: Skvělé, děkuji. Mohli byste mi také pomoci s vlakovým spojením? Potřebuji se dostat do Cambridge z Bishops Stortford.
+Y: Na který den budete cestovat?
+X: Pojedu v úterý a vlak by měl dorazit do Cambridge před 12:45.
+Y: Existují čtyři vlaky, které dorazí před 12:45. Máte preferovaný čas odjezdu?
+X: Ne, jakýkoli bude v pořádku. Potřebuji jen jeden lístek.
+Y: Podařilo se mi zarezervovat vlak v 11:29, který dorazí v 12:07. Cena je 10,10 £ a vaše referenční číslo je AAX97X46. Mohu vám ještě s něčím pomoci?
+X: Ne, děkuji. Opravdu si cením vaší pomoci.
+Y: Bylo mi potěšením. Přeji vám krásný den!
+

@@ -1,0 +1,38 @@
+Cestujete do Cambridge a těšíte se na místní turistické atrakce
+Hledáte <i>určitý hotel</i>. Jeho název je <i>Warkworth House</i>.
+Jakmile najdete <i>hotel</i>, chcete si ho zarezervovat pro <i>1 osobu</i> a <i>3 noci</i>, počínaje <i>úterý</i>.
+Pokud rezervace neuspěje, jak by bylo <i>2 noci</i>?
+Ujistěte se, že dostanete <i>referenční číslo</i>.
+Hledáte také <i>místa, kam jít</i> ve městě. Atrakce by měla být v <i>centru</i>.
+Ujistěte se, že dostanete <i>vstupné</i>, <i>typ atrakce</i> a <i>adresu</i>.
+Také chcete zarezervovat <i>taxi</i>, aby vás přepravilo mezi těmito dvěma místy.
+Chcete opustit <i>atrakci</i> do <i>02:45</i>.
+Ujistěte se, že dostanete <i>kontaktní číslo</i> a <i>typ vozu</i>.
+
+X: Můžete mi pomoci zarezervovat rezervaci v hotelu Warkworth House?
+Y: Ano, mohu! Kolik lidí bude bydlet a jaké dny byste chtěli zůstat?
+X: Je to jen pro mě a zůstanu na tři noci počínaje úterým.
+Y: Omlouvám se, ale nemáme žádné volné pokoje na 3denní pobyt začínající ve středu. Chcete si zarezervovat jiný den nebo kratší pobyt?
+X: Chtěl jsem začít pobyt v úterý, ne ve středu. Můžete to zkontrolovat pro úterý?
+Y: Omlouvám se, ale nemohu udělat rezervaci na úterý.
+X: Tři noci začínající v úterý jen pro mě. Rád bych také referenční číslo.
+Y: Omlouvám se, ale rezervace nebyla úspěšná na tři dny začínající v úterý. Byli byste ochotni zarezervovat kratší pobyt?
+X: Chtěl bych tyto 3 dny v úterý pro 1 osobu.
+Y: Bohužel ta rezervace byla neúspěšná. Můžeme zkusit kratší pobyt nebo jiný den?
+X: Co třeba 2 noci?
+Y: To bylo přijato. Vaše referenční číslo je 7HVR4RK2. A to bylo na 2 noci, 1 osoba. Je ještě něco?
+X: Chtěl bych navštívit atrakci v centrální oblasti, prosím.
+Y: Je jich více než 40 na výběr, máte něco konkrétního na mysli?
+X: Opravdu ne. Jen potřebuji, aby to bylo v centru.
+Y: Navrhuji kostel All Saints. Nemá vstupné. Mohu vám s něčím dalším pomoci?
+X: Ano, mohli byste mi poskytnout jejich adresu?
+Y: Adresa je Jesus Lane, telefon 01223452587 a PSČ je CB58BS. Mohu vám ještě s něčím pomoci?
+X: Ano, potřebuji také typ atrakce, prosím.
+Y: Kostel All Saints je považován za architektonickou atrakci. Můžu vám s něčím dalším pomoci?
+X: Ano, budu potřebovat zarezervovat taxi, abych se dostal k atrakci.
+Y: Ráda bych pomohla! Kdy byste chtěli odjet nebo dorazit?
+X: Chci opustit atrakci do 02:45.
+Y: Rezervace byla dokončena! Zarezervovaný typ vozu: modrý škoda Kontaktní číslo: 07611523004.
+X: Skvělé. Děkuji za veškerou pomoc! Na shledanou.
+Y: Užijte si to! Mějte skvělou noc!
+

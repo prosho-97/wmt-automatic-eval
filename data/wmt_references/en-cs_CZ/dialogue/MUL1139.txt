@@ -1,0 +1,30 @@
+Cestujete do Cambridge a těšíte se na místní turistické atrakce.
+Hledáte <i>ubytování</i>. Hotel by měl <i>zahrnovat bezplatné parkování</i> a měl by být v <i>drahém</i> cenovém rozpětí.
+Hotel by měl <i>zahrnovat bezplatné Wi-Fi</i> a měl by být typu <i>hotel</i>.
+Jakmile najdete <i>hotel</i>, chcete si ho zarezervovat pro <i>8 lidí</i> na <i>3 noci</i> s počátkem od <i>úterý</i>.
+Pokud rezervace selže, co třeba <i>2 noci</i>?
+Ujistěte se, že získáte <i>referenční číslo</i>.
+Také hledáte <i>místa k návštěvě</i> ve městě. Atrakce by měla být v <i>centru</i> a měla by být typu <i>kolej</i>.
+Ujistěte se, že zjistíte <i>vstupné</i> a <i>PSČ</i>.
+Také chcete zarezervovat <i>taxi</i> na přepravu mezi dvěma místy.
+Chcete opustit <i>atrakci</i> ve <i>24:30</i>.
+Ujistěte se, že získáte <i>kontaktní číslo</i> a <i>typ vozu</i>.
+
+X: Dobrý den! Můžete mi pomoci najít hotel? Hledám hotel, který má bezplatné parkování a je drahý.
+Y: Tady je seznam hotelů s bezplatným parkováním, které jsou drahé.
+X: Neobdržel jsem žádný seznam hotelů. Můžete mi prosím vybrat jeden, hotel s bezplatným parkováním a Wi-Fi, který je luxusní?
+Y: Máme hotel University Arms. Nachází se v centru a má Wi-Fi a parkování. Chtěli byste ho pro vás rezervovat?
+X: Ano, pokud je drahý. Chtěl bych přijet v úterý a zůstat na 3 noci. Bude nás 8.
+Y: Omlouvám se, ale hotel není k dispozici pro vaši žádost. Chtěli byste zkusit jiný den nebo kratší pobyt?
+X: Můžete zkusit 2 noci místo toho?
+Y: Doporučuji hotel Huntingdon Marriott, který má to, co potřebujete. Vaše referenční číslo rezervace je FTTNX1M7. Váš dvoudenní pobyt začne v úterý. Děkuji!
+X: Také se zajímám o návštěvu koleje v centru města. Můžete mi s tím pomoci?
+Y: Určitě. V centru je 13 kolejí. Chtěli byste více informací?
+X: Ano, prosím, dejte mi vědět PSČ a vstupné jedné z kolejí v centrální oblasti.
+Y: Christ's College je velmi známá, vstup je zdarma a jejich PSČ je cb23bu. Bude něco dalšího?
+X: Budu potřebovat taxi, abych se dostal mezi hotelem a kolejí. Můžete to také zařídit?
+Y: Ano, mohu. Můžete mi prosím říct čas, kdy byste chtěli odjet nebo dorazit?
+X: Chtěl bych opustit kolej ve 24:30 a také bych chtěl mít kontaktní číslo a typ vozu.
+Y: Dobře. Zarezervoval jsem vám černý Volkswagen, který si pro vás přijede ve 24:30 na Christ's College. Kontaktní číslo je 07324891478. Můžu vám ještě s něčím pomoci?
+X: Ne, to je všechno. Děkuji.
+

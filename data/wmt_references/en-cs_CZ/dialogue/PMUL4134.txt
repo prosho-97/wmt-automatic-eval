@@ -1,0 +1,25 @@
+Plánujete svůj výlet do Cambridge.
+Hledáte <i>konkrétní atrakci</i>. Její název je <i>Queens' College</i>.
+Ujistěte se, že zjistíte <i>vstupné</i>.
+Také hledáte <i>vlak</i>. Vlak by měl odjet <i>v úterý</i> a měl by odjíždět z <i>Cambridge</i>.
+Vlak by měl směřovat do <i>Leicesteru</i> a měl by <i>odjet po 09:45</i>.
+Jakmile najdete vlak, chcete si rezervovat jízdenku pro <i>1 osobu</i>.
+Ujistěte se, že získáte <i>referenční číslo</i>.
+
+X: Slyšel jsem o Queens' College dobré věci, můžete mi poskytnout nějaké základní informace?
+Y: Queens' College se nachází na Silver Street a jejich telefonní číslo je 01223335511. Je něco jiného, co byste chtěl vědět?
+X: Ano, rád bych věděl vstupné, prosím?
+Y: Vstupné je 2,50 liber. Můžu vám poskytnout další informace?
+X: Ne, děkuji. Také potřebuji vlak odjíždějící z Cambridge v úterý.
+Y: Jistě, mohu vám s tím pomoci. Kam budete cestovat?
+X: Chtěl bych jet do Leicesteru, prosím.
+Y: Jistě, mám pro vás několik možností. V kolik hodin byste chtěl odjet?
+X: Chtěl bych odjet po 09:45. Můžete rezervovat první dostupný vlak po té době a poskytnout mi referenční číslo?
+Y: Určitě. Kolik lidí bude cestovat?
+X: Pouze já budu cestovat.
+Y: Dobře. Ušel jsem rezervaci jedné jízdenky. Vaše referenční číslo je M0PIMESH.
+X: Děkuji, to je vše, co dnes potřebuji.
+Y: Děkujeme, že jste se na nás obrátili, a mějte hezký den.
+X: Děkuji mnohokrát.
+Y: Není zač. Pokud můžeme být dále nápomocní, dejte nám vědět. Na shledanou.
+

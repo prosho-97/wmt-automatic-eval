@@ -1,0 +1,25 @@
+Hledáte informace v Cambridge
+Hledáte <i>vlak</i>. Vlak by měl jet do <i>London Kings Cross</i> a měl by <i>přijet do 16:00</i>.
+Vlak by měl odjíždět v <i>sobotu</i> a měl by odjíždět z <i>Cambridge</i>.
+Ujistěte se, že dostanete <i>cenu</i>, <i>ID vlaku</i> a <i>čas odjezdu</i>.
+Hledáte také <i>místo k pobytu</i>. Hotel by měl mít <i>3 hvězdy</i> a měl by být v <i>umírněném</i> cenovém rozmezí.
+Hotel by měl <i>zahrnovat bezplatné Wi-Fi</i> a měl by být typu <i>penzion</i>.
+Ujistěte se, že dostanete <i>zda mají bezplatné parkování</i>, <i>adresu</i> a <i>telefonní číslo</i>.
+
+X: Hledám vlak do London Kings Cross, který přijede do 16:00. Můžete mi s tím pomoci?
+Y: Ano, v jaký den budete cestovat?
+X: V sobotu, odjíždím z Cambridge.
+Y: Vidím několik vlaků. Kdy byste chtěl odjet?
+X: Potřebuji cenu a ujistěte se, že přijede do 16:00.
+Y: Vlak TR6203 stojí 18,88 a přijede v 15:51. Vyhovuje to? Mohu vám rezervovat lístek, pokud chcete.
+X: Není potřeba to rezervovat za mě. Jsou nějaké 3hvězdičkové hotely v umírněném cenovém rozmezí?
+Y: Můžete mi prosím říct, zda máte nějaké preference ohledně internetu/parkování?
+X: Chtěl bych, aby to byl penzion, který má bezplatné Wi-Fi.
+Y: Našel jsem 3 penziony, které splňují vaše požadavky. Chtěli byste zůstat na severu, jihu nebo západě?
+X: Má některý/é z nich také bezplatné parkování?
+Y: Ano, všechny mají bezplatné parkování. Kterou část města byste chtěl zůstat?
+X: Jakákoliv, vezmu první na vašem seznamu a potřebuji prosím adresu a telefonní číslo.
+Y: Penzion Bridge Guest House je na adrese 151 Hills Road a jejich číslo je 01223247942.
+X: Skvělé, děkuji. To je vše, co jsem potřeboval.
+Y: Děkujeme, že používáte naše služby. Zavolejte nám kdykoli. Mějte se hezky. Na shledanou.
+

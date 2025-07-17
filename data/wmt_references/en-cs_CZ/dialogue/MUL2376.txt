@@ -1,0 +1,24 @@
+Plánujete svou cestu do Cambridge
+Hledáte <i>konkrétní atrakci</i>. Její název je <i>muzeum archeologie a antropologie</i>
+Ujistěte se, že dostanete <i>typ atrakce</i>
+Hledáte také <i>místo k obědu</i>. Restaurace by měla být v <i>drahém</i> cenovém rozmezí a měla by být na <i>severu</i>
+Restaurace by měla podávat <i>evropská</i> jídla
+Jakmile najdete <i>restauraci</i>, kterou chcete, chcete si rezervovat stůl pro <i>2 osoby</i> na <i>20:00</i> v <i>neděli</i>
+Pokud rezervace nevyjde, co třeba <i>19:00</i>?
+Ujistěte se, že dostanete <i>referenční číslo</i>
+
+X: Kde bych našel muzeum archeologie a antropologie?
+Y: Muzeum archeologie a antropologie se nachází na University of Cambridge, Downing Street. Jejich telefonní číslo je 01223333516. Potřebujete ještě něco?
+X: A typ atrakce je muzeum, že?
+Y: Ano, je to muzeum.
+X: Zní to skvěle. Děkuji za informace!
+Y: Není zač. Mohu vám pomoci s něčím jiným?
+X: Ano, potřebuji místo k obědu, které je drahé na severu, prosím. Evropské by bylo fajn.
+Y: Jediná drahá evropská restaurace na severu je City Stop Restaurant. Chcete rezervaci?
+X: Ano, vlastně. Rezervujte mi stůl pro 2 osoby na neděli… řekněme 20:00?
+Y: V tu dobu není otevřeno, možná jiná restaurace nebo čas?
+X: Není to ideální, ale možná by fungovalo trochu dříve. Řekněme 19:00?
+Y: Mám pro vás stůl, bude rezervován na 15 minut. Vaše referenční číslo je: ZN0CVH11. Ještě něco dnes?
+X: Ne, moc děkuji za vaši pomoc dnes. Mějte hezký den!
+Y: Jsem rád, že jsem vám mohl dnes pomoci. Mějte také skvělý den.
+

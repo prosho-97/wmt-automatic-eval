@@ -1,0 +1,19 @@
+Hledáte <i>místo k pobytu</i>. Hotel by měl <i>zahrnovat bezplatné parkování</i> a měl by být typu <i>penzion</i>.
+Hotel by měl být v <i>drahém</i> cenovém rozmezí a měl by <i>zahrnovat bezplatné Wi-Fi</i>.
+Pokud takový hotel neexistuje, co třeba jeden, který je v <i>levném</i> cenovém rozmezí.
+Jakmile najdete <i>hotel</i>, chcete si ho zarezervovat pro <i>8 osob</i> a <i>4 noci</i>, počínaje <i>pátkem</i>.
+Ujistěte se, že dostanete <i>referenční číslo</i>.
+
+X: Chci najít penzion s bezplatným parkováním. Můžete mi pomoci?
+Y: Je zde 21 penzionů, které mají dostupné parkování. Máte nějaké preference ohledně cenového rozmezí nebo části města?
+X: Opravdu bych chtěl něco drahého.
+Y: Omlouvám se, ale nemohu najít žádný drahý. Zkusme jiné cenové rozmezí.
+X: Dobře, zkusme levný hotel.
+Y: Chcete levný hotel nebo levný penzion?
+X: Měl jsem na mysli levný penzion s bezplatným Wi-Fi.
+Y: Co takhle Alexander Bed and Breakfast?
+X: Zní to dobře, pojďme to zarezervovat! 8 lidí na 4 noci, začínající v pátek.
+Y: Rezervace byla provedena. Vaše referenční číslo je 2V7EJVA7. Potřebujete ještě něco?
+X: Ne, to stačí. Děkuji moc za vaši pomoc!
+Y: Není zač. Doufám, že máte příjemný pobyt.
+

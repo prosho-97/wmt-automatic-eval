@@ -1,0 +1,23 @@
+Plánujete svou cestu do Cambridge
+Hledáte <i>určitou atrakci</i>. Její název je <i>Regency Gallery</i>.
+Ujistěte se, že dostanete <i>oblast</i>.
+Hledáte také <i>vlak</i>. Vlak by měl jet do <i>Cambridge</i> a měl by <i>přijet do 09:15</i>.
+Vlak by měl odjíždět v <i>pátek</i> a měl by odjíždět z <i>Leicesteru</i>.
+Jakmile najdete vlak, chcete rezervaci pro <i>7 osob</i>.
+Ujistěte se, že dostanete <i>referenční číslo</i>.
+
+X: Ahoj, chtěl bych informace o atrakci nazvané Regency Gallery, děkuji.
+Y: Regency Gallery je muzeum v centru města. Jaké informace potřebujete?
+X: Jen potřebuji vědět, v jaké oblasti se nachází.
+Y: Regency Gallery je v centru. Adresa je 39 Fitzroy Street. Chcete vědět něco dalšího?
+X: Potřebuji rezervovat vlak, který přijede do Cambridge do 9:15.
+Y: To není problém. V jaký den chcete cestovat?
+X: Rád bych cestoval v pátek.
+Y: Odkud budete cestovat?
+X: Přijedu z Leicesteru.
+Y: Existují 3 vlaky, které přijíždějí před 9:15, jeden přijíždí v 6:54, druhý v 7:54 a třetí v 8:54. Chtěli byste, abych jeden z nich rezervoval?
+X: Jak by to bylo s 8:54. Můžete prosím rezervovat pro 7 osob a poskytnout mi referenční číslo?
+Y: Sedm lístků je rezervováno na TR4256, který odjíždí z Leicesteru v 07:09 a přijíždí do Cambridge v 08:54. Celková cena je 264,59 £, splatná na stanici. Referenční číslo je KWI8652L. Bude to vše?
+X: Ano, to je všechno, co jsem potřeboval. Děkuji za vaši pomoc.
+Y: Skvělé. Přeji vám hezký zbytek dne!
+

@@ -1,0 +1,30 @@
+Cestujete do Cambridge a těšíte se na místní turistické atrakce.
+Hledáte <i>místo k pobytu</i>. Hotel by měl mít <i>čtyři hvězdičky</i> a měl by být na <i>východě</i>.
+Hotel by měl být typu <i>pension</i>.
+Jakmile najdete <i>hotel</i>, chcete ho rezervovat pro <i>8 osob</i> a <i>5 nocí</i>, začínající od <i>středy</i>.
+Ujistěte se, že dostanete <i>referenční číslo</i>.
+Také hledáte <i>místa k návštěvě</i> ve městě. Atrakce by měla být v <i>centru</i> a měla by být typu <i>muzeum</i>.
+Ujistěte se, že dostanete <i>PSČ</i>.
+Také chcete zarezervovat <i>taxi</i>, abyste se mohli dopravit mezi oběma místy.
+Chcete odejít z <i>atrakce</i> v <i>12:30</i>.
+Ujistěte se, že dostanete <i>kontaktní číslo</i> a <i>typ vozu</i>.
+
+X: Ahoj. Hledám 4hvězdičkový hotel na východě.
+Y: Na východní straně města nejsou žádné 4hvězdičkové hotely. Měl byste zájem zůstat v pensionu místo toho?
+X: Ano, pension je to, co vlastně hledám.
+Y: V oblasti je 6 pensionů. Jaké máte cenové rozmezí?
+X: Nemám na mysli žádné konkrétní cenové rozmezí. Co navrhujete pro 8 lidí na 5 nocí? Potřebuji to od středy.
+Y: Doporučil bych Autumn House na adrese 710 Newmarket Road. Má internet a parkování a je levný. Zní to dobře?
+X: Ano, také hledám místa k návštěvě ve městě. Atrakce by měla být v centru a měla by být typu muzeum.
+Y: V centru máme mnoho muzeí na výběr! Hledáte umělecké muzeum, archeologické nebo vědecké?
+X: Můžete si vybrat za mě, ale rád bych znal PSČ muzea.
+Y: Moje volba je Castle Galleries. PSČ je cb23bj. Nikdy jsem neudělal tu rezervaci hotelu. Chtěl byste, abych to udělal nyní?
+X: Ano, prosím. Také potřebuji zarezervovat taxi, které mě může vzít z hotelu tam.
+Y: Dobře, v kolik hodin budete odjíždět?
+X: Rezervujte hotel pro 8 osob, 5 nocí a začínající ve středu.
+Y: Rezervace byla úspěšná. Referenční číslo je: 057BYPRI. Můžu vám ještě s něčím pomoci?
+X: Můžeme zarezervovat to taxi? Budu potřebovat odejít z galerií v 12:30.
+Y: Vaše rezervace byla dokončena. Bude to červená Audi a kontaktní číslo je 07888569243. Bude dnes něco dalšího?
+X: Ne, byli jste velmi nápomocní. Nemám žádné další otázky. Děkuji. Na shledanou.
+Y: Děkuji a užijte si pobyt v Cambridge!
+

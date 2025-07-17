@@ -1,0 +1,29 @@
+Cestujete do Cambridge a těšíte se na místní turistické atrakce
+Hledáte <i>místa k návštěvě</i> ve městě. Atrakce by měla být typu <i>zábava</i>
+Ujistěte se, že dostanete <i>poštovní směrovací číslo</i>, <i>adresu</i> a <i>oblast</i>
+Také hledáte <i>restauraci</i>. Restaurace by měla podávat <i>britská</i> jídla a měla by být v <i>střední</i> cenové kategorii
+Jakmile najdete <i>restauraci</i>, kterou chcete, rezervujte stůl pro <i>7 osob</i> na <i>19:30</i> v <i>pátek</i>
+Ujistěte se, že dostanete <i>referenční číslo</i>
+Také chcete zarezervovat <i>taxi</i>, abyste se přepravili mezi dvěma místy
+Chcete se ujistit, že dorazí k restauraci <i>včas podle rezervace</i>
+Ujistěte se, že dostanete <i>kontaktní číslo</i> a <i>typ vozu</i>
+
+X: Ano, hledám zábavnou turistickou atrakci, můžete mi ukázat nějaká místa, která bych měl navštívit?
+Y: Mám asi 5 různých zábavních míst, pokud to je to, co hledáte. Máte nějakou preferenci ohledně oblasti, kde se nachází?
+X: Nemám preference, prosím, vyberte jedno a dejte mi poštovní směrovací číslo a adresu.
+Y: Myslím, že by se vám mohla líbit Funky Fun House. Jsou na adrese 8 Mercers Row, Mercers Row Industrial Estate. Jejich poštovní směrovací číslo je CB5 8HY. Mohu vám ještě s něčím pomoci?
+X: V jaké oblasti se nachází Funky Fun House?
+Y: Funky Fun House se nachází na východě. Mohu vám ještě s něčím pomoci dnes?
+X: Také hledám restauraci, která je cenově přijatelná a podává britská jídla.
+Y: Mám na výběr pět různých restaurací. Čtyři jsou v centru města a jedna na západě. Máte nějakou preferenci?
+X: Zkusme rezervaci v té na západě.
+Y: Dobře, na který den byste chtěl rezervaci?
+X: Potřebujeme rezervaci na pátek v 19:30. Jak se ta restaurace na západě jmenuje?
+Y: Ta se jmenuje Saint John's Chop House. Kolik lidí bude jíst?
+X: Bude nás 7. Můžete mi prosím také říct referenční číslo?
+Y: Vaše rezervace byla úspěšná a referenční číslo je JTWXFM7M.
+X: Děkuji. Teď potřebuji zařídit taxi, které mě odveze z Funky Fun House na večeři do Saint John's.
+Y: Rezervoval jsem modrý Volvo. Vyjede pro vás z Funky Fun House v 19:00 a dostane vás do restaurace včas na vaši rezervaci v 19:30. Kontaktní číslo je 07566667235.
+X: Děkuji moc. To je všechno, co potřebuji na dnes večer. Mějte se. Na shledanou.
+Y: Mějte hezký den, na shledanou.
+

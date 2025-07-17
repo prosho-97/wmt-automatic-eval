@@ -1,0 +1,26 @@
+Plánujete svou cestu do Cambridge
+Hledáte <i>místo k pobytu</i>. Hotel by měl být v <i>dražším</i> cenovém rozmezí a měl by být v typu <i>hotelu</i>.
+Hotel by měl <i>zahrnovat bezplatné Wi-Fi</i>.
+Ujistěte se, že zjistíte, <i>zda mají bezplatné parkování</i> a <i>PSČ</i>.
+Hledáte také <i>vlak</i>. Vlak by měl odjíždět v <i>sobotu</i> a měl by jet do <i>London Kings Cross</i>.
+Vlak by měl <i>odjet po 18:30</i> a měl by odjíždět z <i>Cambridge</i>.
+Jakmile najdete vlak, který chcete, rezervujete ho pro <i>1 osobu</i>.
+Ujistěte se, že dostanete <i>referenční číslo</i>.
+
+X: Plánuji brzkou návštěvu Cambridge a potřebuji informace o typech ubytování, které jsou k dispozici.
+Y: Je zde 33 míst k pobytu. Chcete levné?
+X: Ne, chci drahý hotel s bezplatným Wi-Fi.
+Y: Co říkáte na Express by Holiday Inn Cambridge, je na východě.
+X: Má to bezplatné parkování?
+Y: Ano, má. Chcete pokračovat a udělat rezervaci?
+X: Ne, děkuji, ale můžete mi prosím poskytnout jejich PSČ?
+Y: Jistě. PSČ je CB13LH.
+X: Děkuji. Bylo by možné najít také vlak?
+Y: Jistě. Nejdříve mi dejte více informací. Jaká jsou vaše odjezdová a cílová města?
+X: Potřebuji cestovat v sobotu z Cambridge do London Kings Cross a potřebuji odjet po 18:30.
+Y: Vlak TR0427 odjíždí v 19:00 v sobotu a dorazí tam v 19:51. Cena je 18,88 liber. Chcete, abych to zarezervoval?
+X: Ano, prosím, zarezervujte vlak pro 1 osobu a poskytněte mi referenční číslo.
+Y: Vaše rezervace byla úspěšná. Vaše referenční číslo je SA63GZJD.
+X: Děkuji mnohokrát, to je vše, co potřebuji.
+Y: Není zač! Mějte skvělý den!
+

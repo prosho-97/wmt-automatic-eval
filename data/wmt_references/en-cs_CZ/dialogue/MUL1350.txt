@@ -1,0 +1,33 @@
+Plánujete svou cestu do Cambridge
+Hledáte <i>místo k pobytu</i>. Hotel by měl být na <i>východě</i> a měl by být v <i>levném</i> cenovém rozmezí.
+Hotel by měl <i>zahrnovat bezplatné parkování</i>.
+Jakmile najdete <i>hotel</i>, který chcete, zarezervujete ho pro <i>8 osob</i> a <i>4 noci</i>, počínaje <i>čtvrtkem</i>.
+Ujistěte se, že dostanete <i>referenční číslo</i>.
+Hledáte také <i>místo k večeři</i>. Restaurace by měla být ve <i>stejném cenovém rozmezí jako hotel</i> a měla by podávat <i>indické</i> jídlo.
+Jakmile najdete <i>restauraci</i>, kterou chcete, rezervujete stůl pro <i>stejnou skupinu lidí</i> na <i>12:45</i> ve <i>stejný den</i>.
+Ujistěte se, že dostanete <i>referenční číslo</i>.
+Také chcete zarezervovat <i>taxi</i>, které vás přepraví mezi těmito dvěma místy.
+Chcete, aby dorazilo do restaurace <i>včas</i>.
+Ujistěte se, že dostanete <i>kontaktní číslo</i> a <i>typ vozu</i>.
+
+X: Dobrý den. Opravdu potřebuji najít levné místo k pobytu na východě. Je něco takového?
+Y: Našel jsem tři, všechny jsou to penziony a všechny mají bezplatný internet a parkování. Chcete, abych vám dal jejich informace?
+X: Jistě, to zní skvěle.
+Y: Dobře, dám vám informace, které mám.
+X: Můžete to zarezervovat pro 8 osob na 4 noci počínaje čtvrtkem?
+Y: Dobře, zarezervoval jsem vám The Allenbell na 4 noci pro 8 osob. Vaše referenční číslo je 7SN0BAAT. Potřebujete něco dalšího?
+X: Rád bych indickou restauraci ve stejném cenovém rozmezí jako hotel, prosím.
+Y: Je čtyři levné indické restaurace, tři v centru města a jedna na severním konci.
+X: Kterákoli z nich je v pořádku, překvapte mě!
+Y: Doporučil bych Royal Spice na severním konci. Chcete, abych tam udělal rezervaci?
+X: Ano, potřebuji to rezervovat pro stejnou skupinu lidí na 12:45 ve stejný den.
+Y: Rezervace byla úspěšná. Referenční číslo je KAY2S45O. Můžu pro vás udělat ještě něco?
+X: Ano, chtěl bych rezervovat taxi na přepravu mezi The Allenbell a Royal Spice. Opravu chci být na čas na naší večeři.
+Y: V kolik hodin byste chtěl, abych vás vyzvedl?
+X: Rád bych, aby dorazilo v 12:45, prosím.
+Y: Mám to pro vás zarezervováno, kontaktní číslo je 07340953955. Potřebujete ještě něco?
+X: Potřebuji typ vozu, prosím.
+Y: Ano, je to šedý škoda. Můžu vám s něčím dalším pomoci?
+X: Ne, to je vše, na shledanou.
+Y: Není zač. Užijte si svou cestu!
+
