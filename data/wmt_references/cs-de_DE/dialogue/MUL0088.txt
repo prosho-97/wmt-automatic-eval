@@ -1,0 +1,36 @@
+Sie suchen Informationen über Cambridge.
+Sie suchen nach <i>Unterkünften</i>. Das Hotel sollte in der <i>preiswerten</i> Kategorie sein und <i>kostenloses Parken</i> beinhalten.
+Das Hotel sollte <i>3 Sterne</i> haben.
+Falls ein solches Hotel nicht verfügbar ist, versuchen Sie es mit einem Hotel in der <i>mittleren</i> Preiskategorie.
+Bitte stellen Sie sicher, dass Sie die <i>Postleitzahl</i>, ob es <i>Internet</i> gibt und die <i>Telefonnummer</i> haben.
+Außerdem suchen Sie nach einem <i>bestimmten Restaurant</i>. Es heißt <i>The Cow Pizza Kitchen and Bar</i>.
+Bitte stellen Sie sicher, dass Sie die <i>Adresse</i> haben.
+Sie möchten auch ein <i>Taxi</i> bestellen, um Sie zwischen beiden Orten zu transportieren.
+Sie möchten um <i>13:45 Uhr</i> vom <i>Hotel</i> abfahren.
+Bitte stellen Sie sicher, dass Sie die <i>Telefonnummer</i> und den <i>Fahrzeugtyp</i> haben.
+
+X: Guten Tag, ich suche ein preiswertes Hotel mit kostenlosem Parken in Cambridge.
+Y: Ich habe mehrere preiswerte Hotels mit kostenlosem Parken. In welchem Teil der Stadt sind Sie interessiert?
+X: Ich hätte gerne einen Platz in der Nähe des Zentrums, aber das Hotel sollte 3 Sterne haben.
+Y: Ich entschuldige mich, aber wir haben keine Hotels, die Ihren Suchkriterien entsprechen. Möchten Sie etwas anderes ausprobieren?
+X: Haben Sie 3-Sterne-Hotels in der mittleren Preiskategorie mit kostenlosem Parken?
+Y: Ich entschuldige mich, aber wir haben keine Hotels, die Ihren Suchkriterien entsprechen. Möchten Sie etwas anderes ausprobieren?
+X: Was ist mit etwas in der mittleren Preiskategorie?
+Y: Ich habe 3 Angebote, die Ihren Vorlieben entsprechen. Bevorzugen Sie den Norden, Süden oder Westen?
+X: Ich habe keine Vorlieben, aber ich möchte auch ein Restaurant namens The Cow Pizza Kitchen and Bar finden.
+Y: Möchten Sie zuerst eine Unterkunft reservieren, bevor ich das Restaurant reserviere? Ich denke, das Hamilton Lodge Hotel könnte Ihnen gefallen. Es erfüllt Ihre Anforderungen.
+X: Hat es Internet?
+Y: Ja, das Hamilton Lodge hat Internet.
+X: Das klingt gut. Wie ist die Adresse und die Kontaktdaten?
+Y: Das Hamilton Lodge befindet sich in der 156 Chesterton Road, PLZ CB41DA. Die Telefonnummer ist 01223365664. Möchten Sie ein Zimmer reservieren?
+X: Das ist nicht notwendig, danke. Aber könnten Sie mir das Restaurant finden, von dem mein Freund gesprochen hat? Ich glaube, es hieß The Cow Pizza Kitchen and Bar.
+Y: The Cow Pizza Kitchen and Bar ist ein Gastropub in der mittleren Preiskategorie im Stadtzentrum. Möchten Sie eine Reservierung vornehmen?
+X: Können Sie mir bitte die Adresse des Restaurants The Cow Pizza Kitchen and Bar geben?
+Y: Die Adresse ist Corn Exchange Street. Kann ich Ihnen noch mit etwas anderem helfen?
+X: Ich hätte gerne ein Taxi vom Hotel um 13:45 Uhr, um zum Restaurant zu gelangen.
+Y: Ich habe Ihnen ein Taxi bestellt, das um 13:45 Uhr am Hamilton Lodge ankommt. Die Telefonnummer ist 07214110599.
+X: Was für ein Fahrzeugtyp ist das?
+Y: Das Taxi ist ein rotes Audi.
+X: Vielen Dank, das ist alles, was ich benötige.
+Y: Gern geschehen, ich wünsche Ihnen einen schönen Tag!
+

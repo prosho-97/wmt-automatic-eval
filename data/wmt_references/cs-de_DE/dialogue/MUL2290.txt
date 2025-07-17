@@ -1,0 +1,23 @@
+Sie suchen Informationen in Cambridge
+Sie suchen nach einem <i>Zug</i>. Der Zug sollte am <i>Donnerstag</i> abfahren und <i>nach 12:15</i> Uhr abfahren.
+Der Zug sollte von <i>Cambridge</i> nach <i>Peterborough</i> fahren.
+Stellen Sie sicher, dass Sie <i>den Preis</i> und <i>die Ankunftszeit</i> erhalten.
+Sie suchen auch nach einem <i>Unterkunftsort</i>. Das Hotel sollte <i>2 Sterne</i> haben und <i>kostenloses Parken</i> anbieten.
+Das Hotel sollte vom <i>Hoteltyp</i> sein.
+Stellen Sie sicher, dass Sie <i>die PLZ</i> und <i>die Preisspanne</i> erhalten.
+
+X: Hallo, kannst du mir helfen, einen Zug zu finden?
+Y: Klar! Wohin möchtest du fahren?
+X: Von Cambridge nach Peterborough. Ich suche am Donnerstag nach 12:15 Uhr.
+Y: Ich habe hier den Zug TR8124, der am Donnerstag um 12:34 Uhr von Cambridge abfährt und um 13:24 Uhr in Peterborough ankommt. Wäre das in Ordnung?
+X: Ja, das sollte passen. Wie viel kostet das Ticket?
+Y: Der Preis beträgt 16,50 Pfund.
+X: Gut, ich brauche auch ein 2-Sterne-Hotel mit kostenlosem Parken.
+Y: Ich habe drei Optionen. Möchtest du eine Empfehlung oder hast du spezifische Anforderungen?
+X: Ich hätte gerne eine Empfehlung.
+Y: Ich würde dir Express by Holiday Inn Cambridge empfehlen. Es liegt im Osten und ist etwas teurer, aber nicht viel mehr als die anderen beiden. Ich empfehle es wirklich.
+X: Klingt großartig! Kannst du mir bitte die PLZ sagen?
+Y: Sicher! Die PLZ ist CB13LH. Kann ich dir noch mit etwas anderem helfen?
+X: Das sollte alles sein, was ich heute brauche. Vielen Dank für deine Hilfe!
+Y: Gern geschehen! Ich helfe immer gerne. Mach's gut!
+

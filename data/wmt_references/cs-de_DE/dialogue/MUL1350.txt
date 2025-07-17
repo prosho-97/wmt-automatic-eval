@@ -1,0 +1,33 @@
+Sie planen Ihre Reise nach Cambridge
+Sie suchen nach einem <i>Übernachtungsort</i>. Das Hotel sollte im <i>Osten</i> liegen und in einer <i>günstigen</i> Preiskategorie sein.
+Das Hotel sollte <i>kostenloses Parken</i> anbieten.
+Sobald Sie ein <i>Hotel</i>, das Ihnen gefällt gefunden haben, reservieren Sie es für <i>8 Personen</i> und <i>4 Nächte</i>, beginnend am <i>Donnerstag</i>.
+Stellen Sie sicher, dass Sie eine <i>Referenznummer</i> erhalten.
+Sie suchen auch nach einem <i>Ort zum Abendessen</i>. Das Restaurant sollte im <i>gleichen Preisbereich wie das Hotel</i> liegen und <i>indische</i> Küche anbieten.
+Sobald Sie ein <i>Restaurant</i> gefunden haben, das Ihnen gefällt, reservieren Sie einen Tisch für <i>die gleiche Anzahl von Personen</i> um <i>12:45 Uhr</i> am <i>gleichen Tag</i>.
+Stellen Sie sicher, dass Sie eine <i>Referenznummer</i> erhalten.
+Außerdem möchten Sie ein <i>Taxi</i> reservieren, das Sie zwischen diesen beiden Orten transportiert.
+Sie möchten, dass es <i>pünktlich</i> im Restaurant ankommt.
+Stellen Sie sicher, dass Sie <i>die Kontaktnummer</i> und <i>den Fahrzeugtyp</i> erhalten.
+
+X: Guten Tag. Ich brauche wirklich einen günstigen Übernachtungsort im Osten. Gibt es so etwas?
+Y: Guten Tag! Ich habe drei Optionen gefunden, alle sind Pensionen und bieten kostenloses WLAN und Parkplätze. Möchten Sie, dass ich Ihnen deren Informationen gebe?
+X: Sicher, das klingt großartig.
+Y: Gut, ich gebe Ihnen die Informationen, die ich habe.
+X: Können Sie das für 8 Personen für 4 Nächte ab Donnerstag reservieren?
+Y: Ich habe für Sie The Allenbell für 4 Nächte für 8 Personen reserviert. Ihre Referenznummer ist 7SN0BAAT. Brauchen Sie noch etwas?
+X: Ich hätte gerne ein indisches Restaurant im gleichen Preisbereich wie das Hotel, bitte.
+Y: Ich habe vier günstige indische Restaurants, drei im Stadtzentrum und eines am nördlichen Ende.
+X: Eines davon ist in Ordnung, überraschen Sie mich!
+Y: Ich würde Royal Spice am nördlichen Ende empfehlen. Möchten Sie, dass ich dort eine Reservierung mache?
+X: Ja, ich benötige eine Reservierung für die gleiche Gruppe um 12:45 Uhr am gleichen Tag.
+Y: Die Reservierung war erfolgreich. Die Referenznummer ist KAY2S45O. Kann ich Ihnen noch bei etwas helfen?
+X: Ja, ich möchte ein Taxi reservieren, um zwischen The Allenbell und Royal Spice zu fahren. Ich möchte pünktlich zum Abendessen sein.
+Y: Um wie viel Uhr möchten Sie, dass ich Sie abhole?
+X: Ich hätte gerne, dass es um 12:45 Uhr ankommt, bitte.
+Y: Ich habe das für Sie reserviert, die Kontaktnummer ist 07340953955. Brauchen Sie noch etwas?
+X: Ich brauche den Fahrzeugtyp, bitte.
+Y: Ja, es ist ein grauer Škoda. Kann ich Ihnen noch bei etwas anderem helfen?
+X: Nein, das ist alles. Auf Wiedersehen.
+Y: Gern geschehen. Genießen Sie Ihre Reise!
+

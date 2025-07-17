@@ -1,0 +1,5 @@
+Ich messe hier jetzt im 200-kΩ-Bereich, und der Motor ist unterbrochen – ich bekomme hier immer noch Over Range. Das ist eigentlich auch gleich der Beweis, dass ich den Fehler nicht in den Kabeln suchen muss, sondern einfach den Motor tauschen kann.
+Also schau ich mal, welcher von den Motoren dem alten am ähnlichsten ist – im besten Fall identisch – und dann tausche ich einfach die beiden aus.
+So, der neue Motor ist jetzt eingebaut. Der funktionierende Motor hat übrigens einen Wicklungswiderstand von etwa 12 kΩ. Jetzt bau ich die Mikrowelle wieder zusammen – das wird wahrscheinlich der schwierigste Teil an der ganzen Reparatur – und dann schauen wir, ob sich der Teller wieder dreht.
+Alles ist wieder zusammengebaut, und ich hoffe, die Mikrowelle läuft jetzt. Ich hab ein Glas Wasser reingestellt – natürlich werde ich’s nicht bis zum Kochen erhitzen, das ist nur, damit sie nicht leer läuft und da überhaupt was drin ist.
+Also, ich mach mal das Licht aus, damit man reinschauen kann, und wir testen jetzt, ob sich der Teller dreht. Also – los geht’s.

@@ -1,0 +1,26 @@
+Sie planen Ihre Reise nach Cambridge
+Sie suchen nach einem <i>Unterkunftsort</i>. Das Hotel sollte im <i>teuren</i> Preissegment liegen und vom <i>Hoteltyp</i> sein.
+Das Hotel sollte <i>kostenloses WLAN</i> anbieten.
+Stellen Sie sicher, dass Sie herausfinden, <i>ob sie kostenloses Parken</i> und <i>die PLZ</i> haben.
+Sie suchen auch nach einem <i>Zug</i>. Der Zug sollte am <i>Samstag</i> abfahren und nach <i>London Kings Cross</i> fahren.
+Der Zug sollte <i>nach 18:30</i> abfahren und von <i>Cambridge</i> losfahren.
+Sobald Sie den Zug gefunden haben, den Sie möchten, reservieren Sie ihn für <i>1 Person</i>.
+Stellen Sie sicher, dass Sie <i>die Referenznummer</i> erhalten.
+
+X: Ich plane einen baldigen Besuch in Cambridge und benötige Informationen zu den verfügbaren Unterkunftsarten.
+Y: Es gibt 33 Übernachtungsmöglichkeiten. Möchtest du eine günstige?
+X: Nein, ich möchte ein teures Hotel mit kostenlosem WLAN.
+Y: Wie wäre es mit dem Express by Holiday Inn Cambridge, der sich im Osten befindet?
+X: Hat es kostenloses Parken?
+Y: Ja, hat es. Möchtest du fortfahren und eine Reservierung vornehmen?
+X: Nein, danke. Aber kannst du mir bitte die PLZ geben?
+Y: Sicher. Die PLZ ist CB1 3LH.
+X: Danke. Wäre es möglich, auch einen Zug zu finden?
+Y: Natürlich. Gib mir zuerst mehr Informationen. Was sind deine Abfahrts- und Zielorte?
+X: Ich muss am Samstag von Cambridge nach London Kings Cross reisen und möchte nach 18:30 abfahren.
+Y: Der Zug TR0427 fährt am Samstag um 19:00 Uhr ab und kommt um 19:51 Uhr an. Der Preis beträgt 18,88 Pfund. Möchtest du, dass ich ihn reserviere?
+X: Ja, bitte reserviere den Zug für 1 Person und gib mir die Referenznummer.
+Y: Deine Reservierung war erfolgreich. Deine Referenznummer ist SA63GZJD.
+X: Vielen Dank, das ist alles, was ich brauche.
+Y: Gern geschehen! Hab einen tollen Tag!
+

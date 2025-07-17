@@ -1,0 +1,30 @@
+Sie reisen nach Cambridge und freuen sich auf die dortigen Touristenattraktionen.
+Sie suchen nach <i>einem Ort zum Aufenthalt</i>. Das Hotel sollte <i>vier Sterne</i> haben und im <i>Osten</i> liegen.
+Das Hotel sollte vom Typ <i>Pension</i> sein.
+Sobald Sie <i>das Hotel</i> gefunden haben, möchten Sie es für <i>8 Personen</i> und <i>5 Nächte</i> reservieren, beginnend am <i>Mittwoch</i>.
+Stellen Sie sicher, dass Sie <i>die Referenznummer</i> erhalten.
+Sie suchen auch nach <i>Orten, die Sie in der Stadt besuchen können</i>. Die Attraktionen sollten im <i>Zentrum</i> sein und vom Typ <i>Museum</i> sein.
+Stellen Sie sicher, dass Sie <i>die Postleitzahl</i> erhalten.
+Sie möchten auch ein <i>Taxi</i> reservieren, um zwischen den beiden Orten zu reisen.
+Sie möchten um <i>12:30</i> von der <i>Attraktion</i> abfahren.
+Stellen Sie sicher, dass Sie <i>die Kontaktnummer</i> und <i>den Fahrzeugtyp</i> erhalten.
+
+X: Hallo, ich suche ein 4-Sterne-Hotel im Osten.
+Y: Im östlichen Teil der Stadt gibt es keine 4-Sterne-Hotels. Möchtest du stattdessen in einer Pension bleiben?
+X: Ja, eine Pension ist das, wonach ich eigentlich suche.
+Y: In der Gegend gibt es 6 Pensionen. Was ist dein Preisrahmen?
+X: Ich habe keinen bestimmten Preisrahmen im Sinn. Was empfiehlst du für 8 Personen für 5 Nächte? Ich benötige das ab Mittwoch.
+Y: Ich würde das Autumn House in der 710 Newmarket Road empfehlen. Es hat Internet und Parkmöglichkeiten und ist günstig. Klingt das gut?
+X: Ja, ich suche auch nach Orten, die ich in der Stadt besuchen kann. Die Attraktion sollte im Zentrum sein und ein Museum sein.
+Y: Im Zentrum haben wir viele Museen zur Auswahl! Suchst du nach einem Kunstmuseum, archäologischen oder wissenschaftlichen?
+X: Du kannst für mich auswählen, aber ich möchte die Postleitzahl des Museums wissen.
+Y: Meine Wahl ist Castle Galleries. Die Postleitzahl ist CB2 3BJ. Ich habe die Hotelreservierung noch nicht gemacht. Möchtest du, dass ich das jetzt tue?
+X: Ja, bitte. Ich benötige auch ein Taxi, das mich von dort zum Hotel bringt.
+Y: Gut, um wie viel Uhr wirst du abfahren?
+X: Reserviere das Hotel für 8 Personen für 5 Nächte, beginnend am Mittwoch.
+Y: Die Reservierung war erfolgreich. Die Referenznummer ist 057BYPRI. Kann ich dir noch mit etwas helfen?
+X: Können wir das Taxi reservieren? Ich werde um 12:30 von den Galerien abfahren müssen.
+Y: Deine Reservierung wurde abgeschlossen. Es wird ein rotes Audi sein, und die Kontaktnummer ist 07888569243. Gibt es noch etwas für heute?
+X: Nein, du warst sehr hilfreich. Ich habe keine weiteren Fragen. Danke. Auf Wiedersehen.
+Y: Danke und genieße deinen Aufenthalt in Cambridge!
+

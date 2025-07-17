@@ -1,0 +1,33 @@
+Sie planen Ihre Reise nach Cambridge
+Sie suchen nach <i>Orten, die Sie in der Stadt besuchen können</i>. Die Attraktion sollte im <i>Zentrum</i> sein und vom Typ <i>Theater</i> sein.
+Stellen Sie sicher, dass Sie <i>die Adresse</i> erhalten.
+Sie suchen auch nach einem <i>konkreten Hotel</i>. Sein Name ist <i>Avalon</i>.
+Sobald Sie das <i>Hotel</i> gefunden haben, möchten Sie es für <i>6 Personen</i> für <i>3 Nächte</i> ab <i>Dienstag</i> reservieren.
+Falls die Reservierung nicht klappt, wie wäre es mit <i>1 Nacht</i>?
+Stellen Sie sicher, dass Sie <i>eine Referenznummer</i> erhalten.
+
+X: Hallo, ich suche ein Theater, das ich im Zentrum von Cambridge besuchen kann. Kannst du mir dabei helfen?
+Y: Hallo! Ich kann dir das ADC Theatre in der Park Street oder das Cambridge Arts Theatre in der St Edward's Passage 6 empfehlen.
+X: Sind beide im Stadtzentrum?
+Y: Ja, beide befinden sich im Stadtzentrum.
+X: Kannst du mir bitte die Adresse des ADC Theaters sagen?
+Y: Die Adresse ist Park Street.
+X: Welche Vorstellung wird heute gespielt?
+Y: Es tut mir leid, diese Informationen habe ich nicht. Kann ich dir mit etwas anderem helfen?
+X: Ich suche ein konkretes Hotel namens Avalon.
+Y: Avalon befindet sich in der Gilbert Road 62. Möchtest du, dass ich eine Reservierung für dich mache?
+X: Super, ich möchte für 6 Personen 3 Nächte ab Dienstag reservieren.
+Y: Es tut mir leid, die Reservierung war nicht erfolgreich. Möchtest du ein anderes Datum oder einen kürzeren Aufenthalt versuchen?
+X: Ich hätte Interesse an einem Aufenthalt im Avalon für 1 Nacht? Wenn das nicht möglich ist, können wir ein anderes Hotel für 3 Nächte für 6 Gäste finden.
+Y: Kann ich ein anderes Hotel finden, das 6 Personen unterbringen kann?
+X: Ich suche Avalon, es ist ein schönes Hotel.
+Y: Ich habe es gefunden. Es ist ein 4-Sterne-Hotel, das kostenloses Internet anbietet. Die Adresse ist 62 Gilbert Road. Du kannst die Telefonnummer 01223353071 anrufen und ein Zimmer reservieren.
+X: Ich möchte bitte ein Zimmer für 6 Personen und 3 Nächte ab Dienstag reservieren.
+Y: Ich kann dieses Hotel nicht für 3 Tage für 6 Personen reservieren. Möchtest du ein anderes Hotel ausprobieren?
+X: Kannst du es für 1 Nacht versuchen?
+Y: Ja, wir können eine Nacht im Avalon machen.
+X: Das ist großartig. Kannst du ein Zimmer reservieren und mir die Referenznummer geben?
+Y: Du hast ein Zimmer für 1 Nacht im Avalon für 6 Personen. Deine Referenznummer ist QIS9XTIQ. Kann ich dir noch bei etwas helfen?
+X: Nein, das wäre alles. Danke. Auf Wiedersehen.
+Y: Kein Problem, auf Wiedersehen! Schreib jederzeit!
+

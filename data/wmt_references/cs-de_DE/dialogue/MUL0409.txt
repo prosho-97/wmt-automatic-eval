@@ -1,0 +1,23 @@
+Sie planen Ihre Reise nach Cambridge
+Sie suchen nach einer <i>bestimmten Attraktion</i>. Ihr Name ist <i>Regency Gallery</i>.
+Stellen Sie sicher, dass Sie <i>den Bereich</i> erhalten.
+Sie suchen auch nach einem <i>Zug</i>. Der Zug sollte nach <i>Cambridge</i> fahren und bis <i>09:15 Uhr</i> ankommen.
+Der Zug sollte am <i>Freitag</i> abfahren und von <i>Leicester</i> kommen.
+Sobald Sie den Zug gefunden haben, möchten Sie eine Reservierung für <i>7 Personen</i>.
+Stellen Sie sicher, dass Sie <i>eine Referenznummer</i> erhalten.
+
+X: Hallo, ich hätte gerne Informationen über die Attraktion namens Regency Gallery, danke.
+Y: Die Regency Gallery ist ein Museum im Stadtzentrum. Welche Informationen benötigst du?
+X: Ich muss nur wissen, in welchem Gebiet es sich befindet.
+Y: Die Regency Gallery befindet sich im Zentrum. Die Adresse lautet 39 Fitzroy Street. Möchtest du noch etwas wissen?
+X: Ich brauche einen Zug, der bis 9:15 Uhr in Cambridge ankommt.
+Y: Das ist kein Problem. An welchem Tag möchtest du reisen?
+X: Ich würde gerne am Freitag reisen.
+Y: Von wo aus reist du?
+X: Ich komme aus Leicester.
+Y: Es gibt 3 Züge, die vor 9:15 Uhr ankommen: einer kommt um 6:54 Uhr, der zweite um 7:54 Uhr und der dritte um 8:54 Uhr. Möchtest du, dass ich einen von ihnen reserviere?
+X: Wie wäre es mit 8:54 Uhr? Kannst du bitte für 7 Personen reservieren und mir eine Referenznummer geben?
+Y: Sieben Tickets sind für TR4256 reserviert, der um 07:09 Uhr von Leicester abfährt und um 08:54 Uhr in Cambridge ankommt. Der Gesamtpreis beträgt 264,59 £, zahlbar am Bahnhof. Die Referenznummer lautet KWI8652L. Ist das alles?
+X: Ja, das ist alles, was ich benötige. Vielen Dank für deine Hilfe.
+Y: Super! Ich wünsche dir einen schönen Rest des Tages!
+

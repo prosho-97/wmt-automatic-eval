@@ -1,0 +1,17 @@
+Arbeite mit der Wanderkarte und entscheide, ob die Behauptung richtig ist oder nicht, ergänze eventuell den Satz richtig.
+(Die Karte kannst du durch Anklicken vergrößern.)
+Im Kartenausschnitt sind die Höhenlinien mit einem Abstand von 20 Metern veranschaulicht.
+Im Kartenausschnitt sind die Höhenlinien mit einem Abstand von 10 Metern veranschaulicht.
+Der höchste Punkt auf dem Kartenausschnitt ist der Babí lom.
+Er liegt in 450 m über dem Meeresspiegel. NEIN
+Gipfel Babí lom - der Aussichtsturm liegt in einer Höhe von 521 Metern über dem Meeresspiegel.
+Die blaue Wegmarkierung führt nicht zu einer höheren Lage als 400 m über dem Meeresspiegel. NEIN
+Die Gabelung U studánky liegt in einer Höhe von 480 m über dem Meeresspiegel.
+Die blaue Wegmarkierung führt über die Höhenlinie, die 500 m über dem Meeresspiegel markiert. JA
+Über den Gipfel mit der Kote 438 m ü. d. M. verläuft die blaue Wegmarkierung.
+Der blau markierte Wanderweg von der Gabelung U studánky zur Gabelung Babí lom steigt an.
+Der blau markierte Wanderweg von der Gabelung U studánky zur Gabelung Babí lom verläuft über gerades Terrain.
+fällt ab
+bergauf
+bergab
+

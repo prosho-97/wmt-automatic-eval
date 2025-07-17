@@ -1,0 +1,9 @@
+Die Familie Michna ging in ein Geschäft, um sich neue Kleidung und modische Accessoires zu kaufen.
+Jeder konnte sich Waren bis zu einem Wert von 1.000 Kč auswählen.
+Kennzeichne in der Tabelle mit einem Häkchen die Kombinationen, die Simone kaufen konnte, und mit einem Kreuz die Kombinationen, für die das Geld nicht reicht.
+Hemd 275 Kč Rock 280 Kč Hose 310 Kč Jacke 545 Kč Kette 280 Kč Gummistiefel 420 Kč Baseballmütze 145 Kč
+Bezeichne in der Tabelle mit einem Häkchen die Paare, die Mama kaufen konnte, und mit einem Kreuz die Kombinationen, für die das Geld nicht reicht.
+Pullover 359 Kč Hose 299 Kč Kleid 615 Kč Schuhe 150 Kč Tuch 150 Kč Handtasche 499 Kč
+Kennzeichne in der Tabelle mit einem Häkchen die Paare, die Papa kaufen konnte, und mit einem Kreuzchen die Kombinationen, für die das Geld nicht reicht.
+Jacke 675 Kč Hemd 555 Kč Socken 120 Kč Krawatte 249 Kč Regenschirm 329 Kč Gürtel 450 Kč
+
