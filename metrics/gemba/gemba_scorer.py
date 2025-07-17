@@ -164,7 +164,7 @@ class GembaScorer:
                     )
                     parse_answer = lambda x: x
                     error_spans = self.api.bulk_request(
-                        df, self.model, parse_answer, cache=cache, max_tokens=8196
+                        df, self.model, parse_answer, cache=cache, max_tokens=8192
                     )
                     df["error_spans"] = [output["answer"] for output in error_spans]
 
@@ -178,7 +178,7 @@ class GembaScorer:
                         provide_explanations=provide_explanations,
                     )
                     answers = self.api.bulk_request(
-                        df, self.model, parse_answer, cache=cache, max_tokens=8196
+                        df, self.model, parse_answer, cache=cache, max_tokens=8192
                     )
                 else:  # GEMBA-MQM (THIS PART OF THE CODE IS NOT TESTED!)
                     df["prompt"] = df.apply(
