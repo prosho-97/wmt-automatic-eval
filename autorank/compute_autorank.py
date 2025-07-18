@@ -172,7 +172,7 @@ def compute_autorank() -> None:
             sys2robust_scaled_metric_scores[sys].append(robust_scaled_score)
 
     # Compute the final AutoRank as the average of robust scaled scores across all metrics.
-    with open(args.output_path / "autorank.csv", "w", newline="") as csvfile:
+    with open(args.out_path / "autorank.csv", "w", newline="") as csvfile:
         writer = csv.writer(csvfile)
 
         writer.writerow(["Sys", "Is Constrained?", "AutoRank"])
