@@ -143,6 +143,10 @@ def compute_autorank() -> None:
     for metric, sys2lp_scores in metric_name2outputs.items():
         sys2scores = dict()
         for sys, lp2domain_scores in sys2lp_scores.items():
+            if (
+                args.lp not in lp2domain_scores
+            ):  # sys did not submit translations for this lp
+                continue
             for domain, doc_id2scores in lp2domain_scores[args.lp].items():
                 if args.domain is not None and domain != args.domain:
                     continue
