@@ -1,0 +1,44 @@
+Sie suchen Informationen in Cambridge.
+Sie suchen nach <i>Orten, die Sie in der Stadt besuchen können</i>. Die Attraktionen sollten im <i>Westen</i> sein.
+Stellen Sie sicher, dass Sie <i>die Telefonnummer</i> und <i>Postleitzahl</i> erhalten.
+Sie suchen auch nach <i>Unterkünften</i>. Das Hotel sollte <i>kostenloses Parken</i> beinhalten und vom <i>Hoteltyp</i> sein.
+Das Hotel sollte <i>4 Sterne</i> haben und sich in einem <i>moderaten</i> Preissegment befinden.
+Wenn ein solches Hotel nicht existiert, welches wäre dann im <i>teuren</i> Preissegment?
+Sobald Sie <i>das Hotel</i> gefunden haben, möchten Sie es für <i>6 Personen</i> und <i>2 Nächte</i> reservieren, beginnend am <i>Mittwoch</i>.
+Wenn die Reservierung fehlschlägt, wie wäre es mit <i>Sonntag</i>?
+Stellen Sie sicher, dass Sie <i>eine Referenznummer</i> erhalten.
+Sie möchten auch ein <i>Taxi</i> reservieren, um zwischen den beiden Orten zu reisen.
+Sie möchten um <i>05:30</i> von <i>der Attraktion</i> abfahren.
+Stellen Sie sicher, dass Sie <i>die Kontaktnummer</i> und <i>den Fahrzeugtyp</i> erhalten.
+
+X: Ich versuche, einen Ort zum Besuchen in der Stadt zu finden.
+Y: Ich kann dir dabei helfen! Hast du einen bestimmten Typ von Attraktion im Sinn oder eher eine bestimmte Gegend?
+X: Ja, ich brauche eine Attraktion im Westen.
+Y: Im Westen gibt es viele Colleges und Museen. Passt dir eines davon?
+X: Ja. Kannst du einen Ort empfehlen und mir ihre Telefonnummer und Postleitzahl geben?
+Y: Sicher. Churchill College: Postleitzahl CB3 0DS, Telefonnummer 01223332360.
+X: Ich suche auch ein 4-Sterne-Hotel.
+Y: Es gibt 21 4-Sterne-Hotels. In welchem Bereich möchtest du bleiben?
+X: Gibt es einige von ihnen im moderaten Preissegment?
+Y: Nein, das gibt es nicht.
+X: Welches wäre dann im teuren Preissegment?
+Y: Das Huntingdon Marriott Hotel ist die einzige teure Option im Westen. Möchtest du, dass ich es für dich reserviere?
+X: Ja, für 6 Personen und 2 Nächte am Mittwoch, und ich brauche die Bestätigungsnummer.
+Y: Ich arbeite an der Reservierung und werde dich bald kontaktieren.
+X: Gut, bitte gib mir die Referenznummer, sobald du reservierst.
+Y: Ich habe es gerade für dich reserviert. Deine Referenznummer ist AZU0UO5N. Kann ich dir noch bei etwas anderem helfen?
+X: Ja, ich benötige ein Taxi für die Fahrt zwischen der Attraktion und dem Hotel, bitte.
+Y: Um wie viel Uhr benötigst du das Taxi?
+X: Ich möchte um 05:30 vom College abfahren.
+Y: Ich arbeite an der Reservierung und werde dich bald kontaktieren.
+X: Sobald du die Reservierung vorgenommen hast, benötige ich bitte die Kontaktnummer und den Fahrzeugtyp.
+Y: Sicher. Hattest du ein bestimmtes Auto im Sinn?
+X: Nein, danke, ich muss nur die Kontaktnummer und den Fahrzeugtyp wissen.
+Y: Du hast einen roten Skoda. Viel Spaß!
+X: Danke. Was ist ihre Kontaktnummer?
+Y: Die Kontaktnummer ist 8675309.
+X: Danke. Das ist alles für heute.
+Y: Gern geschehen, und danke, dass du unseren Service genutzt hast.
+X: Ich schätze deine Hilfe. Auf Wiedersehen.
+Y: Ich entschuldige mich, aber es gab eine Verwechslung mit dem Taxi, die korrigiert wurde. Du hast ein Taxi auf einen grauen Honda mit der Kontaktnummer 07913624200 reserviert. Brauchst du noch etwas?
+

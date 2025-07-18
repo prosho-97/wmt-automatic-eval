@@ -1,0 +1,30 @@
+Sie planen Ihre Reise nach Cambridge.
+Sie suchen nach <i>einem Ort zum Abendessen</i>. Das Restaurant sollte im <i>Zentrum</i> sein und in einem <i>preiswerten</i> Preissegment liegen.
+Das Restaurant sollte <i>singapurische</i> Küche servieren.
+Wenn ein solches Restaurant nicht existiert, fragen Sie nach einem Restaurant mit <i>italienischer</i> Küche.
+Stellen Sie sicher, dass Sie <i>die Postleitzahl</i> erhalten.
+Sie suchen auch nach <i>Orten, die Sie in der Stadt besuchen können</i>. Die Attraktionen sollten <i>in derselben Gegend wie das Restaurant</i> sein.
+Stellen Sie sicher, dass Sie <i>die Art der Attraktion</i> und <i>die Postleitzahl</i> erhalten.
+Sie möchten auch ein <i>Taxi</i> reservieren, um zwischen den beiden Orten zu reisen.
+Sie möchten um <i>22:15</i> vom <i>Restaurant</i> abfahren.
+Stellen Sie sicher, dass Sie <i>die Kontaktnummer</i> und <i>den Fahrzeugtyp</i> erhalten.
+
+X: Ich suche ein Restaurant im Stadtzentrum.
+Y: Im Stadtzentrum gibt es mehr als 60 Restaurants. Hast du eine bestimmte Küche oder Preisklasse im Sinn?
+X: Ja, etwas im erschwinglichen Preissegment. Gibt es auch welche, die singapurische Küche servieren?
+Y: Es gibt keine singapurischen Restaurants, aber es gibt preiswerte, die verschiedene Küchen anbieten.
+X: Gut, was ist mit italienischer Küche?
+Y: Zizzi Cambridge serviert italienische Küche im Stadtzentrum. Möchtest du eine Reservierung?
+X: Nicht jetzt, aber kann ich bitte ihre Postleitzahl bekommen?
+Y: Ihre Postleitzahl ist CB2 1AB.
+X: Danke. Ich suche auch einige Orte, die ich besuchen kann. Kannst du mir dabei helfen?
+Y: Ich habe in der Datenbank viele verschiedene Orte und Attraktionen. Gibt es etwas Bestimmtes, das du sehen möchtest? Oder suchst du nach einem Standort?
+X: Was gibt es im Zentrum zu sehen und wie lautet die Postleitzahl?
+Y: Im Stadtzentrum gibt es 44 Attraktionen. Möchtest du ein Museum oder vielleicht ein Kino?
+X: Ich bevorzuge ein Kino. Gibt es eines mit derselben Postleitzahl wie das Restaurant?
+Y: Ich habe nur einen Ort, der ein Kino im Zentrum anbietet, aber er hat eine andere Postleitzahl als das Restaurant. Die Postleitzahl von Vue Cinema ist CB1 1PS. Soll ich woanders nach Kinos suchen?
+X: Nein, das ist perfekt. Kannst du mir bitte helfen, ein Taxi zu reservieren? Ich suche eines, das mich von Zizzi Cambridge zum Vue Cinema bringt. Ich möchte um 22:15 abfahren.
+Y: Natürlich. Ich habe dir einen grauen Honda reserviert, der um 22:15 von Zizzi Cambridge zum Vue Cinema fährt. Die Kontaktnummer ist 07135477113.
+X: Danke, das ist alles, was ich heute brauche. Mach's gut.
+Y: Kein Problem. Ich wünsche dir einen schönen Tag!
+

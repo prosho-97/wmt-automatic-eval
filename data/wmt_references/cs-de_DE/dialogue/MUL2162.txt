@@ -1,0 +1,25 @@
+Sie suchen Informationen in Cambridge
+Sie suchen nach einem <i>Zug</i>. Der Zug sollte nach <i>London Kings Cross</i> fahren und bis <i>16:00 Uhr</i> ankommen.
+Der Zug sollte am <i>Samstag</i> fahren und von <i>Cambridge</i> abfahren.
+Stellen Sie sicher, dass Sie <i>den Preis</i>, <i>die Zug-ID</i> und <i>die Abfahrtszeit</i> erhalten.
+Sie suchen auch nach einem <i>Unterkunftsort</i>. Das Hotel sollte <i>3 Sterne</i> haben und im <i>mäßigen</i> Preissegment liegen.
+Das Hotel sollte <i>kostenloses WLAN</i> anbieten und vom <i>Pensionstyp</i> sein.
+Stellen Sie sicher, dass es <i> kostenloses Parken bietet</i>, und sie <i>die Adresse</i> und <i>die Telefonnummer</i> erhalten.
+
+X: Hallo, ich suche einen Zug nach London Kings Cross, der bis 16:00 Uhr ankommt. Kannst du mir dabei helfen?
+Y: Hallo, klar! An welchem Tag wirst du reisen?
+X: Am Samstag, ich fahre von Cambridge.
+Y: Super, ich sehe mehrere Züge. Wann möchtest du abfahren?
+X: Ich benötige den Preis und stelle sicher, dass er bis 16:00 Uhr ankommt.
+Y: Der Zug TR6203 kostet 18,88 Pfund und kommt um 15:51 Uhr an. Passt dir das? Ich kann das Ticket reservieren, wenn du möchtest.
+X: Eine Reservierung ist nicht nötig. Gibt es 3-Sterne-Hotels im mäßigen Preissegment?
+Y: Kannst du mir sagen, ob du Präferenzen bezüglich Internets oder Parken hast?
+X: Ich möchte, dass es kostenloses WLAN hat.
+Y: Ich habe drei Pensionen gefunden, die deinen Anforderungen entsprechen. Möchtest du im Norden, Süden oder Westen bleiben?
+X: Hat eine von ihnen auch kostenloses Parken?
+Y: Ja, alle haben kostenloses Parken. In welchem Teil der Stadt möchtest du bleiben?
+X: Irgendeiner, ich nehme die erste auf deiner Liste. Ich benötige bitte die Adresse und Telefonnummer.
+Y: Die Pension Bridge Guest House befindet sich in der Hills Road 151 und ihre Nummer ist 01223247942.
+X: Großartig, danke! Das ist alles, was ich benötige.
+Y: Gern geschehen! Vielen Dank, dass du unseren Service nutzt. Ruf uns jederzeit an. Mach's gut!
+

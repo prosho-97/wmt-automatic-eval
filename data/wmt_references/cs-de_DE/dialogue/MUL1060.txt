@@ -1,0 +1,29 @@
+Sie reisen nach Cambridge und freuen sich auf die dortigen Touristenattraktionen.
+Sie suchen nach <i>Unterkünften</i>. Das Hotel sollte im <i>Zentrum</i> liegen und <i>kostenloses Parken</i> anbieten.
+Das Hotel sollte <i>kostenloses WLAN</i> beinhalten.
+Sobald Sie ein <i>Hotel</i> gefunden haben, möchten Sie es für <i>8 Personen</i> für <i>3 Nächte</i>, beginnend am <i>Mittwoch</i>, reservieren.
+Stellen Sie sicher, dass Sie eine <i>Referenznummer</i> erhalten.
+Außerdem suchen Sie nach <i>Sehenswürdigkeiten</i> in der Stadt. Die Attraktion sollte sich in <i>derselben Gegend wie das Hotel</i> befinden und vom <i>Typ Hochschule</i> sein.
+Stellen Sie sicher, dass Sie eine <i>Telefonnummer</i>, <i>Postleitzahl</i> und den <i>Eintrittspreis</i> erhalten.
+
+X: Guten Tag, ich möchte ein Hotel finden, das kostenloses Parken anbietet.
+Y: Hallo! Die meisten Hotels in der Stadt bieten kostenloses Parken an. Hast du eine bevorzugte Gegend, in der du wohnen möchtest, oder einen bestimmten Preisrahmen im Kopf?
+X: Ja, das Zentrum wäre schön und auch kostenloses WLAN.
+Y: Das University Arms ist ein teures Hotel mit 4 Sternen und kostenlosem WLAN. Im Gegensatz dazu ist das Alexander Bed and Breakfast ein günstigerer Gasthof mit 4 Sternen.
+X: Bitte reservieren Sie mir Zimmer im Hotel University Arms für 8 Personen für 3 Nächte ab Mittwoch. Können Sie mir nach der Buchung auch eine Referenznummer geben?
+Y: Ihre Referenznummer ist X5NY66ZV.
+X: Danke. Können Sie mir bitte helfen, einen Ort zu finden, den ich in der Stadt in derselben Gegend wie das Hotel besuchen kann? Ich würde eine Hochschule bevorzugen.
+Y: In der gewünschten Gegend gibt es keine Hochschulen. Möchtest du ein anderes Ziel wählen?
+X: Ich denke, es gibt einige Hochschulen im Stadtzentrum. Können Sie bitte noch einmal nachsehen?
+Y: Es tut mir leid, aber ich habe noch einmal nachgesehen und es gibt in dieser Gegend keine Hochschulen. Kann ich Ihnen noch mit etwas anderem helfen?
+X: Hmmm, ich habe nach der Telefonnummer und der Postleitzahl einer Hochschule in der zentralen Gegend gesucht. Könnten Sie mir dabei helfen?
+Y: Ich habe 5 Hochschulen in der zentralen Gegend. Welche spezifische Hochschule suchen Sie?
+X: Ich suche Cambridge.
+Y: Es tut mir leid, aber es gibt keine Aufzeichnungen über das Cambridge College in der zentralen Gegend. Gibt es eine andere Hochschule, nach der du suchen möchtest?
+X: Oh, es könnte jede sein. Nur eine Hochschule.
+Y: Wie wäre es mit dem Corpus Christi College? Der Eintritt ist kostenlos.
+X: Können Sie mir deren Telefonnummer, Postleitzahl und Eintrittspreis geben?
+Y: Die Telefonnummer ist 01223334900, die Postleitzahl ist CB23BU und der Eintritt, wie bereits erwähnt, ist kostenlos. Kann ich Ihnen noch mit etwas anderem helfen?
+X: Vielen Dank. Das ist alles, was ich heute brauche. Auf Wiedersehen.
+Y: Vielen Dank, dass Sie den Support kontaktiert haben. Haben Sie einen großartigen Tag!
+

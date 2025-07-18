@@ -1,0 +1,23 @@
+Sie reisen nach Cambridge und freuen sich auf die lokalen Restaurants.
+Sie suchen nach <i>einem Restaurant</i>. Das Restaurant sollte <i>chinesische</i> Speisen anbieten und im <i>Zentrum</i> liegen.
+Stellen Sie sicher, dass Sie <i>die Preiskategorie</i>, <i>die Telefonnummer</i> und <i>die Adresse</i> erhalten.
+Sie suchen auch nach <i>einem Zug</i>. Der Zug sollte von <i>Peterborough</i> abfahren und nach <i>Cambridge</i> fahren.
+Der Zug sollte am <i>Dienstag</i> abfahren und <i>nach 15:15 Uhr</i> losfahren.
+Sobald Sie den Zug gefunden haben, den Sie möchten, reservieren Sie ihn für <i>2 Personen</i>.
+Stellen Sie sicher, dass Sie <i>die Referenznummer</i> erhalten.
+
+X: Hallo, ich suche ein chinesisches Restaurant im Zentrum von Cambridge.
+Y: In der Gegend gibt es mehrere chinesische Restaurants! Hast du eine Preiskategorie, in die du gerne fallen würdest?
+X: Nein, es ist mir egal. Kannst du mir ein gutes empfehlen?
+Y: Das Jinling Noodle Bar sieht nach einem großartigen Ort aus.
+X: Kann ich die Telefonnummer und die Adresse bekommen? Und gibt es auch einen Zug, der von Peterborough nach Cambridge fährt?
+Y: Sicher, kein Problem. Die Adresse ist 11 Peas Hill, im Stadtzentrum, und die Telefonnummer ist 01223566188. Möchtest du eine Reservierung?
+X: Wie ist die Preiskategorie des Restaurants?
+Y: Dieses Restaurant gehört zur mittleren Preiskategorie. Möchtest du einen Tisch reservieren?
+X: Nein, danke, aber ich benötige einige Informationen zum Zug. Ich fahre am Dienstag von Peterborough ab, irgendwann nach 15:15 Uhr.
+Y: Der Zug TR5933 fährt um 15:19 Uhr von Peterborough ab.
+X: Kannst du das für mich für 2 Personen reservieren?
+Y: Natürlich. Ich habe zwei Tickets für TR5933 reserviert. Der Gesamtpreis beträgt 33 £ und deine Referenznummer ist TL4R46YS. Kann ich dir noch mit etwas anderem helfen?
+X: Das ist alles. Danke.
+Y: Gern geschehen. Hab einen schönen Tag. Auf Wiedersehen.
+

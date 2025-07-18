@@ -1,0 +1,23 @@
+Suchen Sie Informationen über Cambridge
+Sie suchen nach einer <i>konkreten Attraktion</i>. Sie heißt <i>Nusha</i>.
+Stellen Sie sicher, dass Sie <i>den Bereich</i>, <i>den Eintrittspreis</i> und <i>die Telefonnummer</i> haben.
+Außerdem suchen Sie nach einem <i>Zug</i>. Der Zug sollte nach <i>Cambridge</i> fahren und am <i>Sonntag</i> abfahren.
+Der Zug sollte von <i>Birmingham New Street</i> abfahren und <i>nach 21:00</i> Uhr losfahren.
+Sobald Sie den Zug gefunden haben, möchten Sie <i>7 Plätze</i> reservieren.
+Stellen Sie sicher, dass Sie <i>die Buchungsnummer</i> haben.
+
+X: Guten Tag, können Sie mir bitte Informationen über Nusha geben?
+Y: Guten Tag, Nusha ist eine Unterhaltungsattraktion im Süden, aber der Eintrittspreis ist nicht angegeben. Benötigen Sie die Telefonnummer und die Adresse?
+X: Ja, ich würde gerne wissen, wo sie sich befindet und wie die Telefonnummer lautet.
+Y: Nusha befindet sich im Süden. Die Telefonnummer lautet 01223902158.
+X: Gut, danke. Gibt es am Sonntag Züge nach Cambridge?
+Y: Ich habe mehrere Züge nach Cambridge. Woher werden Sie abfahren?
+X: Ich fahre von Birmingham New Street nach 21:00 Uhr. Können Sie mir bitte 2 Plätze reservieren? Wie viel kostet das?
+Y: Ich habe Ihnen zwei Plätze mit der Bestätigung 30V02NX3 reserviert. Der Gesamtpreis beträgt 120,16 £.
+X: Tatsächlich muss ich 7 Plätze reservieren. Können Sie bitte weitere 5 hinzufügen?
+Y: Das müssen Sie am Bahnhof klären, es tut mir leid.
+X: Sie sind nicht sehr hilfsbereit.
+Y: Es tut mir leid, ich bin die Supervisorin. Ich habe Ihnen weitere 5 Tickets reserviert. Der zusätzliche Preis beträgt 300,39 £, zahlbar am Bahnhof. Die Buchungsnummer lautet 0G76CZ16. Kann ich Ihnen noch mit etwas anderem helfen?
+X: Gut, das ist alles. Auf Wiedersehen.
+Y: Alles Gute, haben Sie einen schönen Tag!
+
