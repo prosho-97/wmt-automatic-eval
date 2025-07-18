@@ -99,15 +99,33 @@ def average_and_rank(
         A dictionary mapping each system name to its AutoRank score.
     """
     systems = list(sys2robust_scaled_metric_scores)
-    z_matrix = np.array(
-        [sys2robust_scaled_metric_scores[sys] for sys in systems], dtype=float
+    # Compute the average for each system (handle empty lists gracefully)
+    avg_z = np.array(
+        [
+            np.mean(sys2robust_scaled_metric_scores[sys])
+            if sys2robust_scaled_metric_scores[sys]
+            else float("-inf")
+            for sys in systems
+        ],
+        dtype=float,
     )
 
-    avg_z = z_matrix.mean(axis=1)
+    # Remove systems with no scores (avg == -inf)
+    valid_idx = avg_z != float("-inf")
+    systems = [s for i, s in enumerate(systems) if valid_idx[i]]
+    avg_z = avg_z[valid_idx]
+
+    if len(avg_z) == 0:
+        return dict()
 
     z_min, z_max = avg_z.min(), avg_z.max()
     N = len(systems)
-    autorank = 1 + (N - 1) * (z_max - avg_z) / (z_max - z_min)
+
+    # If all values are equal, set all autorank to 1.0
+    if np.isclose(z_max, z_min):
+        autorank = np.ones(N)
+    else:
+        autorank = 1 + (N - 1) * (z_max - avg_z) / (z_max - z_min)
 
     return dict(zip(systems, autorank))
 
