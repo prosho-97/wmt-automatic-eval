@@ -156,7 +156,7 @@ def compute_autorank() -> None:
                     sys2scores[sys] += scores
             sys2scores[sys] = sum(sys2scores[sys]) / len(sys2scores[sys])
 
-        with open(args.output_path / f"{metric}.csv", "w", newline="") as csvfile:
+        with open(args.out_path / f"{metric}.csv", "w", newline="") as csvfile:
             writer = csv.writer(csvfile)
 
             writer.writerow(["Sys", "Is Constrained?", f"{metric} Score"])
