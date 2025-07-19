@@ -165,29 +165,46 @@ def compute_autorank() -> None:
                 args.lp not in lp2domain_scores
             ):  # sys did not submit translations for this lp
                 continue
+            scores_sum, n_valid_scores, n_scores = 0, 0, 0
             for domain, doc_id2scores in lp2domain_scores[args.lp].items():
                 if args.domain is not None and domain != args.domain:
                     continue
                 for scores in doc_id2scores.values():
-                    if sys not in sys2scores:
-                        sys2scores[sys] = []
-                    sys2scores[sys] += scores
-            sys2scores[sys] = sum(sys2scores[sys]) / len(sys2scores[sys])
-
-        with open(args.out_path / f"{metric}.csv", "w", newline="") as csvfile:
-            writer = csv.writer(csvfile)
-
-            writer.writerow(["Sys", "Is Constrained?", f"{metric} Score"])
-
-            for sys, score in sorted(
-                sys2scores.items(), key=lambda item: item[1], reverse=True
-            ):
-                writer.writerow(
-                    (sys, "Yes" if sys2is_constrained[sys] else "No", round(score, 4))
+                    for s in scores:
+                        if s is not None:
+                            scores_sum += s
+                            n_valid_scores += 1
+                        n_scores += 1
+            if n_valid_scores != n_scores:
+                print(
+                    f"Found {n_scores - n_valid_scores} None scores out of {n_scores} for {sys} in "
+                    f"{metric}. Percentage: {round(((n_scores - n_valid_scores) / n_scores) * 100, 2)}%"
                 )
+            sys2scores[sys] = scores_sum / n_valid_scores
 
-        for sys, robust_scaled_score in robust_scale_metric(sys2scores).items():
-            sys2robust_scaled_metric_scores[sys].append(robust_scaled_score)
+        if len(sys2scores) > 0:
+            with open(args.out_path / f"{metric}.csv", "w", newline="") as csvfile:
+                writer = csv.writer(csvfile)
+
+                writer.writerow(["Sys", "Is Constrained?", f"{metric} Score"])
+
+                for sys, score in sorted(
+                    sys2scores.items(), key=lambda item: item[1], reverse=True
+                ):
+                    writer.writerow(
+                        (
+                            sys,
+                            "Yes" if sys2is_constrained[sys] else "No",
+                            round(score, 4),
+                        )
+                    )
+
+            for sys, robust_scaled_score in robust_scale_metric(sys2scores).items():
+                sys2robust_scaled_metric_scores[sys].append(robust_scaled_score)
+        else:
+            print(
+                f"Warning: No scores found for metric {metric} on language pair {args.lp}. Skipping."
+            )
 
     # Compute the final AutoRank as the average of robust scaled scores across all metrics.
     with open(args.out_path / "autorank.csv", "w", newline="") as csvfile:
