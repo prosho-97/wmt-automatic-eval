@@ -1,11 +1,13 @@
+import os
 import csv
 import json
+import ipdb
 import pickle
 from argparse import ArgumentParser
 from collections import defaultdict
 from pathlib import Path
 from typing import Dict, List
-
+import pandas as pd
 import numpy as np
 
 
@@ -17,24 +19,26 @@ def read_arguments() -> ArgumentParser:
     parser.add_argument(
         "--metrics-outputs-path",
         type=Path,
-        required=True,
-        help="[REQUIRED] Path to the directory containing the MT metrics outputs. It must contain one directory for "
+        default=Path("../data/metrics_outputs"),
+        help="Path to the directory containing the MT metrics outputs. It must contain one directory for "
         "each MT metric.",
     )
 
     parser.add_argument(
         "--teams-path",
         type=Path,
-        required=True,
-        help="[REQUIRED] Path to the json file containing the scored MT systems info.",
+        default=Path("../data/wmt_submitted_systems/teams.json"),
+        help="Path to the json file containing the scored MT systems info.",
     )
 
     parser.add_argument(
-        "--lp",
+        "--lps",
         type=str,
-        default="en-cs_CZ",
-        help="Which language pair to run AutoRank on. It must be passed in local code format (e.g., 'en-et_EE'). "
-        "Default: 'en-cs_CZ'.",
+        nargs="+",
+        default=["en-cs_CZ"],
+        help="Which language pair(s) to run AutoRank on. Must be passed in local code format (e.g., 'en-et_EE'). "
+        "Multiple language pairs can be provided as space-separated values. "
+        "Default: en-cs_CZ",
     )
 
     parser.add_argument(
@@ -129,12 +133,22 @@ def average_and_rank(
 
     return dict(zip(systems, autorank))
 
+def will_be_human_evaluated(df: pd.DataFrame) -> pd.Series:
+    df['will_humeval'] = False
+    constrained = df[df["is_constrained"] == True].head(9)
+    df.loc[constrained.index, 'will_humeval'] = True
+    while len(df[df['will_humeval']]) < 18:
+        remaining = df[df['will_humeval'] == False].head(1)
+        if remaining.empty:
+            break
+        df.loc[remaining.index, 'will_humeval'] = True
+    return df
 
-def compute_autorank() -> None:
+
+def compute_autorank(language_pair, args) -> None:
     """
     Command to compute AutoRank on a language pair specified in input.
     """
-    args = read_arguments().parse_args()
 
     metric_name2outputs = dict()
     for metric_dir in args.metrics_outputs_path.iterdir():
@@ -158,15 +172,16 @@ def compute_autorank() -> None:
         ]
 
     sys2robust_scaled_metric_scores = defaultdict(list)
+    system_scores = defaultdict(dict)
     for metric, sys2lp_scores in metric_name2outputs.items():
         sys2scores = dict()
         for sys, lp2domain_scores in sys2lp_scores.items():
             if (
-                args.lp not in lp2domain_scores
+                language_pair not in lp2domain_scores
             ):  # sys did not submit translations for this lp
                 continue
             scores_sum, n_valid_scores, n_scores = 0, 0, 0
-            for domain, doc_id2scores in lp2domain_scores[args.lp].items():
+            for domain, doc_id2scores in lp2domain_scores[language_pair].items():
                 if args.domain is not None and domain != args.domain:
                     continue
                 for scores in doc_id2scores.values():
@@ -201,10 +216,32 @@ def compute_autorank() -> None:
 
             for sys, robust_scaled_score in robust_scale_metric(sys2scores).items():
                 sys2robust_scaled_metric_scores[sys].append(robust_scaled_score)
+                system_scores[sys][metric] = robust_scaled_score
+                system_scores[sys][f"{metric}_raw"] = sys2scores[sys]
+                system_scores[sys]["is_constrained"] = sys2is_constrained[sys]
         else:
             print(
-                f"Warning: No scores found for metric {metric} on language pair {args.lp}. Skipping."
+                f"Warning: No scores found for metric {metric} on language pair {language_pair}. Skipping."
             )
+
+    df = pd.DataFrame(system_scores).T
+    # add autorank based on average_and_rank(sys2robust_scaled_metric_scores) dictionary
+    df["autorank"] = average_and_rank(sys2robust_scaled_metric_scores)
+    # sort by autorank
+    df = df.sort_values(by="autorank", ascending=True)
+    df = will_be_human_evaluated(df)
+
+    # sort column in order: is_constrained, autorank, all scaled metrics, all raw metrics
+    cols = ["is_constrained", "will_humeval", "autorank"]
+    cols += sorted(
+        [col for col in df.columns if not col.endswith("_raw") and col not in cols],
+        key=lambda x: x.split("_")[0],
+    )
+    cols += sorted(
+        [col for col in df.columns if col.endswith("_raw")],
+        key=lambda x: x.split("_")[0],
+    )
+    df = df[cols]
 
     # Compute the final AutoRank as the average of robust scaled scores across all metrics.
     with open(args.out_path / "autorank.csv", "w", newline="") as csvfile:
@@ -225,6 +262,17 @@ def compute_autorank() -> None:
                 )
             )
 
+    return df
 
 if __name__ == "__main__":
-    compute_autorank()
+    args = read_arguments().parse_args()
+    os.makedirs(args.out_path, exist_ok=True)
+
+    dfs = {}
+    for lp in args.lps:
+        lpdf = compute_autorank(lp, args)
+        dfs[lp] = lpdf
+
+    with pd.ExcelWriter(args.out_path / "autorank.xlsx") as writer:
+        for lp, df in dfs.items():
+            df.to_excel(writer, sheet_name=lp, index=True, float_format="%.2f")
