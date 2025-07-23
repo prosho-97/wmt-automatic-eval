@@ -27,7 +27,7 @@ def read_arguments() -> ArgumentParser:
     parser.add_argument(
         "--teams-path",
         type=Path,
-        default=Path("../data/wmt_submitted_systems/teams.json"),
+        default=Path("../data/wmt25-general-mt/data/systems_metadata.json"),
         help="Path to the json file containing the scored MT systems info.",
     )
 
@@ -160,22 +160,14 @@ def compute_autorank(language_pair, args) -> None:
 
     with open(args.teams_path, "r", encoding="utf-8") as f:
         teams = json.load(f)
-    sys2is_constrained = dict()
-    for entry in teams:
-        if entry["publication_name"] in sys2is_constrained:
-            raise ValueError(
-                f"Publication name {entry['publication_name']} is not unique in the teams file."
-            )
-        assert len(entry["primary_submissions"]) == 1
-        sys2is_constrained[entry["publication_name"]] = entry["primary_submissions"][0][
-            "is_constrained"
-        ]
 
     sys2robust_scaled_metric_scores = defaultdict(list)
     system_scores = defaultdict(dict)
     for metric, sys2lp_scores in metric_name2outputs.items():
         sys2scores = dict()
         for sys, lp2domain_scores in sys2lp_scores.items():
+            if sys not in teams or language_pair not in teams[sys]['lps']:
+                continue
             if (
                 language_pair not in lp2domain_scores
             ):  # sys did not submit translations for this lp
@@ -209,7 +201,7 @@ def compute_autorank(language_pair, args) -> None:
                     writer.writerow(
                         (
                             sys,
-                            "Yes" if sys2is_constrained[sys] else "No",
+                            "Yes" if teams[sys]['constrained'] else "No",
                             round(score, 4),
                         )
                     )
@@ -218,7 +210,7 @@ def compute_autorank(language_pair, args) -> None:
                 sys2robust_scaled_metric_scores[sys].append(robust_scaled_score)
                 system_scores[sys][metric] = robust_scaled_score
                 system_scores[sys][f"{metric}_raw"] = sys2scores[sys]
-                system_scores[sys]["is_constrained"] = sys2is_constrained[sys]
+                system_scores[sys]["is_constrained"] = teams[sys]['constrained']
         else:
             print(
                 f"Warning: No scores found for metric {metric} on language pair {language_pair}. Skipping."
@@ -257,7 +249,7 @@ def compute_autorank(language_pair, args) -> None:
             writer.writerow(
                 (
                     sys,
-                    "Yes" if sys2is_constrained[sys] else "No",
+                    "Yes" if teams[sys]['constrained'] else "No",
                     round(autorank_score, 2),
                 )
             )
