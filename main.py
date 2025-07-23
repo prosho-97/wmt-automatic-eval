@@ -212,28 +212,14 @@ def main() -> None:
     )  # nested dict: sys -> lp -> domain -> document_id -> list of translated paragraphs
     sys2n_none_translations = defaultdict(int)  # sys -> number of None translations
 
-    with open(args.translations_path / "teams.json", "r", encoding="utf-8") as f:
+    with open(args.translations_path / "systems_metadata.json", "r", encoding="utf-8") as f:
         teams = json.load(f)
     filename2sys = dict()
     for entry in teams:
-        publication_name = entry["publication_name"]
-        assert isinstance(publication_name, str) and len(publication_name) > 0
-        primary_submissions = entry.get("primary_submissions", [])
-        assert len(primary_submissions) == 1
-        for sub in primary_submissions:
-            assert sub["competition"] == "WMT25: General MT"
-            file_name = sub["file_name"]
+        filename2sys[entry] = entry
 
-            assert file_name.startswith("submissions/")
-            short_name = file_name[len("submissions/") :]
-
-            last_dot_char_idx = short_name.rfind(".")
-            filename2sys[short_name[:last_dot_char_idx]] = publication_name
-    assert len(filename2sys.values()) == len(
-        set(filename2sys.values())
-    ), "There are duplicate publication names in the teams.json file. Please check the file for duplicates."
-
-    for filename in args.translations_path.iterdir():
+    tranpath = args.translations_path / "systems"
+    for filename in tranpath.iterdir():
         if filename.suffix == ".jsonl":
             sys = filename2sys.get(filename.stem)
             if sys is None:
