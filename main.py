@@ -1,4 +1,5 @@
 import json
+import ipdb
 import logging
 import pickle
 from argparse import ArgumentParser, Namespace
@@ -23,14 +24,6 @@ def read_arguments() -> ArgumentParser:
         required=True,
         help="[REQUIRED] Path to the directory containing the translations to be scored. The directory must contain a "
         "jsonl file for each MT system.",
-    )
-
-    parser.add_argument(
-        "--refs-path",
-        type=Path,
-        help="Path to the directory containing the reference translations. The directory must contain one directory for"
-        " each language pair with human refs. In each language pair without human references, only QE metrics will be "
-        "used.",
     )
 
     parser.add_argument(
@@ -186,44 +179,6 @@ def main() -> None:
             f"Language pairs to score: {args.lps_to_score}({len(args.lps_to_score)})."
         )
 
-    lp2refs = dict()  # nested dict: lp -> domain -> document_id -> list of refs
-    if args.refs_path is not None:
-        for lp in args.refs_path.iterdir():
-            if lp.is_dir():
-                lp2refs[lp.name] = dict()
-                for domain in lp.iterdir():
-                    if domain.is_dir():
-                        lp2refs[lp.name][domain.name] = dict()
-                        for doc in domain.iterdir():
-                            if doc.is_file() and doc.suffix == ".txt":
-                                doc_id = doc.stem
-                                if domain.name == "speech" and doc_id.startswith(
-                                    "vid_"
-                                ):
-                                    # Remove the "vid_" prefix from ref speech document IDs, as it's not always present.
-                                    doc_id = doc_id[4:]
-                                if lp.name == "en-et_EE" and doc_id.endswith("_ET_C"):
-                                    doc_id = doc_id[
-                                        :-5
-                                    ]  # Remove the "_ET_C" suffix present in en-et_EE ref doc files
-                                elif lp.name == "en-zh_CN" and doc_id.endswith(
-                                    "-en-zh_hans-R-C"
-                                ):
-                                    doc_id = doc_id[
-                                        : -len("-en-zh_hans-R-C")
-                                    ]  # Remove the "-en-zh_hans-R-C" suffix present in en-zh_CN refs
-                                # Read the file content
-                                content = read_file_with_fallback(doc)
-                                # Split into paragraphs by double-newline
-                                paragraphs = [
-                                    p for p in content.split("\n\n") if p.strip()
-                                ]
-                                # Store in nested dictionary
-                                lp2refs[lp.name][domain.name][doc_id] = paragraphs
-        logging.info(
-            f"Loaded reference translations for the following language pairs: {list(lp2refs)}."
-        )
-
     lp2domain_test_docs = defaultdict(
         lambda: defaultdict(lambda: defaultdict(list))
     )  # nested dict: lp -> domain -> document_id -> list of paragraphs
@@ -244,20 +199,11 @@ def main() -> None:
             lp2domain_test_docs[lp][domain][document_id] = [
                 {"src": src} for src in test_doc["src_text"].split("\n\n")
             ]
-            if lp in lp2refs:
-                if len(lp2domain_test_docs[lp][domain][document_id]) != len(
-                    lp2refs[lp][domain][document_id]
-                ):
-                    raise ValueError(
-                        f"Mismatch in number of paragraphs for {lp}, {domain}, {document_id} between source texts "
-                        f"({len(lp2domain_test_docs[lp][domain][document_id])}) and references translations ("
-                        f"{len(lp2refs[lp][domain][document_id])})."
-                    )
-                for seg_idx in range(len(lp2domain_test_docs[lp][domain][document_id])):
-                    lp2domain_test_docs[lp][domain][document_id][seg_idx][
-                        "ref"
-                    ] = lp2refs[lp][domain][document_id][seg_idx]
-
+            if "refs" in test_doc and 'refA' in test_doc["refs"]:
+                reference = test_doc["refs"]["refA"]['ref'].split("\n\n")
+                
+                for seg_idx, ref in enumerate(reference):
+                    lp2domain_test_docs[lp][domain][document_id][seg_idx]["ref"] = ref
             n_test_docs_to_eval += 1
     logging.info(f"Loaded GenMT test set with {n_test_docs_to_eval} docs to eval.")
 
