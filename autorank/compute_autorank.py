@@ -135,13 +135,17 @@ def average_and_rank(
 
 def will_be_human_evaluated(df: pd.DataFrame) -> pd.Series:
     df['will_humeval'] = False
-    constrained = df[df["is_constrained"] == True].head(9)
+    constrained = df[df["is_constrained"] == True].head(8)
     df.loc[constrained.index, 'will_humeval'] = True
-    while len(df[df['will_humeval']]) < 18:
-        remaining = df[df['will_humeval'] == False].head(1)
-        if remaining.empty:
+    for idx, row in df.iterrows():
+        forbidden = ['bb88', 'ctpc_nlp', 'MMMT', 'TranssionTranslate']
+        if idx in forbidden:
+            print(f"Skipping {idx} as it is in the forbidden list.")
+            continue
+        df.loc[idx, 'will_humeval'] = True
+        if len(df[df['will_humeval']]) >= 18:
             break
-        df.loc[remaining.index, 'will_humeval'] = True
+
     return df
 
 
