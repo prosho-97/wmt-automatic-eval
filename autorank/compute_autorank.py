@@ -139,7 +139,7 @@ def will_be_human_evaluated(df: pd.DataFrame) -> pd.Series:
     constrained = df[df["is_constrained"] == True].head(8)
     df.loc[constrained.index, "will_humeval"] = True
     for idx, row in df.iterrows():
-        forbidden = ["bb88", "ctpc_nlp", "MMMT", "TranssionTranslate"]
+        forbidden = ['bb88', 'ctpc_nlp', 'MMMT']
         if idx in forbidden:
             print(f"Skipping {idx} as it is in the forbidden list.")
             continue
