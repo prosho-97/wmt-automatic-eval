@@ -9,3 +9,4 @@ diskcache
 cohere
 tqdm
 unbabel-comet
+sacrebleu

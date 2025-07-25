@@ -8,6 +8,7 @@ from pathlib import Path
 from pprint import pformat
 from typing import Dict, List
 
+from metrics.chrf.chrf_scorer import ChrFScorer
 from metrics.comet.comet_scorer import CometScorer
 from metrics.gemba.gemba_scorer import GembaScorer
 from metrics.metricx.metricx_scorer import MetricXScorer
@@ -50,11 +51,12 @@ def read_arguments() -> ArgumentParser:
             "metricx24-hybrid-xl",
             "xcomet-xl",
             "cometkiwi-xl",
+            "chrf++",
             "gemba-mqm",
         ],
         default="gemba-esa",
         help="Which MT metric to use for scoring. Allowed values: 'gemba-esa', 'metricx24-hybrid-xl', 'xcomet-xl', "
-        "'cometkiwi-xl', and 'gemba-mqm'. Default: 'gemba-esa'.",
+        "'cometkiwi-xl', 'chrf++', and 'gemba-mqm'. Default: 'gemba-esa'.",
     )
 
     parser.add_argument(
@@ -199,9 +201,9 @@ def main() -> None:
             lp2domain_test_docs[lp][domain][document_id] = [
                 {"src": src} for src in test_doc["src_text"].split("\n\n")
             ]
-            if "refs" in test_doc and 'refA' in test_doc["refs"]:
-                reference = test_doc["refs"]["refA"]['ref'].split("\n\n")
-                
+            if "refs" in test_doc and "refA" in test_doc["refs"]:
+                reference = test_doc["refs"]["refA"]["ref"].split("\n\n")
+
                 for seg_idx, ref in enumerate(reference):
                     lp2domain_test_docs[lp][domain][document_id][seg_idx]["ref"] = ref
             n_test_docs_to_eval += 1
@@ -212,7 +214,9 @@ def main() -> None:
     )  # nested dict: sys -> lp -> domain -> document_id -> list of translated paragraphs
     sys2n_none_translations = defaultdict(int)  # sys -> number of None translations
 
-    with open(args.translations_path / "systems_metadata.json", "r", encoding="utf-8") as f:
+    with open(
+        args.translations_path / "systems_metadata.json", "r", encoding="utf-8"
+    ) as f:
         teams = json.load(f)
     filename2sys = dict()
     for entry in teams:
@@ -254,6 +258,13 @@ def main() -> None:
             lp2domain_test_docs,
             sys2translations,
             disk_cache_path=args.disk_cache_path,
+            lps_to_score=args.lps_to_score,
+        )
+    elif args.metric == "chrf++":
+        scorer = ChrFScorer()
+        sys2seg_outputs = scorer.score(
+            lp2domain_test_docs,
+            sys2translations,
             lps_to_score=args.lps_to_score,
         )
     else:
