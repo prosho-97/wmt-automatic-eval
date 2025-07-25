@@ -133,17 +133,18 @@ def average_and_rank(
 
     return dict(zip(systems, autorank))
 
+
 def will_be_human_evaluated(df: pd.DataFrame) -> pd.Series:
-    df['will_humeval'] = False
+    df["will_humeval"] = False
     constrained = df[df["is_constrained"] == True].head(8)
-    df.loc[constrained.index, 'will_humeval'] = True
+    df.loc[constrained.index, "will_humeval"] = True
     for idx, row in df.iterrows():
-        forbidden = ['bb88', 'ctpc_nlp', 'MMMT', 'TranssionTranslate']
+        forbidden = ["bb88", "ctpc_nlp", "MMMT", "TranssionTranslate"]
         if idx in forbidden:
             print(f"Skipping {idx} as it is in the forbidden list.")
             continue
-        df.loc[idx, 'will_humeval'] = True
-        if len(df[df['will_humeval']]) >= 18:
+        df.loc[idx, "will_humeval"] = True
+        if len(df[df["will_humeval"]]) >= 18:
             break
 
     return df
@@ -156,7 +157,11 @@ def compute_autorank(language_pair, args) -> None:
 
     metric_name2outputs = dict()
     for metric_dir in args.metrics_outputs_path.iterdir():
-        if metric_dir.is_dir():
+        if metric_dir.is_dir() and not (
+            metric_dir.name == "chrF++"
+            and language_pair != "en-bho_IN"
+            and language_pair != "en-mas_KE"
+        ):
             metric_outputs_file = metric_dir / "outputs.pickle"
             if metric_outputs_file.exists():
                 with open(metric_outputs_file, "rb") as f:
@@ -170,7 +175,7 @@ def compute_autorank(language_pair, args) -> None:
     for metric, sys2lp_scores in metric_name2outputs.items():
         sys2scores = dict()
         for sys, lp2domain_scores in sys2lp_scores.items():
-            if sys not in teams or language_pair not in teams[sys]['lps']:
+            if sys not in teams or language_pair not in teams[sys]["lps"]:
                 continue
             if (
                 language_pair not in lp2domain_scores
@@ -205,7 +210,7 @@ def compute_autorank(language_pair, args) -> None:
                     writer.writerow(
                         (
                             sys,
-                            "Yes" if teams[sys]['constrained'] else "No",
+                            "Yes" if teams[sys]["constrained"] else "No",
                             round(score, 4),
                         )
                     )
@@ -214,7 +219,7 @@ def compute_autorank(language_pair, args) -> None:
                 sys2robust_scaled_metric_scores[sys].append(robust_scaled_score)
                 system_scores[sys][metric] = robust_scaled_score
                 system_scores[sys][f"{metric}_raw"] = sys2scores[sys]
-                system_scores[sys]["is_constrained"] = teams[sys]['constrained']
+                system_scores[sys]["is_constrained"] = teams[sys]["constrained"]
         else:
             print(
                 f"Warning: No scores found for metric {metric} on language pair {language_pair}. Skipping."
@@ -253,12 +258,13 @@ def compute_autorank(language_pair, args) -> None:
             writer.writerow(
                 (
                     sys,
-                    "Yes" if teams[sys]['constrained'] else "No",
+                    "Yes" if teams[sys]["constrained"] else "No",
                     round(autorank_score, 2),
                 )
             )
 
     return df
+
 
 if __name__ == "__main__":
     args = read_arguments().parse_args()

@@ -10,3 +10,4 @@ cohere
 tqdm
 unbabel-comet
 sacrebleu
+openpyxl
