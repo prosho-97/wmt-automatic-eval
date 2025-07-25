@@ -134,12 +134,17 @@ def average_and_rank(
     return dict(zip(systems, autorank))
 
 
-def will_be_human_evaluated(df: pd.DataFrame) -> pd.Series:
+def will_be_human_evaluated(df: pd.DataFrame, lp) -> pd.Series:
     df["will_humeval"] = False
-    constrained = df[df["is_constrained"] == True].head(8)
+    contrained_limit = 8
+    if lp == "en-cs_CZ":
+        contrained_limit = 9
+    elif lp == "cs-de_DE":
+        contrained_limit = 10
+    constrained = df[df["is_constrained"] == True].head(contrained_limit)
     df.loc[constrained.index, "will_humeval"] = True
     for idx, row in df.iterrows():
-        forbidden = ["bb88", "ctpc_nlp", "MMMT", "TranssionTranslate"]
+        forbidden = ['bb88', 'ctpc_nlp', 'MMMT']
         if idx in forbidden:
             print(f"Skipping {idx} as it is in the forbidden list.")
             continue
@@ -150,6 +155,8 @@ def will_be_human_evaluated(df: pd.DataFrame) -> pd.Series:
     return df
 
 
+reference_exists = ['cs-uk_UA', 'en-ar_EG', 'en-cs_CZ', 'en-et_EE', 'en-is_IS', 'en-ja_JP', 'en-ko_KR', 'en-ru_RU', 'en-uk_UA', 'en-zh_CN', 'ja-zh_CN', 'cs-de_DE', 'en-sr_Cyrl_RS']
+
 def compute_autorank(language_pair, args) -> None:
     """
     Command to compute AutoRank on a language pair specified in input.
@@ -157,6 +164,10 @@ def compute_autorank(language_pair, args) -> None:
 
     metric_name2outputs = dict()
     for metric_dir in args.metrics_outputs_path.iterdir():
+        if "CometKiwi-XL" in metric_dir.name and language_pair not in reference_exists:
+            # Skip CometKiwi-XL for language pairs without reference translations because xCOMET and MetricX are used in QE mode
+            continue
+
         if metric_dir.is_dir() and not (
             metric_dir.name == "chrF++"
             and language_pair != "en-bho_IN"
@@ -230,7 +241,7 @@ def compute_autorank(language_pair, args) -> None:
     df["autorank"] = average_and_rank(sys2robust_scaled_metric_scores)
     # sort by autorank
     df = df.sort_values(by="autorank", ascending=True)
-    df = will_be_human_evaluated(df)
+    df = will_be_human_evaluated(df, language_pair)
 
     # sort column in order: is_constrained, autorank, all scaled metrics, all raw metrics
     cols = ["is_constrained", "will_humeval", "autorank"]
