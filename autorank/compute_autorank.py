@@ -134,9 +134,14 @@ def average_and_rank(
     return dict(zip(systems, autorank))
 
 
-def will_be_human_evaluated(df: pd.DataFrame) -> pd.Series:
+def will_be_human_evaluated(df: pd.DataFrame, lp) -> pd.Series:
     df["will_humeval"] = False
-    constrained = df[df["is_constrained"] == True].head(8)
+    contrained_limit = 8
+    if lp == "en-cs_CZ":
+        contrained_limit = 9
+    elif lp == "cs-de_DE":
+        contrained_limit = 10
+    constrained = df[df["is_constrained"] == True].head(contrained_limit)
     df.loc[constrained.index, "will_humeval"] = True
     for idx, row in df.iterrows():
         forbidden = ['bb88', 'ctpc_nlp', 'MMMT']
@@ -230,7 +235,7 @@ def compute_autorank(language_pair, args) -> None:
     df["autorank"] = average_and_rank(sys2robust_scaled_metric_scores)
     # sort by autorank
     df = df.sort_values(by="autorank", ascending=True)
-    df = will_be_human_evaluated(df)
+    df = will_be_human_evaluated(df, language_pair)
 
     # sort column in order: is_constrained, autorank, all scaled metrics, all raw metrics
     cols = ["is_constrained", "will_humeval", "autorank"]
