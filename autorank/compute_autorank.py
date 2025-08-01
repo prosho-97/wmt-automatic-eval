@@ -157,6 +157,8 @@ def will_be_human_evaluated(df: pd.DataFrame, lp) -> pd.Series:
 
 reference_exists = ['cs-uk_UA', 'en-ar_EG', 'en-cs_CZ', 'en-et_EE', 'en-is_IS', 'en-ja_JP', 'en-ko_KR', 'en-ru_RU', 'en-uk_UA', 'en-zh_CN', 'ja-zh_CN', 'cs-de_DE', 'en-sr_Cyrl_RS']
 
+chrf_only = ["en-bho_IN", "en-mas_KE"]
+
 def compute_autorank(language_pair, args) -> None:
     """
     Command to compute AutoRank on a language pair specified in input.
@@ -227,7 +229,8 @@ def compute_autorank(language_pair, args) -> None:
                     )
 
             for sys, robust_scaled_score in robust_scale_metric(sys2scores).items():
-                sys2robust_scaled_metric_scores[sys].append(robust_scaled_score)
+                if metric == "chrF++" and language_pair in chrf_only:
+                    sys2robust_scaled_metric_scores[sys].append(robust_scaled_score)
                 system_scores[sys][metric] = robust_scaled_score
                 system_scores[sys][f"{metric}_raw"] = sys2scores[sys]
                 system_scores[sys]["is_constrained"] = teams[sys]["constrained"]
