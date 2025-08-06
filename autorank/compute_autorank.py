@@ -229,7 +229,7 @@ def compute_autorank(language_pair, args) -> None:
                     )
 
             for sys, robust_scaled_score in robust_scale_metric(sys2scores).items():
-                if metric == "chrF++" and language_pair in chrf_only:
+                if metric == "chrF++" or language_pair not in chrf_only:
                     sys2robust_scaled_metric_scores[sys].append(robust_scaled_score)
                 system_scores[sys][metric] = robust_scaled_score
                 system_scores[sys][f"{metric}_raw"] = sys2scores[sys]
