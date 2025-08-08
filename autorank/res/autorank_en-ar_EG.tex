@@ -1,0 +1,71 @@
+\usepackage[table]{xcolor}
+\usepackage{booktabs}
+
+\rowcolors{2}{gray!20}{white}
+\small
+\begin{tabularx}{\textwidth}{lXXXXXXXXX}
+\toprule
+\multicolumn{10}{c}{\textbf{English-Egyptian Arabic}} \\
+\midrule
+System Name & LP Supported & Param. Count (B) & AutoRank $\downarrow$ & CometKiwi-XL $\uparrow$ & GEMBA-ESA-CMDA $\uparrow$ & GEMBA-ESA-GPT4.1 $\uparrow$ & MetricX-24-Hybrid-XL $\uparrow$ & XCOMET-XL $\uparrow$ & Human Evaluation? \\
+\midrule
+Shy & \checkmark & 7 & 1.0 & 0.658 & 76.3 & 75.0 & -5.7 & 0.388 & \checkmark \\
+Wenyiil & \checkmark & 14 & 2.5 & 0.65 & 79.2 & 73.3 & -6.4 & 0.337 & \checkmark \\
+Algharb & \checkmark & 14 & 2.6 & 0.645 & 80.0 & 73.9 & -6.5 & 0.328 & \checkmark \\
+\rowcolor{gray!30}
+GemTrans & \checkmark & 27 & 3.4 & 0.644 & 73.0 & 69.6 & -6.0 & 0.345 & \checkmark \\
+\rowcolor{gray!30}
+CommandA-MT & \checkmark & 111 & 4.0 & 0.621 & 77.8 & 75.4 & -7.0 & 0.311 & \checkmark \\
+\rowcolor{gray!30}
+UvA-MT & \checkmark & 12 & 4.1 & 0.637 & 74.4 & 73.4 & -7.1 & 0.325 & \checkmark \\
+Yolu & \checkmark & 14 & 5.4 & 0.658 & 67.8 & 63.9 & -6.6 & 0.323 & \checkmark \\
+\rowcolor{gray!30}
+Gemini-2.5-Pro & Unknown & Unknown & 5.6 & 0.552 & 79.5 & 84.5 & -7.6 & 0.267 & \checkmark \\
+\rowcolor{gray!30}
+ONLINE-B & Unknown & Unknown & 6.4 & 0.627 & 70.4 & 67.4 & -7.1 & 0.288 & \checkmark \\
+\rowcolor{gray!30}
+GPT-4.1 & Unknown & Unknown & 6.5 & 0.534 & 78.4 & 84.1 & -7.8 & 0.265 & \checkmark \\
+\rowcolor{gray!30}
+DeepSeek-V3 & Unknown & Unknown & 6.9 & 0.573 & 74.2 & 75.7 & -7.7 & 0.273 & \checkmark \\
+\rowcolor{gray!30}
+Mistral-Medium & Unknown & Unknown & 7.5 & 0.586 & 71.7 & 71.0 & -7.8 & 0.274 & \checkmark \\
+\rowcolor{gray!30}
+Claude-4 & Unknown & Unknown & 7.6 & 0.552 & 76.5 & 80.0 & -8.5 & 0.246 & \checkmark \\
+SRPOL & \ding{55} & 12 & 7.9 & 0.641 & 65.7 & 61.7 & -7.8 & 0.286 & \checkmark \\
+\rowcolor{gray!30}
+CommandA & Unknown & Unknown & 8.3 & 0.533 & 75.8 & 80.0 & -8.5 & 0.238 & \checkmark \\
+\rowcolor{gray!30}
+AyaExpanse-32B & Unknown & Unknown & 8.4 & 0.585 & 70.7 & 68.8 & -8.1 & 0.261 &  \\
+\rowcolor{gray!30}
+ONLINE-W & Unknown & Unknown & 9.0 & 0.607 & 67.7 & 64.0 & -8.2 & 0.258 &  \\
+AyaExpanse-8B & Unknown & Unknown & 9.7 & 0.596 & 66.1 & 61.6 & -8.2 & 0.259 & \checkmark \\
+\rowcolor{gray!30}
+EuroLLM-22B & Unknown & Unknown & 10.7 & 0.592 & 64.0 & 60.5 & -8.5 & 0.246 &  \\
+\rowcolor{gray!30}
+Qwen3-235B & Unknown & Unknown & 10.7 & 0.571 & 66.1 & 64.1 & -8.7 & 0.247 &  \\
+\rowcolor{gray!30}
+Gemma-3-27B & Unknown & Unknown & 10.7 & 0.549 & 64.8 & 63.3 & -8.6 & 0.281 &  \\
+IRB-MT & \checkmark & 12 & 10.8 & 0.532 & 69.0 & 67.5 & -8.5 & 0.236 & \checkmark \\
+\rowcolor{gray!30}
+Llama-4-Maverick & Unknown & Unknown & 11.1 & 0.526 & 67.9 & 70.0 & -8.8 & 0.234 &  \\
+\rowcolor{gray!30}
+IR-MultiagentMT & \ding{55} & Unknown & 11.3 & 0.543 & 66.0 & 64.2 & -8.7 & 0.247 &  \\
+CommandR7B & Unknown & Unknown & 11.3 & 0.588 & 62.7 & 59.0 & -8.8 & 0.248 & \checkmark \\
+Gemma-3-12B & Unknown & Unknown & 11.7 & 0.529 & 67.9 & 67.6 & -9.0 & 0.22 &  \\
+EuroLLM-9B & Unknown & Unknown & 14.0 & 0.548 & 58.7 & 54.5 & -9.3 & 0.233 &  \\
+\rowcolor{gray!30}
+TowerPlus-72B & Unknown & Unknown & 15.5 & 0.534 & 58.2 & 54.0 & -10.5 & 0.224 &  \\
+\rowcolor{gray!30}
+TranssionTranslate & Unknown & Unknown & 15.8 & 0.501 & 59.0 & 57.4 & -9.9 & 0.2 &  \\
+\rowcolor{gray!30}
+TranssionMT & \checkmark & 1.3 & 16.9 & 0.488 & 58.5 & 56.1 & -10.4 & 0.194 &  \\
+NLLB & Unknown & Unknown & 18.0 & 0.499 & 53.9 & 51.2 & -10.8 & 0.201 &  \\
+SalamandraTA & \checkmark & 7.77 & 20.1 & 0.492 & 50.0 & 44.4 & -11.4 & 0.195 &  \\
+\rowcolor{gray!30}
+ONLINE-G & Unknown & Unknown & 22.6 & 0.445 & 53.5 & 48.3 & -13.5 & 0.152 &  \\
+Llama-3.1-8B & Unknown & Unknown & 22.8 & 0.458 & 45.5 & 41.8 & -12.3 & 0.18 &  \\
+Qwen2.5-7B & Unknown & Unknown & 24.0 & 0.436 & 44.5 & 39.3 & -12.6 & 0.176 &  \\
+TowerPlus-9B & Unknown & Unknown & 31.9 & 0.337 & 31.1 & 26.9 & -15.2 & 0.162 &  \\
+Mistral-7B & Unknown & Unknown & 37.0 & 0.262 & 27.9 & 23.2 & -18.4 & 0.157 &  \\
+\bottomrule
+\end{tabularx}

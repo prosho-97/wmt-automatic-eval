@@ -1,0 +1,66 @@
+\usepackage[table]{xcolor}
+\usepackage{booktabs}
+
+\rowcolors{2}{gray!20}{white}
+\small
+\begin{tabularx}{\textwidth}{lXXXXXXXX}
+\toprule
+\multicolumn{9}{c}{\textbf{English-Italian}} \\
+\midrule
+System Name & LP Supported & Param. Count (B) & AutoRank $\downarrow$ & GEMBA-ESA-CMDA $\uparrow$ & GEMBA-ESA-GPT4.1 $\uparrow$ & MetricX-24-Hybrid-XL $\uparrow$ & XCOMET-XL $\uparrow$ & Human Evaluation? \\
+\midrule
+Shy & \checkmark & 7 & 1.0 & 84.6 & 88.7 & -4.7 & 0.62 & \checkmark \\
+\rowcolor{gray!30}
+CommandA-MT & \checkmark & 111 & 2.6 & 83.4 & 88.0 & -4.8 & 0.59 & \checkmark \\
+\rowcolor{gray!30}
+Gemini-2.5-Pro & Unknown & Unknown & 4.4 & 85.5 & 90.5 & -5.6 & 0.537 & \checkmark \\
+\rowcolor{gray!30}
+GPT-4.1 & Unknown & Unknown & 4.5 & 85.0 & 89.8 & -5.8 & 0.553 & \checkmark \\
+\rowcolor{gray!30}
+GemTrans & \checkmark & 27 & 5.2 & 78.2 & 83.5 & -4.9 & 0.581 & \checkmark \\
+\rowcolor{gray!30}
+UvA-MT & \checkmark & 12 & 5.3 & 78.9 & 84.6 & -5.4 & 0.595 & \checkmark \\
+\rowcolor{gray!30}
+DeepSeek-V3 & Unknown & Unknown & 6.1 & 81.9 & 87.9 & -5.9 & 0.543 & \checkmark \\
+\rowcolor{gray!30}
+Mistral-Medium & Unknown & Unknown & 7.1 & 79.9 & 86.4 & -6.0 & 0.544 & \checkmark \\
+\rowcolor{gray!30}
+Qwen3-235B & Unknown & Unknown & 7.2 & 80.1 & 84.9 & -5.8 & 0.541 & \checkmark \\
+Laniqo & \checkmark & 9 & 7.6 & 70.5 & 75.3 & -4.9 & 0.63 & \checkmark \\
+\rowcolor{gray!30}
+Claude-4 & Unknown & Unknown & 8.4 & 81.7 & 85.2 & -6.4 & 0.52 & \checkmark \\
+\rowcolor{gray!30}
+CommandA & Unknown & Unknown & 8.5 & 79.4 & 83.7 & -6.2 & 0.537 & \checkmark \\
+\rowcolor{gray!30}
+ONLINE-B & Unknown & Unknown & 9.4 & 76.7 & 78.6 & -5.6 & 0.53 &  \\
+\rowcolor{gray!30}
+TowerPlus-72B & Unknown & Unknown & 9.4 & 76.2 & 81.8 & -6.1 & 0.539 &  \\
+\rowcolor{gray!30}
+AyaExpanse-32B & Unknown & Unknown & 10.1 & 75.7 & 80.9 & -6.1 & 0.527 &  \\
+\rowcolor{gray!30}
+ONLINE-W & Unknown & Unknown & 10.1 & 74.6 & 81.1 & -6.0 & 0.531 &  \\
+IRB-MT & \checkmark & 12 & 10.2 & 73.8 & 79.8 & -5.7 & 0.523 & \checkmark \\
+SalamandraTA & \checkmark & 7.77 & 10.3 & 71.9 & 76.9 & -5.8 & 0.561 & \checkmark \\
+\rowcolor{gray!30}
+EuroLLM-22B & Unknown & Unknown & 11.0 & 74.2 & 79.8 & -6.4 & 0.53 &  \\
+\rowcolor{gray!30}
+TranssionTranslate & Unknown & Unknown & 11.0 & 72.9 & 77.1 & -5.7 & 0.523 &  \\
+TowerPlus-9B & Unknown & Unknown & 11.3 & 73.5 & 78.6 & -6.2 & 0.526 & \checkmark \\
+\rowcolor{gray!30}
+Gemma-3-27B & Unknown & Unknown & 12.6 & 73.4 & 78.3 & -6.7 & 0.513 &  \\
+\rowcolor{gray!30}
+IR-MultiagentMT & \ding{55} & Unknown & 13.6 & 73.0 & 77.0 & -6.8 & 0.499 &  \\
+AyaExpanse-8B & Unknown & Unknown & 14.9 & 69.5 & 73.9 & -6.7 & 0.502 & \checkmark \\
+EuroLLM-9B & Unknown & Unknown & 15.2 & 68.3 & 73.5 & -6.8 & 0.509 & \checkmark \\
+Gemma-3-12B & Unknown & Unknown & 15.5 & 69.7 & 74.7 & -7.1 & 0.494 & \checkmark \\
+\rowcolor{gray!30}
+Llama-4-Maverick & Unknown & Unknown & 18.0 & 67.0 & 71.9 & -7.5 & 0.479 &  \\
+CommandR7B & Unknown & Unknown & 18.0 & 67.3 & 69.4 & -7.4 & 0.486 &  \\
+Llama-3.1-8B & Unknown & Unknown & 22.8 & 61.8 & 64.1 & -8.1 & 0.449 &  \\
+Qwen2.5-7B & Unknown & Unknown & 23.5 & 60.8 & 61.5 & -7.8 & 0.44 &  \\
+NLLB & Unknown & Unknown & 27.1 & 58.5 & 61.6 & -9.3 & 0.421 &  \\
+\rowcolor{gray!30}
+ONLINE-G & Unknown & Unknown & 30.0 & 58.7 & 60.6 & -9.9 & 0.368 &  \\
+Mistral-7B & Unknown & Unknown & 33.0 & 53.5 & 52.1 & -9.8 & 0.363 &  \\
+\bottomrule
+\end{tabularx}

@@ -1,0 +1,75 @@
+\usepackage[table]{xcolor}
+\usepackage{booktabs}
+
+\rowcolors{2}{gray!20}{white}
+\small
+\begin{tabularx}{\textwidth}{lXXXXXXXXX}
+\toprule
+\multicolumn{10}{c}{\textbf{English-Russian}} \\
+\midrule
+System Name & LP Supported & Param. Count (B) & AutoRank $\downarrow$ & CometKiwi-XL $\uparrow$ & GEMBA-ESA-CMDA $\uparrow$ & GEMBA-ESA-GPT4.1 $\uparrow$ & MetricX-24-Hybrid-XL $\uparrow$ & XCOMET-XL $\uparrow$ & Human Evaluation? \\
+\midrule
+Shy & \checkmark & 7 & 1.0 & 0.657 & 84.3 & 85.9 & -4.9 & 0.652 & \checkmark \\
+\rowcolor{gray!30}
+CommandA-MT & \checkmark & 111 & 4.2 & 0.656 & 81.3 & 80.5 & -5.8 & 0.607 & \checkmark \\
+\rowcolor{gray!30}
+Gemini-2.5-Pro & Unknown & Unknown & 4.3 & 0.634 & 85.9 & 87.8 & -6.1 & 0.575 & \checkmark \\
+\rowcolor{gray!30}
+Yandex & \checkmark & Unknown & 4.4 & 0.638 & 81.2 & 80.6 & -5.3 & 0.617 & \checkmark \\
+\rowcolor{gray!30}
+UvA-MT & \checkmark & 12 & 4.5 & 0.662 & 78.6 & 80.5 & -6.1 & 0.611 & \checkmark \\
+Wenyiil & \checkmark & 14 & 4.7 & 0.644 & 82.5 & 84.1 & -6.1 & 0.588 & \checkmark \\
+\rowcolor{gray!30}
+GemTrans & \checkmark & 27 & 5.1 & 0.639 & 77.8 & 79.5 & -5.3 & 0.617 & \checkmark \\
+Algharb & \checkmark & 14 & 5.1 & 0.637 & 84.4 & 85.5 & -6.4 & 0.573 & \checkmark \\
+\rowcolor{gray!30}
+GPT-4.1 & Unknown & Unknown & 5.3 & 0.631 & 84.6 & 85.8 & -6.5 & 0.577 & \checkmark \\
+\rowcolor{gray!30}
+DeepSeek-V3 & Unknown & Unknown & 5.6 & 0.632 & 84.2 & 84.7 & -6.4 & 0.57 & \checkmark \\
+Yolu & \checkmark & 14 & 6.9 & 0.658 & 73.1 & 73.6 & -6.0 & 0.596 & \checkmark \\
+\rowcolor{gray!30}
+Claude-4 & Unknown & Unknown & 8.5 & 0.619 & 82.0 & 81.6 & -7.5 & 0.548 & \checkmark \\
+\rowcolor{gray!30}
+Qwen3-235B & Unknown & Unknown & 8.7 & 0.625 & 78.2 & 79.9 & -6.9 & 0.543 & \checkmark \\
+\rowcolor{gray!30}
+Gemma-3-27B & Unknown & Unknown & 8.7 & 0.626 & 78.9 & 79.6 & -7.3 & 0.551 & \checkmark \\
+Laniqo & \checkmark & 9 & 8.7 & 0.649 & 67.9 & 67.0 & -6.0 & 0.622 & \checkmark \\
+RuZh & Unknown & 9 & 9.5 & 0.633 & 74.5 & 74.7 & -7.0 & 0.558 & \checkmark \\
+IRB-MT & \checkmark & 12 & 9.9 & 0.616 & 75.8 & 76.5 & -6.7 & 0.541 & \checkmark \\
+SRPOL & \checkmark & 12 & 10.5 & 0.647 & 71.8 & 71.6 & -7.7 & 0.549 & \checkmark \\
+\rowcolor{gray!30}
+TowerPlus-72B & Unknown & Unknown & 10.5 & 0.624 & 75.7 & 75.2 & -7.6 & 0.543 &  \\
+\rowcolor{gray!30}
+CommandA & Unknown & Unknown & 11.0 & 0.618 & 76.9 & 76.3 & -8.1 & 0.536 &  \\
+\rowcolor{gray!30}
+ONLINE-W & Unknown & Unknown & 11.5 & 0.624 & 73.7 & 73.6 & -7.9 & 0.534 &  \\
+\rowcolor{gray!30}
+DLUT\_GTCOM & \checkmark & 27 & 11.6 & 0.626 & 71.1 & 71.2 & -7.3 & 0.537 &  \\
+TowerPlus-9B & Unknown & Unknown & 11.8 & 0.617 & 73.2 & 72.7 & -7.5 & 0.533 &  \\
+\rowcolor{gray!30}
+Llama-4-Maverick & Unknown & Unknown & 12.3 & 0.616 & 75.3 & 75.5 & -8.5 & 0.513 &  \\
+SalamandraTA & \checkmark & 7.77 & 12.3 & 0.632 & 69.6 & 68.2 & -7.6 & 0.534 &  \\
+\rowcolor{gray!30}
+ONLINE-B & Unknown & Unknown & 12.7 & 0.616 & 73.8 & 72.8 & -8.2 & 0.517 &  \\
+\rowcolor{gray!30}
+TranssionTranslate & Unknown & Unknown & 12.7 & 0.618 & 70.7 & 71.0 & -7.5 & 0.52 &  \\
+\rowcolor{gray!30}
+AyaExpanse-32B & Unknown & Unknown & 13.5 & 0.603 & 71.8 & 72.1 & -7.9 & 0.517 &  \\
+\rowcolor{gray!30}
+ONLINE-G & Unknown & Unknown & 14.2 & 0.613 & 67.8 & 66.6 & -7.6 & 0.522 &  \\
+\rowcolor{gray!30}
+EuroLLM-22B & Unknown & Unknown & 14.4 & 0.606 & 70.9 & 71.3 & -8.4 & 0.502 &  \\
+Gemma-3-12B & Unknown & Unknown & 14.7 & 0.589 & 72.6 & 73.2 & -8.4 & 0.503 &  \\
+AyaExpanse-8B & Unknown & Unknown & 17.4 & 0.589 & 67.1 & 66.2 & -8.7 & 0.48 &  \\
+\rowcolor{gray!30}
+IR-MultiagentMT & \ding{55} & Unknown & 19.4 & 0.564 & 65.7 & 65.7 & -8.9 & 0.467 &  \\
+EuroLLM-9B & Unknown & Unknown & 21.5 & 0.547 & 63.6 & 63.1 & -9.5 & 0.471 &  \\
+Qwen2.5-7B & Unknown & Unknown & 24.8 & 0.546 & 60.2 & 57.5 & -10.2 & 0.411 &  \\
+Llama-3.1-8B & Unknown & Unknown & 29.7 & 0.521 & 58.6 & 55.1 & -12.6 & 0.372 &  \\
+NLLB & Unknown & Unknown & 31.5 & 0.483 & 54.3 & 53.3 & -11.7 & 0.389 &  \\
+\rowcolor{gray!30}
+TranssionMT & \checkmark & 1.3 & 34.2 & 0.483 & 54.3 & 54.9 & -13.7 & 0.332 &  \\
+Mistral-7B & Unknown & Unknown & 39.0 & 0.45 & 52.4 & 46.3 & -14.4 & 0.288 &  \\
+CommandR7B & Unknown & Unknown & 40.0 & 0.41 & 52.1 & 39.9 & -13.6 & 0.347 &  \\
+\bottomrule
+\end{tabularx}

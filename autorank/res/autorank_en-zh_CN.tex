@@ -1,0 +1,71 @@
+\usepackage[table]{xcolor}
+\usepackage{booktabs}
+
+\rowcolors{2}{gray!20}{white}
+\small
+\begin{tabularx}{\textwidth}{lXXXXXXXXX}
+\toprule
+\multicolumn{10}{c}{\textbf{English-Simplified Chinese}} \\
+\midrule
+System Name & LP Supported & Param. Count (B) & AutoRank $\downarrow$ & CometKiwi-XL $\uparrow$ & GEMBA-ESA-CMDA $\uparrow$ & GEMBA-ESA-GPT4.1 $\uparrow$ & MetricX-24-Hybrid-XL $\uparrow$ & XCOMET-XL $\uparrow$ & Human Evaluation? \\
+\midrule
+Shy & \checkmark & 7 & 1.0 & 0.67 & 87.2 & 88.3 & -4.0 & 0.576 & \checkmark \\
+Wenyiil & \checkmark & 14 & 3.9 & 0.663 & 84.2 & 87.7 & -5.0 & 0.52 & \checkmark \\
+\rowcolor{gray!30}
+Gemini-2.5-Pro & Unknown & Unknown & 4.0 & 0.657 & 85.2 & 88.7 & -4.9 & 0.512 & \checkmark \\
+Algharb & \checkmark & 14 & 4.1 & 0.66 & 84.7 & 87.8 & -5.0 & 0.515 & \checkmark \\
+\rowcolor{gray!30}
+GPT-4.1 & Unknown & Unknown & 4.6 & 0.652 & 84.9 & 86.8 & -5.0 & 0.512 & \checkmark \\
+\rowcolor{gray!30}
+Qwen3-235B & Unknown & Unknown & 4.8 & 0.661 & 82.7 & 85.0 & -5.0 & 0.513 & \checkmark \\
+Yolu & \checkmark & 14 & 4.8 & 0.687 & 74.9 & 77.1 & -4.6 & 0.542 & \checkmark \\
+\rowcolor{gray!30}
+Mistral-Medium & Unknown & Unknown & 4.9 & 0.658 & 82.4 & 84.9 & -5.0 & 0.514 & \checkmark \\
+\rowcolor{gray!30}
+GemTrans & \checkmark & 27 & 4.9 & 0.658 & 77.0 & 80.2 & -4.3 & 0.546 & \checkmark \\
+\rowcolor{gray!30}
+CommandA-MT & \checkmark & 111 & 5.6 & 0.665 & 78.9 & 81.5 & -5.0 & 0.508 & \checkmark \\
+\rowcolor{gray!30}
+UvA-MT & \checkmark & 12 & 6.3 & 0.671 & 76.8 & 81.0 & -5.4 & 0.499 & \checkmark \\
+\rowcolor{gray!30}
+Claude-4 & Unknown & Unknown & 7.0 & 0.649 & 80.4 & 82.8 & -5.6 & 0.487 & \checkmark \\
+\rowcolor{gray!30}
+DeepSeek-V3 & Unknown & Unknown & 7.1 & 0.618 & 84.9 & 85.1 & -5.2 & 0.473 & \checkmark \\
+\rowcolor{gray!30}
+Llama-4-Maverick & Unknown & Unknown & 8.0 & 0.65 & 74.9 & 79.4 & -5.5 & 0.489 & \checkmark \\
+\rowcolor{gray!30}
+ONLINE-B & Unknown & Unknown & 8.2 & 0.656 & 73.0 & 74.7 & -5.2 & 0.492 &  \\
+\rowcolor{gray!30}
+Gemma-3-27B & Unknown & Unknown & 9.0 & 0.638 & 75.5 & 78.7 & -5.8 & 0.475 &  \\
+Laniqo & \checkmark & 9 & 9.1 & 0.665 & 65.6 & 67.4 & -4.9 & 0.513 & \checkmark \\
+IRB-MT & \checkmark & 12 & 9.3 & 0.633 & 73.7 & 77.5 & -5.3 & 0.467 & \checkmark \\
+\rowcolor{gray!30}
+CommandA & Unknown & Unknown & 9.4 & 0.645 & 76.5 & 76.8 & -6.1 & 0.464 &  \\
+\rowcolor{gray!30}
+TowerPlus-72B & Unknown & Unknown & 9.8 & 0.645 & 73.3 & 76.6 & -6.1 & 0.466 &  \\
+SRPOL & \ding{55} & 12 & 10.3 & 0.666 & 68.2 & 71.1 & -6.0 & 0.461 & \checkmark \\
+RuZh & Unknown & 9 & 10.4 & 0.648 & 71.2 & 74.2 & -5.9 & 0.454 & \checkmark \\
+Gemma-3-12B & Unknown & Unknown & 10.6 & 0.636 & 73.4 & 76.6 & -6.1 & 0.446 &  \\
+Qwen2.5-7B & Unknown & Unknown & 11.5 & 0.625 & 70.6 & 73.6 & -5.9 & 0.451 &  \\
+\rowcolor{gray!30}
+AyaExpanse-32B & Unknown & Unknown & 11.6 & 0.631 & 70.9 & 74.6 & -6.3 & 0.444 &  \\
+TowerPlus-9B & Unknown & Unknown & 11.9 & 0.634 & 69.9 & 71.7 & -6.2 & 0.446 &  \\
+\rowcolor{gray!30}
+TranssionTranslate & Unknown & Unknown & 12.7 & 0.638 & 66.9 & 70.1 & -6.4 & 0.438 &  \\
+\rowcolor{gray!30}
+EuroLLM-22B & Unknown & Unknown & 12.8 & 0.627 & 68.9 & 71.5 & -6.4 & 0.43 &  \\
+\rowcolor{gray!30}
+ONLINE-W & Unknown & Unknown & 13.4 & 0.627 & 66.4 & 69.2 & -6.5 & 0.437 &  \\
+AyaExpanse-8B & Unknown & Unknown & 15.0 & 0.615 & 65.1 & 68.6 & -6.7 & 0.403 &  \\
+EuroLLM-9B & Unknown & Unknown & 16.4 & 0.604 & 63.6 & 66.6 & -6.9 & 0.394 &  \\
+\rowcolor{gray!30}
+IR-MultiagentMT & \ding{55} & Unknown & 17.2 & 0.575 & 64.0 & 66.0 & -6.6 & 0.399 &  \\
+SalamandraTA & \checkmark & 7.77 & 17.9 & 0.618 & 59.5 & 59.2 & -7.1 & 0.376 &  \\
+Llama-3.1-8B & Unknown & Unknown & 18.4 & 0.594 & 61.6 & 62.8 & -7.4 & 0.379 &  \\
+CommandR7B & Unknown & Unknown & 18.5 & 0.595 & 63.1 & 65.0 & -7.9 & 0.376 &  \\
+\rowcolor{gray!30}
+ONLINE-G & Unknown & Unknown & 31.2 & 0.508 & 52.2 & 51.7 & -11.1 & 0.256 &  \\
+Mistral-7B & Unknown & Unknown & 32.0 & 0.5 & 47.6 & 46.7 & -10.4 & 0.257 &  \\
+NLLB & Unknown & Unknown & 38.0 & 0.441 & 44.4 & 45.6 & -12.8 & 0.238 &  \\
+\bottomrule
+\end{tabularx}
