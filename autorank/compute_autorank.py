@@ -137,6 +137,25 @@ LANG_CODE_2_LANG_COUNTRY = {
     },
 }
 
+human_evaluated_lps = ['en-ar_EG', 'en-bho_IN', 'en-cs_CZ', 'en-et_EE', 'en-is_IS', 'en-it_IT', 'en-ja_JP', 'en-ko_KR', 'en-mas_KE', 'en-ru_RU', 'en-sr_Cyrl_RS', 'en-uk_UA', 'en-zh_CN', 'cs-uk_UA', 'cs-de_DE', 'ja-zh_CN']
+
+reference_exists = [
+    "cs-uk_UA",
+    "en-ar_EG",
+    "en-cs_CZ",
+    "en-et_EE",
+    "en-is_IS",
+    "en-ja_JP",
+    "en-ko_KR",
+    "en-ru_RU",
+    "en-uk_UA",
+    "en-zh_CN",
+    "ja-zh_CN",
+    "cs-de_DE",
+    "en-sr_Cyrl_RS",
+]
+
+chrf_only = ["en-bho_IN", "en-mas_KE"]
 
 def read_arguments() -> ArgumentParser:
     parser = ArgumentParser(
@@ -465,8 +484,9 @@ def generate_latex_table(
     # Only consider systems present in both df and metadata
     systems_to_show = [sys for sys in df.index if sys in teams]
 
+    is_humeval = language_pair in human_evaluated_lps
+
     table_rows = []
-    rowcolors = []  # Track if the row should be gray (unconstrained)
 
     # All raw metric columns (in order of appearance)
     metric_cols = [c for c in df.columns if c.endswith("_raw")]
@@ -505,14 +525,19 @@ def generate_latex_table(
             val = df.loc[sys][col]
             metric_vals.append(f"{round(val, 3 if 'comet' in col.lower() else 1)}")
 
-        # Human evaluation column: ✓ if True, else blank
-        humeval = df.loc[sys]["will_humeval"]
-        humeval_str = r"\checkmark" if bool(humeval) else ""
+        if is_humeval:
+            # Human evaluation column: ✓ if True, else blank
+            humeval = df.loc[sys]["will_humeval"]
+            humeval_str = r"\checkmark" if bool(humeval) else ""
 
-        row = (
-            [team_name_escaped, lp_mark, param_count, humeval_str, autorank_str]
-            + metric_vals
-        )
+            row = (
+                [team_name_escaped, lp_mark, param_count, humeval_str, autorank_str]
+                + metric_vals
+            )
+        else:
+            row = (
+                [team_name_escaped, lp_mark, param_count, autorank_str] + metric_vals
+            )
         table_rows.append(row)
 
         # Save as tuple: (raw_name, row_data, is_unconstrained)
@@ -520,13 +545,22 @@ def generate_latex_table(
         table_data.append((sys, row, is_unconstrained))
 
     # Build header (with arrows)
-    header = (
-        ["System Name", "LP Supported", "Params. (B)", "Humeval?", "AutoRank $\\downarrow$"]
-        + [f"{c.replace('_raw', '')} $\\uparrow$" for c in metric_cols]
-    )
+    
+    if is_humeval:
+        header = (
+            ["System Name", "LP Supported", "Params. (B)", "Humeval?", "AutoRank $\\downarrow$"]
+            + [f"{c.replace('_raw', '')} $\\uparrow$" for c in metric_cols]
+        )
+    else:
+        header = (
+            ["System Name", "LP Supported", "Params. (B)", "AutoRank $\\downarrow$"]
+            + [f"{c.replace('_raw', '')} $\\uparrow$" for c in metric_cols]
+        )
 
     # Tabular column spec: one col for each field
     ncols = 4 + len(metric_cols) + 1
+    if not is_humeval:
+        ncols -= 1
     colspec = "l" + "X" * (ncols - 1)
 
     latex_df = pd.DataFrame(
@@ -592,25 +626,6 @@ def generate_latex_table(
 
     print(f"LaTeX table written to {output_path}")
     return "\n".join(latex_lines) + "\n\n"
-
-
-reference_exists = [
-    "cs-uk_UA",
-    "en-ar_EG",
-    "en-cs_CZ",
-    "en-et_EE",
-    "en-is_IS",
-    "en-ja_JP",
-    "en-ko_KR",
-    "en-ru_RU",
-    "en-uk_UA",
-    "en-zh_CN",
-    "ja-zh_CN",
-    "cs-de_DE",
-    "en-sr_Cyrl_RS",
-]
-
-chrf_only = ["en-bho_IN", "en-mas_KE"]
 
 
 def compute_autorank(language_pair, args) -> None:
