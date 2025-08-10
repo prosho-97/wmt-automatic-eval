@@ -157,6 +157,40 @@ reference_exists = [
 
 chrf_only = ["en-bho_IN", "en-mas_KE"]
 
+# AyaExpanse-8B, CommandR7B, EuroLLM-9B, Gemma-3-12B, Llama-3.1-8B, Mistral-7B, NLLB, Qwen2.5-7B, TowerPlus-9B, AyaExpanse-32B, Claude-4, CommandA, DeepSeek-V3, EuroLLM-22B, Gemma-3-27B, Gemini-2.5-Pro, GPT-4.1, Llama-4-Maverick, Mistral-Medium, ONLINE-B, ONLINE-G, ONLINE-W, Qwen3-235B, TowerPlus-72B
+
+official_systems = [
+    "AyaExpanse-8B",
+    "CommandR7B",
+    "EuroLLM-9B",
+    "Gemma-3-12B",
+    "Llama-3.1-8B",
+    "Mistral-7B",
+    "NLLB",
+    "Qwen2.5-7B",
+    "TowerPlus-9B",
+    "AyaExpanse-32B",
+    "Claude-4",
+    "CommandA",
+    "DeepSeek-V3",
+    "EuroLLM-22B",
+    "Gemma-3-27B",
+    "Gemini-2.5-Pro",
+    "GPT-4.1",
+    "Llama-4-Maverick",
+    "Mistral-Medium",
+    "ONLINE-B",
+    "ONLINE-G",
+    "ONLINE-W",
+    "Qwen3-235B",
+    "TowerPlus-72B"
+]
+
+system_renames = {
+    "CommandA-MT": "CommandA-WMT",
+    "Shy": "Shy-hunyuan-MT"
+}
+
 def read_arguments() -> ArgumentParser:
     parser = ArgumentParser(
         description="Command to compute AutoRank on a language pair specified in input."
@@ -337,26 +371,26 @@ def normalize_param_count(val: Optional[str] = None) -> str:
             return val
 
     # Handle '<1'
-    if s == "<1":
+    if s == "<1" or s =='633.2M':
         return "<1"
 
     # Handle values ending with B/b (billions)
     match_b = re.match(r"^(\d+(?:\.\d+)?)\s*[Bb]$", s)
     if match_b:
-        return str(float(match_b.group(1))).rstrip(".0")
+        return f"{float(match_b.group(1)):.0f}"
 
     # Handle values ending with M/m (millions)
     match_m = re.match(r"^(\d+(?:\.\d+)?)\s*[Mm]$", s)
     if match_m:
         val_b = float(match_m.group(1)) / 1000
-        return f"{val_b:.2f}".rstrip("0").rstrip(".")
+        return f"{val_b:.0f}"
 
     # Pure numbers: treat as billions if reasonable
     try:
         num = float(s)
         if num > 1000:  # Unlikely to be billions, probably millions
             return f"{num / 1000:.2f}".rstrip("0").rstrip(".")
-        return str(num).rstrip(".0")
+        return f"{num:.0f}"
     except Exception:
         pass
 
@@ -499,8 +533,17 @@ def generate_latex_table(
     for sys in systems_to_show:
         meta = teams[sys]
 
+        # rename system
+        if sys in system_renames:
+            team_name_escaped = system_renames[sys]
+        else:
+            team_name_escaped = sys
+
         # System name
-        team_name_escaped = escape_latex(sys)
+        team_name_escaped = escape_latex(team_name_escaped)
+        if sys in official_systems:
+            team_name_escaped = r"\official " + team_name_escaped
+
 
         # LP supported
         supported_lps = meta.get("supported_lps", {})
@@ -561,7 +604,7 @@ def generate_latex_table(
     ncols = 4 + len(metric_cols) + 1
     if not is_humeval:
         ncols -= 1
-    colspec = "l" + "X" * (ncols - 1)
+    colspec = "l" + "Y" * (ncols - 1)
 
     latex_df = pd.DataFrame(
         [d[1] for d in table_data], columns=header, index=[d[0] for d in table_data]
