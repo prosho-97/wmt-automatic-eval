@@ -358,7 +358,7 @@ def normalize_param_count(val: Optional[str] = None) -> str:
     Returns:
         A string representing the normalized value in billions, or "not specified" if the input is invalid.
     """
-    if val is None or str(val).strip() in {"", "-", "several billion"}:
+    if val is None or val == "unk" or str(val).strip() in {"", "-", "several billion"}:
         return r"\unknown"
 
     s = str(val).strip()
@@ -377,6 +377,9 @@ def normalize_param_count(val: Optional[str] = None) -> str:
     # Handle '<1'
     if s == "<1" or s =='633.2M':
         return "<1"
+
+    if "A" in s:
+        return s.split("A")[1].split("B")[0].strip()
 
     # Handle values ending with B/b (billions)
     match_b = re.match(r"^(\d+(?:\.\d+)?)\s*[Bb]$", s)
