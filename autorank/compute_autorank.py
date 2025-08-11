@@ -188,7 +188,11 @@ official_systems = [
 
 system_renames = {
     "CommandA-MT": "CommandA-WMT",
-    "Shy": "Shy-hunyuan-MT"
+    "Shy": "Shy-hunyuan-MT",
+    "TowerPlus-9B": "TowerPlus-9B[M]",
+    "TowerPlus-72B": "TowerPlus-72B[M]",
+    "EuroLLM-9B": "EuroLLM-9B[M]",
+    "EuroLLM-22B": "EuroLLM-22B-pre.[M]",
 }
 
 def read_arguments() -> ArgumentParser:
