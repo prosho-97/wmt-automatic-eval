@@ -193,6 +193,7 @@ system_renames = {
     "TowerPlus-72B": "TowerPlus-72B[M]",
     "EuroLLM-9B": "EuroLLM-9B[M]",
     "EuroLLM-22B": "EuroLLM-22B-pre.[M]",
+    "RuZH": "RuZH-Eole",
 }
 
 def read_arguments() -> ArgumentParser:
