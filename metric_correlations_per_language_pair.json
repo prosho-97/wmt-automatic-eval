@@ -1,0 +1,2513 @@
+{
+  "cs-de_DE": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.441335,
+        "r2": 0.194777,
+        "n_pairs": 18737
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.483913,
+        "r2": 0.234172,
+        "n_pairs": 18280
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.540575,
+        "r2": 0.292222,
+        "n_pairs": 18737
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.708967,
+        "r2": 0.502635,
+        "n_pairs": 18737
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.731764,
+        "r2": 0.535479,
+        "n_pairs": 18280
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.5827,
+        "r2": 0.33954,
+        "n_pairs": 18737
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.402833,
+        "r2": 0.162275,
+        "n_pairs": 18737
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.635757,
+        "r2": 0.404187,
+        "n_pairs": 18280
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": 0.436128,
+        "r2": 0.190208,
+        "n_pairs": 18280
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.5605,
+        "r2": 0.31416,
+        "n_pairs": 18737
+      }
+    ]
+  },
+  "cs-uk_UA": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.531382,
+        "r2": 0.282367,
+        "n_pairs": 17415
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.600275,
+        "r2": 0.36033,
+        "n_pairs": 17010
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.696047,
+        "r2": 0.484482,
+        "n_pairs": 17415
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.794461,
+        "r2": 0.631169,
+        "n_pairs": 17415
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.708092,
+        "r2": 0.501394,
+        "n_pairs": 17010
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.570857,
+        "r2": 0.325878,
+        "n_pairs": 17415
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.517087,
+        "r2": 0.267379,
+        "n_pairs": 17415
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.654405,
+        "r2": 0.428245,
+        "n_pairs": 17010
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": 0.572567,
+        "r2": 0.327833,
+        "n_pairs": 17010
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.709821,
+        "r2": 0.503846,
+        "n_pairs": 17415
+      }
+    ]
+  },
+  "en-ar_EG": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.610169,
+        "r2": 0.372306,
+        "n_pairs": 12614
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.573331,
+        "r2": 0.328709,
+        "n_pairs": 12284
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.749604,
+        "r2": 0.561907,
+        "n_pairs": 12616
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.494326,
+        "r2": 0.244358,
+        "n_pairs": 12616
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.740411,
+        "r2": 0.548208,
+        "n_pairs": 12282
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.624453,
+        "r2": 0.389942,
+        "n_pairs": 12614
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.350006,
+        "r2": 0.122505,
+        "n_pairs": 12614
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.604993,
+        "r2": 0.366016,
+        "n_pairs": 12284
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": 0.267584,
+        "r2": 0.071601,
+        "n_pairs": 12284
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.564671,
+        "r2": 0.318853,
+        "n_pairs": 12616
+      }
+    ]
+  },
+  "en-bho_IN": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.464634,
+        "r2": 0.215885,
+        "n_pairs": 11952
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.092669,
+        "r2": 0.008588,
+        "n_pairs": 11620
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.517359,
+        "r2": 0.26766,
+        "n_pairs": 11952
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.029984,
+        "r2": 0.000899,
+        "n_pairs": 11952
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.503266,
+        "r2": 0.253277,
+        "n_pairs": 11620
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.621248,
+        "r2": 0.385949,
+        "n_pairs": 11952
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.050566,
+        "r2": 0.002557,
+        "n_pairs": 11952
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.427591,
+        "r2": 0.182834,
+        "n_pairs": 11620
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": -0.007822,
+        "r2": 6.1e-05,
+        "n_pairs": 11620
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.193935,
+        "r2": 0.037611,
+        "n_pairs": 11952
+      }
+    ]
+  },
+  "en-bn_BD": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.741509,
+        "r2": 0.549836,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.751951,
+        "r2": 0.565431,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.821625,
+        "r2": 0.675068,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.498204,
+        "r2": 0.248207,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.802304,
+        "r2": 0.643691,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.734984,
+        "r2": 0.540202,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.435188,
+        "r2": 0.189389,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.730282,
+        "r2": 0.533312,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": 0.448234,
+        "r2": 0.200913,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.583983,
+        "r2": 0.341036,
+        "n_pairs": 9960
+      }
+    ]
+  },
+  "en-cs_CZ": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.61726,
+        "r2": 0.38101,
+        "n_pairs": 16511
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.696047,
+        "r2": 0.484481,
+        "n_pairs": 16128
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.72767,
+        "r2": 0.529503,
+        "n_pairs": 16512
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.746808,
+        "r2": 0.557722,
+        "n_pairs": 16512
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.756528,
+        "r2": 0.572335,
+        "n_pairs": 16127
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.642331,
+        "r2": 0.412589,
+        "n_pairs": 16511
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.533328,
+        "r2": 0.284438,
+        "n_pairs": 16511
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.682038,
+        "r2": 0.465176,
+        "n_pairs": 16128
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": 0.534756,
+        "r2": 0.285964,
+        "n_pairs": 16128
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.712407,
+        "r2": 0.507523,
+        "n_pairs": 16512
+      }
+    ]
+  },
+  "en-de_DE": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.480974,
+        "r2": 0.231336,
+        "n_pairs": 12288
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.54575,
+        "r2": 0.297843,
+        "n_pairs": 12288
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.611697,
+        "r2": 0.374173,
+        "n_pairs": 12288
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.789437,
+        "r2": 0.62321,
+        "n_pairs": 12288
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.741974,
+        "r2": 0.550526,
+        "n_pairs": 12288
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.578385,
+        "r2": 0.334529,
+        "n_pairs": 12288
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.350462,
+        "r2": 0.122824,
+        "n_pairs": 12288
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.592963,
+        "r2": 0.351606,
+        "n_pairs": 12288
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": 0.358231,
+        "r2": 0.128329,
+        "n_pairs": 12288
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.559067,
+        "r2": 0.312556,
+        "n_pairs": 12288
+      }
+    ]
+  },
+  "en-el_GR": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.735781,
+        "r2": 0.541373,
+        "n_pairs": 10622
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.777362,
+        "r2": 0.604291,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.786807,
+        "r2": 0.619065,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.691224,
+        "r2": 0.47779,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.863487,
+        "r2": 0.74561,
+        "n_pairs": 10622
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.716372,
+        "r2": 0.513189,
+        "n_pairs": 10622
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.54217,
+        "r2": 0.293948,
+        "n_pairs": 10622
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.743136,
+        "r2": 0.552251,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": 0.544073,
+        "r2": 0.296016,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.740625,
+        "r2": 0.548525,
+        "n_pairs": 10624
+      }
+    ]
+  },
+  "en-et_EE": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.782813,
+        "r2": 0.612796,
+        "n_pairs": 12948
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.837482,
+        "r2": 0.701377,
+        "n_pairs": 12616
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.82508,
+        "r2": 0.680757,
+        "n_pairs": 12948
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.720144,
+        "r2": 0.518608,
+        "n_pairs": 12948
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.787487,
+        "r2": 0.620135,
+        "n_pairs": 12616
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.7355,
+        "r2": 0.540961,
+        "n_pairs": 12948
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.582744,
+        "r2": 0.339591,
+        "n_pairs": 12948
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.794759,
+        "r2": 0.631641,
+        "n_pairs": 12616
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": 0.654918,
+        "r2": 0.428918,
+        "n_pairs": 12616
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.802438,
+        "r2": 0.643907,
+        "n_pairs": 12948
+      }
+    ]
+  },
+  "en-fa_IR": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.814311,
+        "r2": 0.663102,
+        "n_pairs": 9959
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.834452,
+        "r2": 0.69631,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.861897,
+        "r2": 0.742866,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.702729,
+        "r2": 0.493827,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.85216,
+        "r2": 0.726177,
+        "n_pairs": 9959
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.78532,
+        "r2": 0.616727,
+        "n_pairs": 9959
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.595554,
+        "r2": 0.354684,
+        "n_pairs": 9959
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.793123,
+        "r2": 0.629044,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": 0.589471,
+        "r2": 0.347476,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.689437,
+        "r2": 0.475323,
+        "n_pairs": 9960
+      }
+    ]
+  },
+  "en-hi_IN": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.650775,
+        "r2": 0.423508,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.663291,
+        "r2": 0.439954,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.654371,
+        "r2": 0.428202,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.442717,
+        "r2": 0.195999,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.754057,
+        "r2": 0.568602,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.658462,
+        "r2": 0.433572,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.432106,
+        "r2": 0.186716,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.680843,
+        "r2": 0.463547,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": 0.458581,
+        "r2": 0.210296,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.634439,
+        "r2": 0.402513,
+        "n_pairs": 9960
+      }
+    ]
+  },
+  "en-id_ID": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.695573,
+        "r2": 0.483822,
+        "n_pairs": 10292
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.776864,
+        "r2": 0.603518,
+        "n_pairs": 10292
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.704613,
+        "r2": 0.496479,
+        "n_pairs": 10292
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.680336,
+        "r2": 0.462858,
+        "n_pairs": 10292
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.775407,
+        "r2": 0.601255,
+        "n_pairs": 10292
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.633291,
+        "r2": 0.401057,
+        "n_pairs": 10292
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.542232,
+        "r2": 0.294016,
+        "n_pairs": 10292
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.653477,
+        "r2": 0.427032,
+        "n_pairs": 10292
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": 0.552431,
+        "r2": 0.30518,
+        "n_pairs": 10292
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.775374,
+        "r2": 0.601204,
+        "n_pairs": 10292
+      }
+    ]
+  },
+  "en-is_IS": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.78677,
+        "r2": 0.619008,
+        "n_pairs": 10953
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.810812,
+        "r2": 0.657417,
+        "n_pairs": 10956
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.839445,
+        "r2": 0.704667,
+        "n_pairs": 10956
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.659318,
+        "r2": 0.4347,
+        "n_pairs": 10956
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.755754,
+        "r2": 0.571164,
+        "n_pairs": 10953
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.712692,
+        "r2": 0.507929,
+        "n_pairs": 10953
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.495259,
+        "r2": 0.245281,
+        "n_pairs": 10953
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.786617,
+        "r2": 0.618766,
+        "n_pairs": 10956
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": 0.620326,
+        "r2": 0.384804,
+        "n_pairs": 10956
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.740729,
+        "r2": 0.548679,
+        "n_pairs": 10956
+      }
+    ]
+  },
+  "en-it_IT": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.548754,
+        "r2": 0.301131,
+        "n_pairs": 10956
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.59638,
+        "r2": 0.355669,
+        "n_pairs": 10956
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.691141,
+        "r2": 0.477676,
+        "n_pairs": 10956
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.780126,
+        "r2": 0.608597,
+        "n_pairs": 10956
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.735291,
+        "r2": 0.540652,
+        "n_pairs": 10956
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.565765,
+        "r2": 0.32009,
+        "n_pairs": 10956
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.470492,
+        "r2": 0.221363,
+        "n_pairs": 10956
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.58333,
+        "r2": 0.340273,
+        "n_pairs": 10956
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": 0.456049,
+        "r2": 0.20798,
+        "n_pairs": 10956
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.71587,
+        "r2": 0.51247,
+        "n_pairs": 10956
+      }
+    ]
+  },
+  "en-ja_JP": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.644131,
+        "r2": 0.414904,
+        "n_pairs": 14608
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.668363,
+        "r2": 0.446709,
+        "n_pairs": 14276
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.717189,
+        "r2": 0.51436,
+        "n_pairs": 14608
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.691025,
+        "r2": 0.477515,
+        "n_pairs": 14608
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.751771,
+        "r2": 0.56516,
+        "n_pairs": 14276
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.626277,
+        "r2": 0.392223,
+        "n_pairs": 14608
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.542564,
+        "r2": 0.294376,
+        "n_pairs": 14608
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.636618,
+        "r2": 0.405283,
+        "n_pairs": 14276
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": 0.496315,
+        "r2": 0.246328,
+        "n_pairs": 14276
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.715365,
+        "r2": 0.511747,
+        "n_pairs": 14608
+      }
+    ]
+  },
+  "en-kn_IN": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.796423,
+        "r2": 0.634289,
+        "n_pairs": 9953
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.778104,
+        "r2": 0.605446,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.825527,
+        "r2": 0.681495,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.378914,
+        "r2": 0.143576,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.790288,
+        "r2": 0.624555,
+        "n_pairs": 9953
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.713624,
+        "r2": 0.50926,
+        "n_pairs": 9953
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.323559,
+        "r2": 0.10469,
+        "n_pairs": 9953
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.702746,
+        "r2": 0.493853,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": 0.374622,
+        "r2": 0.140342,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.563362,
+        "r2": 0.317377,
+        "n_pairs": 9960
+      }
+    ]
+  },
+  "en-ko_KR": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.645459,
+        "r2": 0.416618,
+        "n_pairs": 12284
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.666989,
+        "r2": 0.444874,
+        "n_pairs": 11952
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.698969,
+        "r2": 0.488558,
+        "n_pairs": 12284
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.680022,
+        "r2": 0.46243,
+        "n_pairs": 12284
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.774458,
+        "r2": 0.599785,
+        "n_pairs": 11952
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.643307,
+        "r2": 0.413844,
+        "n_pairs": 12284
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.580198,
+        "r2": 0.33663,
+        "n_pairs": 12284
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.647581,
+        "r2": 0.419361,
+        "n_pairs": 11952
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": 0.546829,
+        "r2": 0.299022,
+        "n_pairs": 11952
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.738174,
+        "r2": 0.544901,
+        "n_pairs": 12284
+      }
+    ]
+  },
+  "en-lt_LT": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.798081,
+        "r2": 0.636933,
+        "n_pairs": 10623
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.836671,
+        "r2": 0.700018,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.857516,
+        "r2": 0.735333,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.725647,
+        "r2": 0.526564,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.828467,
+        "r2": 0.686357,
+        "n_pairs": 10623
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.754861,
+        "r2": 0.569815,
+        "n_pairs": 10623
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.555937,
+        "r2": 0.309066,
+        "n_pairs": 10623
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.782587,
+        "r2": 0.612443,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": 0.600547,
+        "r2": 0.360657,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.762024,
+        "r2": 0.58068,
+        "n_pairs": 10624
+      }
+    ]
+  },
+  "en-mas_KE": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.694064,
+        "r2": 0.481725,
+        "n_pairs": 8962
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.325293,
+        "r2": 0.105816,
+        "n_pairs": 8964
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.403231,
+        "r2": 0.162595,
+        "n_pairs": 8964
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.124089,
+        "r2": 0.015398,
+        "n_pairs": 8964
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.4599,
+        "r2": 0.211508,
+        "n_pairs": 8962
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.405808,
+        "r2": 0.16468,
+        "n_pairs": 8962
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.22347,
+        "r2": 0.049939,
+        "n_pairs": 8962
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.095635,
+        "r2": 0.009146,
+        "n_pairs": 8964
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": -0.085237,
+        "r2": 0.007265,
+        "n_pairs": 8964
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.532838,
+        "r2": 0.283916,
+        "n_pairs": 8964
+      }
+    ]
+  },
+  "en-mr_IN": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.738248,
+        "r2": 0.54501,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.621649,
+        "r2": 0.386447,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.784516,
+        "r2": 0.615466,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.178633,
+        "r2": 0.03191,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.610001,
+        "r2": 0.372101,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.685371,
+        "r2": 0.469733,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.124266,
+        "r2": 0.015442,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.594672,
+        "r2": 0.353635,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": 0.034159,
+        "r2": 0.001167,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.320438,
+        "r2": 0.10268,
+        "n_pairs": 9960
+      }
+    ]
+  },
+  "en-ro_RO": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.634314,
+        "r2": 0.402354,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.707446,
+        "r2": 0.500479,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.747896,
+        "r2": 0.559349,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.796412,
+        "r2": 0.634273,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.753269,
+        "r2": 0.567414,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.619391,
+        "r2": 0.383645,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.546168,
+        "r2": 0.298299,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.64774,
+        "r2": 0.419567,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": 0.561158,
+        "r2": 0.314899,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.762363,
+        "r2": 0.581197,
+        "n_pairs": 10624
+      }
+    ]
+  },
+  "en-ru_RU": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.579571,
+        "r2": 0.335903,
+        "n_pairs": 13612
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.647243,
+        "r2": 0.418923,
+        "n_pairs": 13280
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.676578,
+        "r2": 0.457758,
+        "n_pairs": 13612
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.730696,
+        "r2": 0.533917,
+        "n_pairs": 13612
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.706662,
+        "r2": 0.499371,
+        "n_pairs": 13280
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.534109,
+        "r2": 0.285272,
+        "n_pairs": 13612
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.498543,
+        "r2": 0.248545,
+        "n_pairs": 13612
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.574541,
+        "r2": 0.330097,
+        "n_pairs": 13280
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": 0.500072,
+        "r2": 0.250072,
+        "n_pairs": 13280
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.74237,
+        "r2": 0.551113,
+        "n_pairs": 13612
+      }
+    ]
+  },
+  "en-sr_Cyrl_RS": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.698859,
+        "r2": 0.488404,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.774832,
+        "r2": 0.600365,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.713663,
+        "r2": 0.509315,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.743398,
+        "r2": 0.55264,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.737478,
+        "r2": 0.543874,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.576656,
+        "r2": 0.332532,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.577255,
+        "r2": 0.333223,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.65451,
+        "r2": 0.428384,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": 0.66394,
+        "r2": 0.440817,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.696011,
+        "r2": 0.484431,
+        "n_pairs": 10624
+      }
+    ]
+  },
+  "en-sr_Latn_RS": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.73133,
+        "r2": 0.534843,
+        "n_pairs": 11952
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.788605,
+        "r2": 0.621897,
+        "n_pairs": 11620
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.723677,
+        "r2": 0.523709,
+        "n_pairs": 11952
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.690895,
+        "r2": 0.477335,
+        "n_pairs": 11952
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.796686,
+        "r2": 0.634709,
+        "n_pairs": 11620
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.672489,
+        "r2": 0.452242,
+        "n_pairs": 11952
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.532371,
+        "r2": 0.283419,
+        "n_pairs": 11952
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.660711,
+        "r2": 0.436538,
+        "n_pairs": 11620
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": 0.563991,
+        "r2": 0.318086,
+        "n_pairs": 11620
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.609844,
+        "r2": 0.37191,
+        "n_pairs": 11952
+      }
+    ]
+  },
+  "en-sv_SE": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.662486,
+        "r2": 0.438887,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.738322,
+        "r2": 0.545119,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.777395,
+        "r2": 0.604343,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.829589,
+        "r2": 0.688219,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.779963,
+        "r2": 0.608343,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.634379,
+        "r2": 0.402437,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.572706,
+        "r2": 0.327993,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.705647,
+        "r2": 0.497937,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": 0.641337,
+        "r2": 0.411313,
+        "n_pairs": 10624
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.797559,
+        "r2": 0.6361,
+        "n_pairs": 10624
+      }
+    ]
+  },
+  "en-th_TH": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.820601,
+        "r2": 0.673386,
+        "n_pairs": 9959
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.844792,
+        "r2": 0.713673,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.837399,
+        "r2": 0.701237,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.667228,
+        "r2": 0.445193,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.831344,
+        "r2": 0.691133,
+        "n_pairs": 9959
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.775085,
+        "r2": 0.600756,
+        "n_pairs": 9959
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.584887,
+        "r2": 0.342093,
+        "n_pairs": 9959
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.797013,
+        "r2": 0.63523,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": 0.638902,
+        "r2": 0.408196,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.734611,
+        "r2": 0.539654,
+        "n_pairs": 9960
+      }
+    ]
+  },
+  "en-tr_TR": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.70443,
+        "r2": 0.496221,
+        "n_pairs": 10292
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.758075,
+        "r2": 0.574678,
+        "n_pairs": 10292
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.713017,
+        "r2": 0.508393,
+        "n_pairs": 10292
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.649001,
+        "r2": 0.421202,
+        "n_pairs": 10292
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.782373,
+        "r2": 0.612108,
+        "n_pairs": 10292
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.61921,
+        "r2": 0.383421,
+        "n_pairs": 10292
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.498273,
+        "r2": 0.248276,
+        "n_pairs": 10292
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.642448,
+        "r2": 0.41274,
+        "n_pairs": 10292
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": 0.515547,
+        "r2": 0.265789,
+        "n_pairs": 10292
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.738191,
+        "r2": 0.544926,
+        "n_pairs": 10292
+      }
+    ]
+  },
+  "en-uk_UA": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.645761,
+        "r2": 0.417008,
+        "n_pairs": 14276
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.704196,
+        "r2": 0.495892,
+        "n_pairs": 13944
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.745294,
+        "r2": 0.555463,
+        "n_pairs": 14276
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.763478,
+        "r2": 0.582899,
+        "n_pairs": 14276
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.751901,
+        "r2": 0.565355,
+        "n_pairs": 13944
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.594106,
+        "r2": 0.352962,
+        "n_pairs": 14276
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.54953,
+        "r2": 0.301983,
+        "n_pairs": 14276
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.643451,
+        "r2": 0.414029,
+        "n_pairs": 13944
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": 0.568328,
+        "r2": 0.322997,
+        "n_pairs": 13944
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.771237,
+        "r2": 0.594806,
+        "n_pairs": 14276
+      }
+    ]
+  },
+  "en-vi_VN": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.714088,
+        "r2": 0.509922,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.762039,
+        "r2": 0.580704,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.762343,
+        "r2": 0.581166,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.64089,
+        "r2": 0.41074,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.827286,
+        "r2": 0.684402,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.684661,
+        "r2": 0.468761,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.506783,
+        "r2": 0.256829,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.698218,
+        "r2": 0.487509,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": 0.521957,
+        "r2": 0.272439,
+        "n_pairs": 9960
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.743042,
+        "r2": 0.552111,
+        "n_pairs": 9960
+      }
+    ]
+  },
+  "en-zh_CN": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.556875,
+        "r2": 0.31011,
+        "n_pairs": 12948
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.632888,
+        "r2": 0.400547,
+        "n_pairs": 12616
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.652849,
+        "r2": 0.426212,
+        "n_pairs": 12948
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.652913,
+        "r2": 0.426295,
+        "n_pairs": 12948
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.687778,
+        "r2": 0.473038,
+        "n_pairs": 12616
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.584207,
+        "r2": 0.341298,
+        "n_pairs": 12948
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.524921,
+        "r2": 0.275542,
+        "n_pairs": 12948
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.583732,
+        "r2": 0.340743,
+        "n_pairs": 12616
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": 0.518251,
+        "r2": 0.268584,
+        "n_pairs": 12616
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.743891,
+        "r2": 0.553374,
+        "n_pairs": 12948
+      }
+    ]
+  },
+  "ja-zh_CN": {
+    "metrics_considered": [
+      "CometKiwi-XL",
+      "GEMBA-ESA-CMDA",
+      "GEMBA-ESA-GPT4.1",
+      "MetricX-24-Hybrid-XL",
+      "XCOMET-XL"
+    ],
+    "pairs": [
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-CMDA",
+        "r": 0.508431,
+        "r2": 0.258502,
+        "n_pairs": 14028
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.552606,
+        "r2": 0.305373,
+        "n_pairs": 13694
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.657513,
+        "r2": 0.432323,
+        "n_pairs": 14028
+      },
+      {
+        "metric_i": "CometKiwi-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.734886,
+        "r2": 0.540057,
+        "n_pairs": 14028
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "GEMBA-ESA-GPT4.1",
+        "r": 0.779345,
+        "r2": 0.607379,
+        "n_pairs": 13694
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.638519,
+        "r2": 0.407706,
+        "n_pairs": 14028
+      },
+      {
+        "metric_i": "GEMBA-ESA-CMDA",
+        "metric_j": "XCOMET-XL",
+        "r": 0.531544,
+        "r2": 0.282539,
+        "n_pairs": 14028
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "MetricX-24-Hybrid-XL",
+        "r": 0.638776,
+        "r2": 0.408035,
+        "n_pairs": 13694
+      },
+      {
+        "metric_i": "GEMBA-ESA-GPT4.1",
+        "metric_j": "XCOMET-XL",
+        "r": 0.544678,
+        "r2": 0.296674,
+        "n_pairs": 13694
+      },
+      {
+        "metric_i": "MetricX-24-Hybrid-XL",
+        "metric_j": "XCOMET-XL",
+        "r": 0.718312,
+        "r2": 0.515972,
+        "n_pairs": 14028
+      }
+    ]
+  }
+}

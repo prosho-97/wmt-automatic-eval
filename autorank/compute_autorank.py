@@ -137,6 +137,64 @@ LANG_CODE_2_LANG_COUNTRY = {
     },
 }
 
+human_evaluated_lps = ['en-ar_EG', 'en-bho_IN', 'en-cs_CZ', 'en-et_EE', 'en-is_IS', 'en-it_IT', 'en-ja_JP', 'en-ko_KR', 'en-mas_KE', 'en-ru_RU', 'en-sr_Cyrl_RS', 'en-uk_UA', 'en-zh_CN', 'cs-uk_UA', 'cs-de_DE', 'ja-zh_CN']
+
+reference_exists = [
+    "cs-uk_UA",
+    "en-ar_EG",
+    "en-cs_CZ",
+    "en-et_EE",
+    "en-is_IS",
+    "en-ja_JP",
+    "en-ko_KR",
+    "en-ru_RU",
+    "en-uk_UA",
+    "en-zh_CN",
+    "ja-zh_CN",
+    "cs-de_DE",
+    "en-sr_Cyrl_RS",
+]
+
+chrf_only = ["en-bho_IN", "en-mas_KE"]
+
+# AyaExpanse-8B, CommandR7B, EuroLLM-9B, Gemma-3-12B, Llama-3.1-8B, Mistral-7B, NLLB, Qwen2.5-7B, TowerPlus-9B, AyaExpanse-32B, Claude-4, CommandA, DeepSeek-V3, EuroLLM-22B, Gemma-3-27B, Gemini-2.5-Pro, GPT-4.1, Llama-4-Maverick, Mistral-Medium, ONLINE-B, ONLINE-G, ONLINE-W, Qwen3-235B, TowerPlus-72B
+
+official_systems = [
+    "AyaExpanse-8B",
+    "CommandR7B",
+    "EuroLLM-9B",
+    "Gemma-3-12B",
+    "Llama-3.1-8B",
+    "Mistral-7B",
+    "NLLB",
+    "Qwen2.5-7B",
+    "TowerPlus-9B",
+    "AyaExpanse-32B",
+    "Claude-4",
+    "CommandA",
+    "DeepSeek-V3",
+    "EuroLLM-22B",
+    "Gemma-3-27B",
+    "Gemini-2.5-Pro",
+    "GPT-4.1",
+    "Llama-4-Maverick",
+    "Mistral-Medium",
+    "ONLINE-B",
+    "ONLINE-G",
+    "ONLINE-W",
+    "Qwen3-235B",
+    "TowerPlus-72B"
+]
+
+system_renames = {
+    "CommandA-MT": "CommandA-WMT",
+    "Shy": "Shy-hunyuan-MT",
+    "TowerPlus-9B": "TowerPlus-9B[M]",
+    "TowerPlus-72B": "TowerPlus-72B[M]",
+    "EuroLLM-9B": "EuroLLM-9B[M]",
+    "EuroLLM-22B": "EuroLLM-22B-pre.[M]",
+    "RuZH": "RuZH-Eole",
+}
 
 def read_arguments() -> ArgumentParser:
     parser = ArgumentParser(
@@ -162,7 +220,7 @@ def read_arguments() -> ArgumentParser:
         "--lps",
         type=str,
         nargs="+",
-        default=["en-cs_CZ"],
+        default=[],
         help="Which language pair(s) to run AutoRank on. Must be passed in local code format (e.g., 'en-et_EE'). "
         "Multiple language pairs can be provided as space-separated values. "
         "Default: en-cs_CZ",
@@ -301,8 +359,8 @@ def normalize_param_count(val: Optional[str] = None) -> str:
     Returns:
         A string representing the normalized value in billions, or "not specified" if the input is invalid.
     """
-    if val is None or str(val).strip() in {"", "-", "several billion"}:
-        return "Unknown"
+    if val is None or val == "unk" or str(val).strip() in {"", "-", "several billion"}:
+        return r"\unknown"
 
     s = str(val).strip()
 
@@ -315,34 +373,72 @@ def normalize_param_count(val: Optional[str] = None) -> str:
             num = eval(s_eval)
             return f"{num / 1e9:.0f}".rstrip(".0")
         except Exception:
-            return "Unknown"
+            return val
 
     # Handle '<1'
-    if s == "<1":
+    if s == "<1" or s =='633.2M':
         return "<1"
+
+    if "A" in s:
+        return s.split("A")[1].split("B")[0].strip()
 
     # Handle values ending with B/b (billions)
     match_b = re.match(r"^(\d+(?:\.\d+)?)\s*[Bb]$", s)
     if match_b:
-        return str(float(match_b.group(1))).rstrip(".0")
+        return f"{float(match_b.group(1)):.0f}"
 
     # Handle values ending with M/m (millions)
     match_m = re.match(r"^(\d+(?:\.\d+)?)\s*[Mm]$", s)
     if match_m:
         val_b = float(match_m.group(1)) / 1000
-        return f"{val_b:.2f}".rstrip("0").rstrip(".")
+        return f"{val_b:.0f}"
 
     # Pure numbers: treat as billions if reasonable
     try:
         num = float(s)
         if num > 1000:  # Unlikely to be billions, probably millions
             return f"{num / 1000:.2f}".rstrip("0").rstrip(".")
-        return str(num).rstrip(".0")
+        return f"{num:.0f}"
     except Exception:
         pass
 
     # If nothing matches, return 'not specified'
-    return "Unknown"
+    return val
+
+def shade(val, col, col_min, col_max, col_25, col_75):
+    if pd.isna(val):
+        return str(val)
+
+    min_q = col_min[col]
+    max_q = col_max[col]
+    lo_q = col_25[col]
+    hi_q = col_75[col]
+
+    # Determine direction (lower is better for ↓)
+    is_down = r"$\downarrow$" in col
+
+    if not is_down:
+        g = (val - lo_q) / (max_q - lo_q)   # up-arrow: high is better
+    else:
+        g = (hi_q - val) / (hi_q - min_q)   # down-arrow: low is better
+
+    g = float(np.clip(g, 0, 1))
+
+    # # Map g to LaTeX xcolor blends: green→yellow→red
+    # if g <= 0.5:
+    #     # From red (0) to yellow (0.5)
+    #     pct = int(round(g / 0.5 * 100))
+    #     color_cmd = rf"\cellcolor{{yellow!{pct}!red}}"
+    # else:
+    #     # From yellow (0.5) to green (1.0)
+    #     pct = int(round((g - 0.5) / 0.5 * 100))
+    #     color_cmd = rf"\cellcolor{{green!{pct}!yellow}}"
+
+    red = int(round((1 - g) * 100))
+    green = 100 - red
+    color_cmd = rf"\cellcolor{{green!{green}!red!{red}}}"
+
+    return rf"{color_cmd}{val}"
 
 
 def escape_latex(text: str) -> str:
@@ -430,18 +526,32 @@ def generate_latex_table(
     # Only consider systems present in both df and metadata
     systems_to_show = [sys for sys in df.index if sys in teams]
 
+    is_humeval = language_pair in human_evaluated_lps
+
     table_rows = []
-    rowcolors = []  # Track if the row should be gray (unconstrained)
 
     # All raw metric columns (in order of appearance)
     metric_cols = [c for c in df.columns if c.endswith("_raw")]
+
+    if language_pair in ['en-mas_KE', 'en-bho_IN']:
+        # we use only Chrf for these two lps
+        metric_cols = ['chrF++_raw']
 
     table_data = []
     for sys in systems_to_show:
         meta = teams[sys]
 
+        # rename system
+        if sys in system_renames:
+            team_name_escaped = system_renames[sys]
+        else:
+            team_name_escaped = sys
+
         # System name
-        team_name_escaped = escape_latex(sys)
+        team_name_escaped = escape_latex(team_name_escaped)
+        if sys in official_systems:
+            team_name_escaped = r"\official " + team_name_escaped
+
 
         # LP supported
         supported_lps = meta.get("supported_lps", {})
@@ -449,9 +559,9 @@ def generate_latex_table(
         if lp_support == "supported":
             lp_mark = r"\checkmark"
         elif lp_support == "unsupported":
-            lp_mark = r"\ding{55}"  # or r"\texttimes" or "--"
+            lp_mark = r"\crossmark"  
         else:
-            lp_mark = "Unknown"
+            lp_mark = r"\unknown"
 
         # Parameter count (normalized, in billions)
         param_count = normalize_param_count(meta.get("parameter_count"))
@@ -466,15 +576,19 @@ def generate_latex_table(
             val = df.loc[sys][col]
             metric_vals.append(f"{round(val, 3 if 'comet' in col.lower() else 1)}")
 
-        # Human evaluation column: ✓ if True, else blank
-        humeval = df.loc[sys]["will_humeval"]
-        humeval_str = r"\checkmark" if bool(humeval) else ""
+        if is_humeval:
+            # Human evaluation column: ✓ if True, else blank
+            humeval = df.loc[sys]["will_humeval"]
+            humeval_str = r"\checkmark" if bool(humeval) else ""
 
-        row = (
-            [team_name_escaped, lp_mark, param_count, autorank_str]
-            + metric_vals
-            + [humeval_str]
-        )
+            row = (
+                [team_name_escaped, lp_mark, param_count, humeval_str, autorank_str]
+                + metric_vals
+            )
+        else:
+            row = (
+                [team_name_escaped, lp_mark, param_count, autorank_str] + metric_vals
+            )
         table_rows.append(row)
 
         # Save as tuple: (raw_name, row_data, is_unconstrained)
@@ -482,15 +596,23 @@ def generate_latex_table(
         table_data.append((sys, row, is_unconstrained))
 
     # Build header (with arrows)
-    header = (
-        ["System Name", "LP Supported", "Param. Count (B)", "AutoRank $\\downarrow$"]
-        + [f"{c.replace('_raw', '')} $\\uparrow$" for c in metric_cols]
-        + ["Human Evaluation?"]
-    )
+    
+    if is_humeval:
+        header = (
+            ["System Name", "LP Supported", "Params. (B)", "Humeval?", "AutoRank $\\downarrow$"]
+            + [f"{c.replace('_raw', '')} $\\uparrow$" for c in metric_cols]
+        )
+    else:
+        header = (
+            ["System Name", "LP Supported", "Params. (B)", "AutoRank $\\downarrow$"]
+            + [f"{c.replace('_raw', '')} $\\uparrow$" for c in metric_cols]
+        )
 
     # Tabular column spec: one col for each field
     ncols = 4 + len(metric_cols) + 1
-    colspec = "l" + "X" * (ncols - 1)
+    if not is_humeval:
+        ncols -= 1
+    colspec = "l" + "Y" * (ncols - 1)
 
     latex_df = pd.DataFrame(
         [d[1] for d in table_data], columns=header, index=[d[0] for d in table_data]
@@ -506,12 +628,23 @@ def generate_latex_table(
 
     # Compose LaTeX lines
     latex_lines = []
-    latex_lines.append(r"\usepackage[table]{xcolor}")
-    latex_lines.append(r"\usepackage{booktabs}")
     latex_lines.append("")
     # Use tabularx for auto-resizing
     pretty_title = get_pretty_lang_pair_name(language_pair)
-    latex_lines.append(r"\rowcolors{2}{gray!20}{white}")
+
+    # Identify exactly which column names in latex_df get gradients
+    # This assumes latex_df's columns are the *original* names, not the pretty LaTeX headers.
+    gradient_cols = [c for c in latex_df.columns if "arrow" in c]
+
+    latex_df[gradient_cols] = latex_df[gradient_cols].apply(pd.to_numeric, errors="coerce")
+
+    # Precompute min/max for those columns
+    col_min = latex_df[gradient_cols].min()
+    col_max = latex_df[gradient_cols].max()
+    col_25 = latex_df[gradient_cols].quantile(0.25)
+    col_75 = latex_df[gradient_cols].quantile(0.75)
+
+    latex_lines.append(r"\begin{table*}")
     latex_lines.append(r"\small")
     latex_lines.append(r"\begin{tabularx}{\textwidth}{" + colspec + "}")
     latex_lines.append(r"\toprule")
@@ -520,45 +653,30 @@ def generate_latex_table(
     latex_lines.append(" & ".join(header) + r" \\")
     latex_lines.append(r"\midrule")
 
-    # Build a mapping from sys (raw name) to is_unconstrained
     unconstr_map = dict((d[0], d[2]) for d in table_data)
     for idx, row in latex_df.iterrows():
-        row_data = row.tolist()
-        color_cmd = ""
-        if unconstr_map.get(idx, False):
-            color_cmd = r"\rowcolor{gray!30}"
-        row_str = " & ".join(str(x) for x in row_data) + r" \\"
+        cells = []
+        for col, val in row.items():
+            if col in gradient_cols:
+                cells.append(shade(val, col, col_min, col_max, col_25, col_75))
+            else:
+                cells.append(str(val))
+        color_cmd = r"\rowcolor{gray!30}" if unconstr_map.get(idx, False) else ""
+        row_str = " & ".join(cells) + r" \\"
         if color_cmd:
             latex_lines.append(color_cmd)
         latex_lines.append(row_str)
 
     latex_lines.append(r"\bottomrule")
     latex_lines.append(r"\end{tabularx}")
+    latex_lines.append(r"\end{table*}")
 
     # Write to the output file
     with open(output_path, "w", encoding="utf-8") as fout:
         fout.write("\n".join(latex_lines))
 
     print(f"LaTeX table written to {output_path}")
-
-
-reference_exists = [
-    "cs-uk_UA",
-    "en-ar_EG",
-    "en-cs_CZ",
-    "en-et_EE",
-    "en-is_IS",
-    "en-ja_JP",
-    "en-ko_KR",
-    "en-ru_RU",
-    "en-uk_UA",
-    "en-zh_CN",
-    "ja-zh_CN",
-    "cs-de_DE",
-    "en-sr_Cyrl_RS",
-]
-
-chrf_only = ["en-bho_IN", "en-mas_KE"]
+    return "\n".join(latex_lines) + "\n\n"
 
 
 def compute_autorank(language_pair, args) -> None:
@@ -679,24 +797,34 @@ def compute_autorank(language_pair, args) -> None:
                 )
             )
 
-    generate_latex_table(
+    latex_code = generate_latex_table(
         df,
         teams,
         language_pair,
         output_path=args.out_path / f"autorank_{language_pair}.tex",
     )
 
-    return df
+    return df, latex_code
 
 
 if __name__ == "__main__":
     args = read_arguments().parse_args()
     os.makedirs(args.out_path, exist_ok=True)
 
+    lps = args.lps
+    # if empty
+    if not lps:
+        lps = ['en-ar_EG', 'en-bho_IN', 'en-cs_CZ', 'en-et_EE', 'en-is_IS', 'en-it_IT', 'en-ja_JP', 'en-ko_KR', 'en-mas_KE', 'en-ru_RU', 'en-sr_Cyrl_RS', 'en-uk_UA', 'en-zh_CN', 'cs-uk_UA', 'cs-de_DE', 'ja-zh_CN', 'en-bn_BD', 'en-de_DE', 'en-el_GR', 'en-fa_IR', 'en-hi_IN', 'en-id_ID', 'en-kn_IN', 'en-lt_LT', 'en-mr_IN', 'en-ro_RO', 'en-th_TH', 'en-sr_Latn_RS', 'en-sv_SE', 'en-tr_TR', 'en-vi_VN']
+
     dfs = {}
-    for lp in args.lps:
-        lpdf = compute_autorank(lp, args)
+    latex_codes = ""
+    for lp in lps:
+        lpdf, latex_code = compute_autorank(lp, args)
         dfs[lp] = lpdf
+        latex_codes += latex_code
+
+    with open(args.out_path / "autorank.tex", "w", encoding="utf-8") as fout:
+        fout.write(latex_codes)
 
     with pd.ExcelWriter(args.out_path / "autorank.xlsx") as writer:
         for lp, df in dfs.items():
