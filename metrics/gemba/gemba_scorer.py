@@ -116,9 +116,7 @@ class GembaScorer:
             lps_to_score = set(lps_to_score)
 
         for sys, lp2domain_translated_docs in tqdm(
-            sys2translations.items(),
-            desc="Systems",
-            total=1 if score_only_refs else len(sys2translations),
+            sys2translations.items(), desc="Systems"
         ):
             sys = "refA" if score_only_refs else sys
             for lp, domain2translated_docs in tqdm(
@@ -226,8 +224,5 @@ class GembaScorer:
                 # Fill per-paragraph
                 for (domain, doc_id, seg_idx), output in zip(meta, model_outputs):
                     sys2seg_outputs[sys][lp][domain][doc_id][seg_idx] = output
-
-            if score_only_refs:
-                break
 
         return sys2seg_outputs
