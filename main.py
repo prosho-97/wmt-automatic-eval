@@ -1,5 +1,4 @@
 import json
-import ipdb
 import logging
 import pickle
 from argparse import ArgumentParser, Namespace
@@ -33,6 +32,13 @@ def read_arguments() -> ArgumentParser:
         required=True,
         help="[REQUIRED] Path to a jsonl file containing the WMT test set. This is used to extract the source texts for"
         " scoring.",
+    )
+
+    parser.add_argument(
+        "--score-only-refs",
+        action="store_true",
+        help="Whether to score only the human reference translations. This input argument is used only for GEMBA. "
+        "Default: False.",
     )
 
     parser.add_argument(
@@ -70,7 +76,7 @@ def read_arguments() -> ArgumentParser:
         type=str,
         choices=["gpt-4o", "gpt-4.1", "command-a-03-2025"],
         default="gpt-4.1",
-        help="The LLM model to call with API for GEMBA. Default: 'gpt-4.1'.",
+        help="The LLM model to call with API. Default: 'gpt-4.1'.",
     )
 
     parser.add_argument(
@@ -257,6 +263,7 @@ def main() -> None:
         sys2seg_outputs = scorer.score(
             lp2domain_test_docs,
             sys2translations,
+            score_only_refs=args.score_only_refs,
             disk_cache_path=args.disk_cache_path,
             lps_to_score=args.lps_to_score,
         )

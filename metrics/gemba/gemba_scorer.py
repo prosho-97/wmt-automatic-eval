@@ -1,3 +1,4 @@
+import logging
 from collections import defaultdict
 from functools import partial
 from pathlib import Path
@@ -64,6 +65,7 @@ class GembaScorer:
         lp2domain_test_docs: Dict[str, Dict[str, Dict[str, List[Dict[str, str]]]]],
         sys2translations: Dict[str, Dict[str, Dict[str, Dict[str, List[str]]]]],
         provide_explanations: bool = False,
+        score_only_refs: bool = False,
         disk_cache_path: Optional[Path] = None,
         lps_to_score: Optional[List[str]] = None,
     ) -> Dict[
@@ -88,6 +90,7 @@ class GembaScorer:
             lp2domain_test_docs: Nested dict for src: lp -> domain -> document_id -> list of paragraphs.
             sys2translations: Nested dict for tgt: sys -> lp -> domain -> document_id -> list of translated paragraphs.
             provide_explanations: If True, returns explanations for the scores. Default: False.
+            score_only_refs: If True, only the reference translations will be scored. Default: False.
             disk_cache_path: Optional path to a disk cache directory. If not provided, a default one will be used.
             lps_to_score: Optional language pairs to score. If provided, only these language pairs will be scored.
 
@@ -113,9 +116,14 @@ class GembaScorer:
             lps_to_score = set(lps_to_score)
 
         for sys, lp2domain_translated_docs in tqdm(
-            sys2translations.items(), desc="Systems"
+            sys2translations.items(),
+            desc="Systems",
+            total=1 if score_only_refs else len(sys2translations),
         ):
-            for lp, domain2translated_docs in tqdm(lp2domain_translated_docs.items(), "Language pairs"):
+            sys = "refA" if score_only_refs else sys
+            for lp, domain2translated_docs in tqdm(
+                lp2domain_translated_docs.items(), "Language pairs"
+            ):
                 if lps_to_score is not None and lp not in lps_to_score:
                     continue
 
@@ -146,6 +154,15 @@ class GembaScorer:
                             )
                         ):
                             lp_source_texts.append(seg_data["src"])
+                            tgt = seg_data["ref"] if score_only_refs else tgt
+                            if tgt is None:
+                                raise ValueError(
+                                    f"Translation for {sys}, {lp}, {domain}, {doc_id}, segment {seg_idx} is None."
+                                )
+                            elif tgt == "":
+                                logging.warning(
+                                    f"Empty translation for {sys}, {lp}, {domain}, {doc_id}, segment {seg_idx}."
+                                )
                             lp_translations.append(tgt)
                             meta.append((domain, doc_id, seg_idx))
 
@@ -209,5 +226,8 @@ class GembaScorer:
                 # Fill per-paragraph
                 for (domain, doc_id, seg_idx), output in zip(meta, model_outputs):
                     sys2seg_outputs[sys][lp][domain][doc_id][seg_idx] = output
+
+            if score_only_refs:
+                break
 
         return sys2seg_outputs
