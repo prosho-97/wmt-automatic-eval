@@ -269,6 +269,7 @@ def main() -> None:
         )
     elif args.metric == "chrf++":
         scorer = ChrFScorer()
+        logging.info(f"SacreBLEU signature ({scorer.metric}): {scorer.get_signature()}")
         sys2seg_outputs = scorer.score(
             lp2domain_test_docs,
             sys2translations,
