@@ -14,15 +14,15 @@ class ChrFScorer:
         # SacreBLEU's chrF++ is the default ('word_order' = 2 means chrF++)
         self.chrf = sacrebleu.CHRF(word_order=2)
 
-    def get_signature(self, nrefs: int = 1) -> str:
+    def get_signature(self, n_refs: int = 1) -> str:
         """
         Get the ChrF++ string signature from the SacreBLEU package.
 
         Args:
-           nrefs: Number of references to consider.
+           n_refs: Number of references to consider.
         """
-        # Prime: run a dummy evaluation to let the metric know the number of references
-        _ = self.chrf.sentence_score("", [""] * nrefs)
+        # Prime: run a fake evaluation to let the metric know the number of references
+        _ = self.chrf.sentence_score("", [""] * n_refs)
         return self.chrf.get_signature()
 
     def score(
