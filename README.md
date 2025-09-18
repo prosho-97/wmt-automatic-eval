@@ -70,7 +70,7 @@ python main.py \
         --testset-path data/wmt25-general-mt/data/wmt25-genmt.jsonl
         --lps-to-score <LP> <LP> ... \ # e.g. cs-de_DE cs-uk_UA en-cs_CZ. If not specified, the scoring will run for all language pairs.
         --metric metricx24-hybrid-xl
-        --metricx24-predict-script-path <METRICX preict.py SCRIPT PATH>
+        --metricx24-predict-script-path <METRICX predict.py SCRIPT PATH>
         --batch-size 8
         --scored-translations-path data/metrics_outputs/MetricX-24-Hybrid-XL/outputs.pickle
 ```
