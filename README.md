@@ -80,6 +80,8 @@ python main.py \
 <details>
 <summary><strong>3) XCOMET-XL</strong></summary>
 
+As with MetricX-24-Hybrid-XL above, for language pairs with human reference translations available, [XCOMET-XL](https://huggingface.co/Unbabel/XCOMET-XL) will score in reference-based mode, otherwise in QE mode.
+
 ```bash
 python main.py \
         --translations-path data/wmt25-general-mt/data
