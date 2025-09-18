@@ -22,7 +22,7 @@ git clone https://github.com/wmt-conference/wmt25-general-mt
 
 <br/>
 
-To score with GEMBA-ESA, you need to set the required API keys in your environment (Cohere or OpenAI).
+To score with `GEMBA-ESA`, you need to set the required API keys in your environment (Cohere or OpenAI).
 
 <br/>
 
@@ -56,6 +56,8 @@ python main.py \
 
 </details>
 
+With `GEMBA-ESA`, there is the option of scoring human reference translations for the language pairs where they are available, which are the followoing: `cs-de_DE cs-uk_UA en-ar_EG en-bho_IN en-cs_CZ en-et_EE en-is_IS en-ja_JP en-ko_KR en-mas_KE en-ru_RU en-sr_Cyrl_RS en-uk_UA en-zh_CN ja-zh_CN`. To do this, add the `--score-only-refs` flag to the commands above and set the output pickle filename to `outputs_refA.pickle`.
+
 </details>
 
 <details>
@@ -80,7 +82,7 @@ python main.py \
 <details>
 <summary><strong>3) XCOMET-XL</strong></summary>
 
-As with MetricX-24-Hybrid-XL above, for language pairs with human reference translations available, [XCOMET-XL](https://huggingface.co/Unbabel/XCOMET-XL) will score in reference-based mode, otherwise in QE mode.
+As with `MetricX-24-Hybrid-XL` above, for language pairs with human reference translations available, [XCOMET-XL](https://huggingface.co/Unbabel/XCOMET-XL) will score in reference-based mode, otherwise in QE mode.
 
 ```bash
 python main.py \
