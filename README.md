@@ -4,7 +4,7 @@ All the automatic metric scores have already been computed, and they can be foun
 
 ---
 
-## Data setup
+## Data Setup
 
 Clone inside the `data` folder the `wmt25-general-mt` repository containing MT system outputs and human references:
 
@@ -15,7 +15,9 @@ git clone https://github.com/wmt-conference/wmt25-general-mt
 
 ---
 
-## Automatic evaluation
+## Compute Metric Scores
+
+In all the commands below, `--lps-to-score` accepts a space-separated list of language pairs, e.g., `cs-de_DE cs-uk_UA en-cs_CZ`. If omitted, all WMT25 language pairs are scored. The only exception is `chrF++`, which can run only on `en-bho_IN` and `en-mas_KE`.
 
 <details>
 <summary><strong>1) GEMBA-ESA</strong></summary>
@@ -35,7 +37,7 @@ python main.py \
         --testset-path data/wmt25-general-mt/data/wmt25-genmt.jsonl \
         --metric gemba-esa \
         --gemba-model command-a-03-2025 \
-        --lps-to-score <LP> <LP> ... \ # e.g. cs-de_DE cs-uk_UA en-cs_CZ. If not specified, the scoring will run for all language pairs.
+        --lps-to-score cs-de_DE cs-uk_UA en-cs_CZ
         --scored-translations-path data/metrics_outputs/GEMBA-ESA-CMDA/outputs.pickle
 ```
 
@@ -50,7 +52,7 @@ python main.py \
         --testset-path data/wmt25-general-mt/data/wmt25-genmt.jsonl \
         --metric gemba-esa \
         --gemba-model gpt-4.1 \
-        --lps-to-score <LP> <LP> ... \ # e.g. cs-de_DE cs-uk_UA en-cs_CZ. If not specified, the scoring will run for all language pairs.
+        --lps-to-score cs-de_DE cs-uk_UA en-cs_CZ
         --scored-translations-path data/metrics_outputs/GEMBA-ESA-GPT4.1/outputs.pickle \
 ```
 
@@ -70,7 +72,7 @@ For language pairs with human reference translations available, [MetricX-24-Hybr
 python main.py \
         --translations-path data/wmt25-general-mt/data
         --testset-path data/wmt25-general-mt/data/wmt25-genmt.jsonl
-        --lps-to-score <LP> <LP> ... \ # e.g. cs-de_DE cs-uk_UA en-cs_CZ. If not specified, the scoring will run for all language pairs.
+        --lps-to-score cs-de_DE cs-uk_UA en-cs_CZ
         --metric metricx24-hybrid-xl
         --metricx24-predict-script-path <METRICX predict.py SCRIPT PATH>
         --batch-size 8
@@ -88,7 +90,7 @@ As with `MetricX-24-Hybrid-XL` above, for language pairs with human reference tr
 python main.py \
         --translations-path data/wmt25-general-mt/data
         --testset-path data/wmt25-general-mt/data/wmt25-genmt.jsonl
-        --lps-to-score <LP> <LP> ... \ # e.g. cs-de_DE cs-uk_UA en-cs_CZ. If not specified, the scoring will run for all language pairs.
+        --lps-to-score cs-de_DE cs-uk_UA en-cs_CZ
         --metric xcomet-xl
         --batch-size 8
         --scored-translations-path data/metrics_outputs/XCOMET-XL/outputs.pickle
@@ -103,7 +105,7 @@ python main.py \
 python main.py \
         --translations-path data/wmt25-general-mt/data
         --testset-path data/wmt25-general-mt/data/wmt25-genmt.jsonl
-        --lps-to-score <LP> <LP> ... \ # e.g. cs-de_DE cs-uk_UA en-cs_CZ. If not specified, the scoring will run for all language pairs.
+        --lps-to-score cs-de_DE cs-uk_UA en-cs_CZ.
         --metric cometkiwi-xl
         --batch-size 8
         --scored-translations-path data/metrics_outputs/CometKiwi-XL/outputs.pickle
@@ -124,3 +126,18 @@ python main.py \
 ```
 
 </details>
+
+---
+
+## Final AutoRank
+
+Once you have computed the scores with all the metrics above (saved under [data/metrics_outputs](data/metrics_outputs)), you can finally run **AutoRank** with:
+
+```bash
+cd autorank
+python compute_autorank.py \
+        --lps cs-de_DE cs-uk_UA en-cs_CZ
+        --out-path ./res
+```
+
+Where `--lps` accepts a space-separated list of language pairs, e.g., `cs-de_DE cs-uk_UA en-cs_CZ`. Default is the empty list. You can optionally retrict the `AutoRank` to one or more domain(s) using the `--domains` input argument. For example: `--domains speech`.
