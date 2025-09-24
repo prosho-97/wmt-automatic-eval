@@ -817,11 +817,15 @@ if __name__ == "__main__":
         lps = ['en-ar_EG', 'en-bho_IN', 'en-cs_CZ', 'en-et_EE', 'en-is_IS', 'en-it_IT', 'en-ja_JP', 'en-ko_KR', 'en-mas_KE', 'en-ru_RU', 'en-sr_Cyrl_RS', 'en-uk_UA', 'en-zh_CN', 'cs-uk_UA', 'cs-de_DE', 'ja-zh_CN', 'en-bn_BD', 'en-de_DE', 'en-el_GR', 'en-fa_IR', 'en-hi_IN', 'en-id_ID', 'en-kn_IN', 'en-lt_LT', 'en-mr_IN', 'en-ro_RO', 'en-th_TH', 'en-sr_Latn_RS', 'en-sv_SE', 'en-tr_TR', 'en-vi_VN']
 
     dfs = {}
+    autorank = {}
     latex_codes = ""
     for lp in lps:
         lpdf, latex_code = compute_autorank(lp, args)
         dfs[lp] = lpdf
         latex_codes += latex_code
+        autorank[lp] = lpdf['autorank'].to_dict()
+
+    pd.DataFrame(autorank).to_json(args.out_path / "autorank.json", indent=4)
 
     with open(args.out_path / "autorank.tex", "w", encoding="utf-8") as fout:
         fout.write(latex_codes)
