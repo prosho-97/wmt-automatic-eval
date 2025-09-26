@@ -245,6 +245,15 @@ def read_arguments() -> ArgumentParser:
     )
 
     parser.add_argument(
+        "--systems",
+        type=str,
+        nargs="+",
+        default=None,
+        help="If passed, only the specified systems will be considered in the AutoRank computation. It accepts a list "
+        "of space-separated system names.",
+    )
+
+    parser.add_argument(
         "--domain",
         type=str,
         help="If passed, the AutoRank will be computed considering only the specified domain. ",
@@ -740,7 +749,11 @@ def compute_autorank(language_pair, args) -> None:
     for metric, sys2lp_scores in metric_name2outputs.items():
         sys2scores = dict()
         for sys, lp2domain_scores in sys2lp_scores.items():
-            if sys not in teams or language_pair not in teams[sys]["supported_lps"]:
+            if (
+                sys not in teams
+                or language_pair not in teams[sys]["supported_lps"]
+                or (args.systems is not None and sys not in args.systems)
+            ):
                 continue
             if (
                 language_pair not in lp2domain_scores
