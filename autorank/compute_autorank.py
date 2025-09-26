@@ -137,7 +137,24 @@ LANG_CODE_2_LANG_COUNTRY = {
     },
 }
 
-human_evaluated_lps = ['en-ar_EG', 'en-bho_IN', 'en-cs_CZ', 'en-et_EE', 'en-is_IS', 'en-it_IT', 'en-ja_JP', 'en-ko_KR', 'en-mas_KE', 'en-ru_RU', 'en-sr_Cyrl_RS', 'en-uk_UA', 'en-zh_CN', 'cs-uk_UA', 'cs-de_DE', 'ja-zh_CN']
+human_evaluated_lps = [
+    "en-ar_EG",
+    "en-bho_IN",
+    "en-cs_CZ",
+    "en-et_EE",
+    "en-is_IS",
+    "en-it_IT",
+    "en-ja_JP",
+    "en-ko_KR",
+    "en-mas_KE",
+    "en-ru_RU",
+    "en-sr_Cyrl_RS",
+    "en-uk_UA",
+    "en-zh_CN",
+    "cs-uk_UA",
+    "cs-de_DE",
+    "ja-zh_CN",
+]
 
 reference_exists = [
     "cs-uk_UA",
@@ -183,7 +200,7 @@ official_systems = [
     "ONLINE-G",
     "ONLINE-W",
     "Qwen3-235B",
-    "TowerPlus-72B"
+    "TowerPlus-72B",
 ]
 
 system_renames = {
@@ -195,6 +212,7 @@ system_renames = {
     "EuroLLM-22B": "EuroLLM-22B-pre.[M]",
     "RuZH": "RuZH-Eole",
 }
+
 
 def read_arguments() -> ArgumentParser:
     parser = ArgumentParser(
@@ -237,6 +255,12 @@ def read_arguments() -> ArgumentParser:
         type=Path,
         required=True,
         help="[REQUIRED] Path to the directory where the AutoRank results will be stored.",
+    )
+
+    parser.add_argument(
+        "--save-on-pkl",
+        action="store_true",
+        help="Whether to store the computed AutoRank results on a pickle file as well. Default: False.",
     )
 
     return parser
@@ -376,7 +400,7 @@ def normalize_param_count(val: Optional[str] = None) -> str:
             return val
 
     # Handle '<1'
-    if s == "<1" or s =='633.2M':
+    if s == "<1" or s == "633.2M":
         return "<1"
 
     if "A" in s:
@@ -405,6 +429,7 @@ def normalize_param_count(val: Optional[str] = None) -> str:
     # If nothing matches, return 'not specified'
     return val
 
+
 def shade(val, col, col_min, col_max, col_25, col_75):
     if pd.isna(val):
         return str(val)
@@ -418,9 +443,9 @@ def shade(val, col, col_min, col_max, col_25, col_75):
     is_down = r"$\downarrow$" in col
 
     if not is_down:
-        g = (val - lo_q) / (max_q - lo_q)   # up-arrow: high is better
+        g = (val - lo_q) / (max_q - lo_q)  # up-arrow: high is better
     else:
-        g = (hi_q - val) / (hi_q - min_q)   # down-arrow: low is better
+        g = (hi_q - val) / (hi_q - min_q)  # down-arrow: low is better
 
     g = float(np.clip(g, 0, 1))
 
@@ -533,9 +558,9 @@ def generate_latex_table(
     # All raw metric columns (in order of appearance)
     metric_cols = [c for c in df.columns if c.endswith("_raw")]
 
-    if language_pair in ['en-mas_KE', 'en-bho_IN']:
+    if language_pair in ["en-mas_KE", "en-bho_IN"]:
         # we use only Chrf for these two lps
-        metric_cols = ['chrF++_raw']
+        metric_cols = ["chrF++_raw"]
 
     table_data = []
     for sys in systems_to_show:
@@ -552,14 +577,13 @@ def generate_latex_table(
         if sys in official_systems:
             team_name_escaped = r"\official " + team_name_escaped
 
-
         # LP supported
         supported_lps = meta.get("supported_lps", {})
         lp_support = supported_lps.get(language_pair)
         if lp_support == "supported":
             lp_mark = r"\checkmark"
         elif lp_support == "unsupported":
-            lp_mark = r"\crossmark"  
+            lp_mark = r"\crossmark"
         else:
             lp_mark = r"\unknown"
 
@@ -581,14 +605,15 @@ def generate_latex_table(
             humeval = df.loc[sys]["will_humeval"]
             humeval_str = r"\checkmark" if bool(humeval) else ""
 
-            row = (
-                [team_name_escaped, lp_mark, param_count, humeval_str, autorank_str]
-                + metric_vals
-            )
+            row = [
+                team_name_escaped,
+                lp_mark,
+                param_count,
+                humeval_str,
+                autorank_str,
+            ] + metric_vals
         else:
-            row = (
-                [team_name_escaped, lp_mark, param_count, autorank_str] + metric_vals
-            )
+            row = [team_name_escaped, lp_mark, param_count, autorank_str] + metric_vals
         table_rows.append(row)
 
         # Save as tuple: (raw_name, row_data, is_unconstrained)
@@ -596,17 +621,22 @@ def generate_latex_table(
         table_data.append((sys, row, is_unconstrained))
 
     # Build header (with arrows)
-    
+
     if is_humeval:
-        header = (
-            ["System Name", "LP Supported", "Params. (B)", "Humeval?", "AutoRank $\\downarrow$"]
-            + [f"{c.replace('_raw', '')} $\\uparrow$" for c in metric_cols]
-        )
+        header = [
+            "System Name",
+            "LP Supported",
+            "Params. (B)",
+            "Humeval?",
+            "AutoRank $\\downarrow$",
+        ] + [f"{c.replace('_raw', '')} $\\uparrow$" for c in metric_cols]
     else:
-        header = (
-            ["System Name", "LP Supported", "Params. (B)", "AutoRank $\\downarrow$"]
-            + [f"{c.replace('_raw', '')} $\\uparrow$" for c in metric_cols]
-        )
+        header = [
+            "System Name",
+            "LP Supported",
+            "Params. (B)",
+            "AutoRank $\\downarrow$",
+        ] + [f"{c.replace('_raw', '')} $\\uparrow$" for c in metric_cols]
 
     # Tabular column spec: one col for each field
     ncols = 4 + len(metric_cols) + 1
@@ -636,7 +666,9 @@ def generate_latex_table(
     # This assumes latex_df's columns are the *original* names, not the pretty LaTeX headers.
     gradient_cols = [c for c in latex_df.columns if "arrow" in c]
 
-    latex_df[gradient_cols] = latex_df[gradient_cols].apply(pd.to_numeric, errors="coerce")
+    latex_df[gradient_cols] = latex_df[gradient_cols].apply(
+        pd.to_numeric, errors="coerce"
+    )
 
     # Precompute min/max for those columns
     col_min = latex_df[gradient_cols].min()
@@ -814,7 +846,39 @@ if __name__ == "__main__":
     lps = args.lps
     # if empty
     if not lps:
-        lps = ['en-ar_EG', 'en-bho_IN', 'en-cs_CZ', 'en-et_EE', 'en-is_IS', 'en-it_IT', 'en-ja_JP', 'en-ko_KR', 'en-mas_KE', 'en-ru_RU', 'en-sr_Cyrl_RS', 'en-uk_UA', 'en-zh_CN', 'cs-uk_UA', 'cs-de_DE', 'ja-zh_CN', 'en-bn_BD', 'en-de_DE', 'en-el_GR', 'en-fa_IR', 'en-hi_IN', 'en-id_ID', 'en-kn_IN', 'en-lt_LT', 'en-mr_IN', 'en-ro_RO', 'en-th_TH', 'en-sr_Latn_RS', 'en-sv_SE', 'en-tr_TR', 'en-vi_VN']
+        lps = [
+            "en-ar_EG",
+            "en-bho_IN",
+            "en-cs_CZ",
+            "en-et_EE",
+            "en-is_IS",
+            "en-it_IT",
+            "en-ja_JP",
+            "en-ko_KR",
+            "en-mas_KE",
+            "en-ru_RU",
+            "en-sr_Cyrl_RS",
+            "en-uk_UA",
+            "en-zh_CN",
+            "cs-uk_UA",
+            "cs-de_DE",
+            "ja-zh_CN",
+            "en-bn_BD",
+            "en-de_DE",
+            "en-el_GR",
+            "en-fa_IR",
+            "en-hi_IN",
+            "en-id_ID",
+            "en-kn_IN",
+            "en-lt_LT",
+            "en-mr_IN",
+            "en-ro_RO",
+            "en-th_TH",
+            "en-sr_Latn_RS",
+            "en-sv_SE",
+            "en-tr_TR",
+            "en-vi_VN",
+        ]
 
     dfs = {}
     autorank = {}
@@ -823,7 +887,7 @@ if __name__ == "__main__":
         lpdf, latex_code = compute_autorank(lp, args)
         dfs[lp] = lpdf
         latex_codes += latex_code
-        autorank[lp] = lpdf['autorank'].to_dict()
+        autorank[lp] = lpdf["autorank"].to_dict()
 
     pd.DataFrame(autorank).to_json(args.out_path / "autorank.json", indent=4)
 
@@ -833,3 +897,7 @@ if __name__ == "__main__":
     with pd.ExcelWriter(args.out_path / "autorank.xlsx") as writer:
         for lp, df in dfs.items():
             df.to_excel(writer, sheet_name=lp, index=True, float_format="%.2f")
+
+    if args.save_on_pkl:
+        with open(args.out_path / "autorank.pkl", "wb") as f:
+            pickle.dump(dfs, f, protocol=pickle.HIGHEST_PROTOCOL)
